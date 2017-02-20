@@ -184,8 +184,10 @@ export default class NavigatorIOSComment extends Component {
                 initialRoute={{
           component: SendComment,
           title: '发表评论',
+          rightButtonTitle: '发布'
         }}
                 barTintColor='#4964ef'
+                titleTextColor="#ffffff"
                 style={{flex: 1}}
             />
         )
