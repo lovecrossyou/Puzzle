@@ -1,41 +1,64 @@
 /**
- * Sample React Native App
- * https://github.com/facebook/react-native
- * @flow
+ * Created by zhulizhe on 2017/2/6.
  */
+'use strict';
 
-import React, {Component} from 'react';
+import React from 'react';
 import {
     AppRegistry,
     StyleSheet,
     Text,
-    View,
-    TouchableOpacity
+    View
 } from 'react-native';
 
+// 最新投注记录
+import RecentBetList from './app/home/RecentBetList'
+// 我的二维码
+import MyQRCodeShare from './app/share/MyQRCodeShare'
+//登录首页
+import FirstLogin from './app/login/FirstLogin'
+import Login from './app/login/Login'
+import UserInfoView from './app/order/ShareOrderDetail'
+//分享
+import CommentShareView from './app/share/CommentShareView'
+//发表评论
+import SendComment from './app/comment/SendComment'
+import codePush from 'react-native-code-push'
 
-import ImagePicker from 'react-native-image-crop-picker'
-export default class Puzzle extends Component {
+let codePushOptions = {checkFrequency: codePush.CheckFrequency.ON_APP_RESUME};
 
-    _onPress() {
-        ImagePicker.openPicker({
-            multiple: true
-        }).then(images => {
-            console.log(images);
-        })
-    }
-
+class Puzzle extends React.Component {
     render() {
-        return (
-            <View style={styles.container}>
-                <Text style={styles.welcome}>
-                    Welcome to React Native!
-                </Text>
-                <TouchableOpacity onPress={this._onPress.bind(this)}>
-                    <Text>相册</Text>
-                </TouchableOpacity>
-            </View>
-        );
+        // return (<SendComment />)
+        var pageName = this.props['page']
+        switch (pageName) {
+            case 'home': {
+                return (
+                    <RecentBetList />
+                )
+            }
+            case 'share': {
+                return (
+                    <MyQRCodeShare />
+                )
+            }
+            case 'login': {
+                return (<FirstLogin />)
+            }
+            case 'main_login': {
+                return <Login />
+            }
+            case 'share_order': {
+                var orderId = this.props['orderId']
+                var shareType = this.props['shareType']
+                var url = this.props['url']
+                alert(orderId+'--' + shareType + '--' + url)
+                return <UserInfoView orderId={orderId} shareType={shareType} url={url}/>
+            }
+            case 'share_comment':{
+                return <CommentShareView />
+            }
+        }
     }
 }
 
@@ -44,18 +67,21 @@ const styles = StyleSheet.create({
         flex: 1,
         justifyContent: 'center',
         alignItems: 'center',
-        backgroundColor: '#F5FCFF',
+        backgroundColor: '#FFFFFF',
     },
-    welcome: {
+    highScoresTitle: {
         fontSize: 20,
         textAlign: 'center',
         margin: 10,
     },
-    instructions: {
+    scores: {
         textAlign: 'center',
         color: '#333333',
         marginBottom: 5,
     },
 });
 
+// Module name
+Puzzle = codePush(codePushOptions)(Puzzle)
 AppRegistry.registerComponent('Puzzle', () => Puzzle);
+

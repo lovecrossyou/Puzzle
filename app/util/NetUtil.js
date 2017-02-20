@@ -5,8 +5,8 @@
 
 import {NativeModules} from 'react-native'
 
-const Base_url = "http://www.xiteng.com/xitenggame/"
-// const Base_Test_url = "http://114.251.53.22/xitenggamejar/"
+// const Base_url = "http://www.xiteng.com/xitenggame/"
+const Base_url = "http://114.251.53.22/xitenggamejar/"
 
 var PersonManager = NativeModules.PersonManager
 
