@@ -1,0 +1,32 @@
+platform:ios,'8.0'
+target 'Puzzle' do
+pod 'Masonry'
+pod 'SDWebImage'
+pod 'YYModel'
+pod 'TPKeyboardAvoiding'
+pod 'ReactiveCocoa',2.5
+pod 'WMPageController'
+pod 'TPKeyboardAvoiding'
+pod 'AFNetworking'
+pod 'SDCycleScrollView'
+pod 'Realm',2.1
+pod 'MJRefresh'
+pod 'UMengSocialCOM'
+pod 'TZImagePickerController'
+pod 'XHImageViewer'
+pod 'HUPhotoBrowser'
+pod 'SWTableViewCell'
+pod 'KILabel'
+pod 'FSCalendar'
+pod 'LGAlertView'
+pod 'SCLAlertView-Objective-C'
+pod 'SwipeBack'
+pod 'HMQRCodeScanner'
+pod 'iCarousel'
+pod 'STPopup'
+pod 'MBProgressHUD'
+pod 'DZNEmptyDataSet'
+# Pods for JChat
+pod 'CocoaLumberjack'
+pod 'GPUImage', '~> 0.1.7'
+end
