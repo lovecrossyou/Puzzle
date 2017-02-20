@@ -29,7 +29,6 @@ let codePushOptions = {checkFrequency: codePush.CheckFrequency.ON_APP_RESUME};
 
 class Puzzle extends React.Component {
     render() {
-        // return (<SendComment />)
         var pageName = this.props['page']
         switch (pageName) {
             case 'home': {
@@ -57,6 +56,9 @@ class Puzzle extends React.Component {
             }
             case 'share_comment':{
                 return <CommentShareView />
+            }
+            case 'send_comment':{
+                return (<SendComment />)
             }
         }
     }

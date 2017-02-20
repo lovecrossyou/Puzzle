@@ -15,7 +15,7 @@
 #import "UIImage+Image.h"
 #import <TZImagePickerController/TZImagePickerController.h>
 #import "TZImageManager.h"
-
+#import "PZReactUIManager.h"
 @interface HomePostCommentController ()<TZImagePickerControllerDelegate,UITextViewDelegate>
 @property (nonatomic, strong) STInputBar *inputBar;
 @property(weak,nonatomic)HomePostCommentContent* headView ;
@@ -35,6 +35,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+  UIView* rootView = [PZReactUIManager createWithPage:@"send_comment" params:nil size:CGSizeZero];
+  self.view = rootView ;
+  
+  return;
     WEAKSELF
     self.edgesForExtendedLayout = UIRectEdgeNone ;
     self.title = @"评论";
@@ -282,9 +286,20 @@
     [self keyboardUp];
 }
 
+-(void)viewWillAppear:(BOOL)animated{
+  [super viewWillAppear:animated];
+  [self.navigationController setNavigationBarHidden:YES animated:YES];
+
+}
+
 -(void)viewWillDisappear:(BOOL)animated
 {
     [super viewWillDisappear:animated];
-    [MBProgressHUD dismiss];
+  [self.navigationController setNavigationBarHidden:NO animated:YES];
+
+//    [MBProgressHUD dismiss];
 }
+
+
+
 @end

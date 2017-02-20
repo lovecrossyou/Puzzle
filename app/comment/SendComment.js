@@ -13,7 +13,8 @@ import {
     LayoutAnimation,
     ScrollView,
     TouchableOpacity,
-    PixelRatio
+    PixelRatio,
+    NavigatorIOS
 } from 'react-native';
 import Toast, {DURATION} from 'react-native-easy-toast'
 import ImagePicker from 'react-native-image-crop-picker';
@@ -32,7 +33,7 @@ const MIN_COMPOSER_HEIGHT = 60
 class KeyboardTool extends Component {
     render() {
         return <View
-            style={{backgroundColor:'#F5FFFA',height:MIN_COMPOSER_HEIGHT,flexDirection:'row',justifyContent:'space-between'}}>
+            style={{backgroundColor:'#f7f7f8',height:MIN_COMPOSER_HEIGHT,flexDirection:'row',justifyContent:'space-between'}}>
             <View style={{flexDirection:'row',alignItems:'center',margin:10}}>
                 <TouchableOpacity
                     style={styles.item}
@@ -64,13 +65,12 @@ class KeyboardTool extends Component {
     }
 }
 
-
-export default class SendComment extends Component {
+class SendComment extends Component {
     onMainViewLayout(e) {
         const layout = e.nativeEvent.layout
-        this.setMaxHeight(layout.height);
+        this.setMaxHeight(layout.height-64);
         this.setState({
-            messagesContainerHeight: this.prepareMessagesContainerHeight(layout.height)
+            messagesContainerHeight: this.prepareMessagesContainerHeight(layout.height-64)
         })
     }
 
@@ -167,6 +167,7 @@ export default class SendComment extends Component {
                 keyboardShouldPersistTaps='always'
                 style={styles.container}
                 bounces={false}
+                scrollEnabled={false}
                 onLayout={this.onMainViewLayout.bind(this)}>
                 {this.renderMainView()}
                 <KeyboardTool/>
@@ -175,6 +176,22 @@ export default class SendComment extends Component {
         );
     }
 }
+
+export default class NavigatorIOSComment extends Component {
+    render() {
+        return (
+            <NavigatorIOS
+                initialRoute={{
+          component: SendComment,
+          title: '发表评论',
+        }}
+                barTintColor='#4964ef'
+                style={{flex: 1}}
+            />
+        )
+    }
+}
+
 
 SendComment.defaultProps = {
     isAnimated: Platform.select({
