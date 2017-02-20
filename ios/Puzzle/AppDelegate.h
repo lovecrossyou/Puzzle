@@ -1,16 +1,24 @@
-/**
- * Copyright (c) 2015-present, Facebook, Inc.
- * All rights reserved.
- *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
- */
+//
+//  AppDelegate.h
+//  Puzzle
+//
+//  Created by 朱理哲 on 16/7/21.
+//  Copyright © 2016年 HuiBei. All rights reserved.
+//
 
 #import <UIKit/UIKit.h>
+#import <JMessage/JMessage.h>
+#import <CocoaLumberjack/DDLegacyMacros.h>
+#import "JChatConstants.h"
+#import "PZTabController.h"
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate>
+@interface AppDelegate : UIResponder <UIApplicationDelegate,JMessageDelegate>
+@property (nonatomic,strong) PZTabController *tabBarCtl;
 
-@property (nonatomic, strong) UIWindow *window;
+@property (strong, nonatomic) UIWindow *window;
+@property (assign, nonatomic)BOOL isDBMigrating;
+
+- (void)setupMainTabBar;
 
 @end
+

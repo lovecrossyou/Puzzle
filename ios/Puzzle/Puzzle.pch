@@ -1,0 +1,241 @@
+//
+//  Puzzle.pch
+//  Puzzle
+//
+//  Created by 朱理哲 on 16/7/21.
+//  Copyright © 2016年 HuiBei. All rights reserved.
+//
+
+#ifndef Puzzle_pch
+#define Puzzle_pch
+
+// 测试环境
+#define Base_url @"http://114.251.53.22/xitenggamejar/"
+#define ImageUrl @"http://114.251.53.22/imageserver/"
+#define  AppKey @"b5958b665e0b4d8cae77d28e1ad3f521"
+#define  AppSecret @"71838ae252714085bc0fb2fc3f420110"
+
+//生产环境
+//#define Base_url @"http://www.xiteng.com/xitenggame/"
+//#define ImageUrl @"http://www.xiteng.com/imageserver/"
+//#define  AppKey @"b5958b665e0b4d8cae77d28e1ad3f521"
+//#define  AppSecret @"71838ae252714085bc0fb2fc3f420110"
+
+//AlipayClient      UnionPay   WeixinPay
+#define AlipayClient @"AlipayClient"
+#define UnionPay @"UnionPay"
+#define WeixinPay @"WeixinPay"
+
+//支付结果查询
+#define QueryOrderState @"queryOrderState"
+#define RefreshBadgeValue @"refreshBadgeValue"
+#define RefreshMeBadgeValue @"refreshMeBadgeValue"
+
+#define RefreshFriendCircleBadgeValue @"refreshFriendCircleBadgeValue"
+
+
+#define RefreshCommentNoticeView @"refreCommentView"
+#define RefreshFriendCircleNoticeView @"RefreshFriendCircleNoticeView"
+
+#define RefreshCommentTableView @"refreTableView"
+#define RefreshDiscover @"RefreshDiscover"
+
+#define HeaderClickNotificate @"HeaderClickNotificate"
+#define FriendCircleReplyNotificate @"friendCircleReplyNotificate"
+
+//朋友圈通知
+#define NotifyCircle @"NotifyCircle"
+#define NotifyClearCircle @"NotifyClearCircle"
+#define NotifyChat @"NotifyChat"
+
+#define RRFDynamicRefre @"RRFDynamicTableViewRefre"
+#define RRFFriendCircleRefre @"RRFFriendCircleTableViewRefre"
+
+#define RefreshPersonalAskBarTableView @"refrePersonalAskBar"
+#define RefreshRRFHomePageTableView @"refreRRFPersonalHomePage"
+
+#define RefreshFMViewController @"refreFMViewController"
+
+#define FirstInstall @"firstInstall"
+#define DISMISSLOGIN @"DISMISSLOGIN"
+#import "UIColor+Extension.h"
+#import "NSString+Valid.h"
+#import <Masonry/Masonry.h>
+#import "ReactiveCocoa.h"
+#import "NSString+TimeConvert.h"
+#import "YYModel.h"
+#import "UIImage+Image.h"
+#import "HMScanerCardViewController.h"
+#import "MBProgressHUD+HBProgresss.h"
+#import "ViewUtil.h"
+
+//qq
+#define QQAppID @"1105589917"
+#define QQAppKey @"6O9aXu8gnXVAMzA9"
+
+
+#define UMShareAppKey @"57c79b0e67e58e0c9b0020ab"
+// 微信登录的AppID&AppSecret
+#define WechatAppID @"wx29fb35e25d660f0a"
+#define WechatSecret @"64ea45d0b288669706194b3a07726208"
+//微博
+#define WeiBoAppKey @"1794573914"
+#define WeiBoAppSecret @"54944bff0da13eb5848ff1afd8f6e5df"
+
+//JPushAppKey
+#define JPushAppKey @"62ba44a264241d188eb817e5"
+#define JMESSAGE_APPKEY @"62ba44a264241d188eb817e5"
+
+#define kTimeLineCellOperationButtonClickedNotification @"TimeLineCellOperationButtonClickedNotification"
+
+typedef void(^ControllerRefreBlock)(BOOL isRefre);
+typedef void(^ItemClickBlock)();
+typedef void(^ItemClickParamBlock)(id param);
+typedef void(^PZMutilRequestSuccess) (id json,id obj);
+typedef void(^TapPhotoHandler)(BOOL hidden);
+typedef void(^ReloadBlock)(BOOL shouldReload);
+typedef void(^CountBlock)(NSInteger count);
+typedef void(^ButtonBlock)(UIButton *button);
+
+typedef void(^PZRequestSuccess) (id json);
+typedef void(^PZRequestFailure) (id json);
+typedef enum : NSUInteger {
+  RRFFriendCircleTypeSelf = 1,
+  RRFFriendCircleTypeOther = 0,
+  
+} RRFFriendCircleType;
+typedef enum : NSUInteger {
+  RRFShowOrderTypeGift = 1,
+  RRFShowOrderTypeFreeBuy = 2,
+  RRFShowOrderTypeWining = 3,
+} RRFShowOrderType;
+typedef enum : NSUInteger {
+  RRFFreeBuyOrderTypeMe = 1,
+  RRFFreeBuyOrderTypeFreeBuy = 0,
+  
+} RRFFreeBuyOrderType;
+typedef enum : NSUInteger {
+  ReplyTypeReply = 1,
+  ReplyTypeReplyToReply = 2
+} ReplyType;
+typedef enum : NSUInteger {
+  RRFDetailInfoComeInTypeTypeHomePage = 1,
+  RRFDetailInfoComeInTypeDynamic = 2,
+  RRFDetailInfoComeInTypeOther = 3,
+  RRFDetailInfoComeInTypeBet = 4,
+} RRFDetailInfoComeInType;
+typedef enum : NSUInteger {
+  RRFCommentDetailInfoTypeComment = 1,
+  RRFCommentDetailInfoTypeFriendCircle = 2,
+  
+} RRFCommentDetailInfoType;
+typedef enum : NSUInteger {
+  RRFPersonalHomePageCellTypeTypeSelf = 1,
+  DelegaterListControllerViewTypeOther = 2,
+  
+} RRFPersonalHomePageCellType;
+typedef enum : NSUInteger {
+  DelegaterListControllerViewTypeUser = 1,
+  DelegaterListControllerViewTypeDelegate = 2,
+  
+} DelegaterListControllerViewType;
+
+typedef enum : NSUInteger {
+  DelegaterListSwitchTypeA = 1,
+  DelegaterListSwitchTypeB = 2,
+  DelegaterListSwitchTypeC = 3
+  
+} DelegaterListSwitchType;
+typedef enum : NSUInteger {
+  CommentsTableView = 1,
+  ProblemTabelView = 2
+} TabelTViewType;
+typedef enum : NSUInteger {
+  ComeInTypeHome = 1,
+  ComeInTypePersonCenter = 2,
+  ComeInTypeWenBar = 3
+  
+} ComeInType;
+typedef enum : NSUInteger {
+  PraiseListTypeComment = 0,
+  PraiseListTypeFriendCircle = 1
+} PraiseListType;
+typedef enum : NSUInteger {
+  CommentCellClickTypePraise = 1,
+  CommentCellClickTypeReward = 2
+} CommentCellClickType;
+typedef NS_ENUM(NSInteger, FriendRankType) {
+  FriendRankTypeIncome = 1,       //收益
+  FriendRankTypeHit    = 2        //命中率
+};
+typedef NS_ENUM(NSInteger, RankViewType) {
+  RankViewTypeCurrent = 1,        //本期
+  RankViewTypePrior   = 2         //上期
+};
+
+typedef NS_ENUM(NSInteger, RankType) {
+  RankTypePriorPeriod   = 0,         //上期
+  RankTypePriorWeek     = 1,         //上周
+  RankTypePriorMonth    = 2,         //上月
+  RankTypeCurrentPeriod = 3,         //本期
+  RankTypeCurrentWeek   = 4,         //本周
+  RankTypeCurrentMonth  = 5,         //本月
+  RankTypeCurrentYear   = 6,         //本年
+  RankTypePriorYear     = 7          //上年
+};
+typedef NS_ENUM(NSInteger, ProductDetailViewType) {
+  ProductDetailViewTypeProduct = 1,       //商品
+  ProductDetailViewTypeAward   = 2        //奖品
+};
+
+static NSString *rankImgArr[3] = {
+  @"common_icon_champion-0",
+  @"common_icon_runner-up",
+  @"common_icon_third"
+};
+#define imageTotalCount 3
+#define imageMargin 10
+#define WEAKSELF typeof(self) __weak weakSelf = self ;
+#define HBColor(r, g, b) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:1]
+#define SCREENWidth [UIScreen mainScreen].bounds.size.width
+#define SCREENHeight [UIScreen mainScreen].bounds.size.height
+#define PZFont(size) [UIFont systemFontOfSize:size]
+#define BasicBlueColor [UIColor colorWithRed:73/255.0 green:100/255.0 blue:239/255.0 alpha:1]
+#define ADAPTHeight(height) SCREENHeight*height/667
+#define BasicRedColor [UIColor colorWithRed:247/255.0 green:41/255.0 blue:41/255.0 alpha:1]
+#define BasicGoldColor [UIColor colorWithRed:255/255.0 green:186/255.0 blue:38/255.0 alpha:1]
+
+#define DefaultImage   [UIImage createImageWithColor:HBColor(243,243,243)]
+
+#define StockGreen HBColor(2, 197, 107)
+#define StockRed HBColor(255, 66, 67)
+
+//AlipayClient      UnionPay   WeixinPay
+#define AlipayClient @"AlipayClient"
+#define UnionPay @"UnionPay"
+#define WeixinPay @"WeixinPay"
+
+//清除购物车
+#define ShoppingCartClearNotificate @"ShoppingCartClear"
+#define ShoppingCartReloadNotificate @"ShoppingCartReload"
+
+//支付结果查询
+#define QueryOrderState @"queryOrderState"
+
+//声明
+//#define DeclarationInfo @"声明： 本活动与苹果公司（Apple Inc.）无关​"
+#define DeclarationInfo @"​"
+
+
+#define IOS_VERSION_9_OR_ABOVE (([[[UIDevice currentDevice] systemVersion] floatValue] >= 9.0)? (YES):(NO))
+#define IPHONE4 [UIScreen mainScreen].bounds.size.height<=480
+#define IPHONE5 [UIScreen mainScreen].bounds.size.height<=568
+#define IPHONE6 [UIScreen mainScreen].bounds.size.width<=375
+
+#define HomeBannerHeight IPHONE4? 110:130
+#define FreeBuyBannerHeight 111
+#define RankBannerHeight 130
+//#define FreeBuyBannerHeight (IPHONE4? 92 : 111)
+//#define RankBannerHeight (IPHONE4||IPHONE5? 120 : (IPHONE6 ? 130 : 150))
+#define HomeStockHeight 240
+#endif /* Puzzle_pch */
