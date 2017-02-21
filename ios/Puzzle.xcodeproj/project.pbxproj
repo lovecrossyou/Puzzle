@@ -13,6 +13,30 @@
 		00C302E91ABCBA2D00DB3ED1 /* libRCTNetwork.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C302DC1ABCB9D200DB3ED1 /* libRCTNetwork.a */; };
 		00C302EA1ABCBA2D00DB3ED1 /* libRCTVibration.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C302E41ABCB9EE00DB3ED1 /* libRCTVibration.a */; };
 		00E356F31AD99517003FC87E /* PuzzleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* PuzzleTests.m */; };
+<<<<<<< HEAD
+		121B37941E5C3BB40010EBED /* RRFApplyForController.m in Sources */ = {isa = PBXBuildFile; fileRef = 121B37631E5C3BB40010EBED /* RRFApplyForController.m */; };
+		121B37951E5C3BB40010EBED /* RRFCDelegateController.m in Sources */ = {isa = PBXBuildFile; fileRef = 121B37651E5C3BB40010EBED /* RRFCDelegateController.m */; };
+		121B37971E5C3BB40010EBED /* RRFJoinController.m in Sources */ = {isa = PBXBuildFile; fileRef = 121B37691E5C3BB40010EBED /* RRFJoinController.m */; };
+		121B37981E5C3BB40010EBED /* RRFRebateController.m in Sources */ = {isa = PBXBuildFile; fileRef = 121B376B1E5C3BB40010EBED /* RRFRebateController.m */; };
+		121B37991E5C3BB40010EBED /* RRFRecruitController.m in Sources */ = {isa = PBXBuildFile; fileRef = 121B376D1E5C3BB40010EBED /* RRFRecruitController.m */; };
+		121B379A1E5C3BB40010EBED /* RRFXTDelegateController.m in Sources */ = {isa = PBXBuildFile; fileRef = 121B376F1E5C3BB40010EBED /* RRFXTDelegateController.m */; };
+		121B379B1E5C3BB40010EBED /* RRFXTNextDelegateController.m in Sources */ = {isa = PBXBuildFile; fileRef = 121B37711E5C3BB40010EBED /* RRFXTNextDelegateController.m */; };
+		121B379C1E5C3BB40010EBED /* RRFXTPlanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 121B37731E5C3BB40010EBED /* RRFXTPlanViewController.m */; };
+		121B379D1E5C3BB40010EBED /* RRFApplyDelegaterModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 121B37761E5C3BB40010EBED /* RRFApplyDelegaterModel.m */; };
+		121B379E1E5C3BB40010EBED /* RRFRebateDetailInfoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 121B37781E5C3BB40010EBED /* RRFRebateDetailInfoModel.m */; };
+		121B379F1E5C3BB40010EBED /* RRFRebateModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 121B377A1E5C3BB40010EBED /* RRFRebateModel.m */; };
+		121B37A01E5C3BB40010EBED /* RRFXTDelegateCellModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 121B377C1E5C3BB40010EBED /* RRFXTDelegateCellModel.m */; };
+		121B37A11E5C3BB40010EBED /* RRFXTDelegateInfoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 121B377E1E5C3BB40010EBED /* RRFXTDelegateInfoModel.m */; };
+		121B37A21E5C3BB40010EBED /* RRFXTPlanModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 121B37801E5C3BB40010EBED /* RRFXTPlanModel.m */; };
+		121B37A31E5C3BB40010EBED /* RRFApplyForView.m in Sources */ = {isa = PBXBuildFile; fileRef = 121B37831E5C3BB40010EBED /* RRFApplyForView.m */; };
+		121B37A51E5C3BB40010EBED /* RRFJoinView.m in Sources */ = {isa = PBXBuildFile; fileRef = 121B37871E5C3BB40010EBED /* RRFJoinView.m */; };
+		121B37A61E5C3BB40010EBED /* RRFRebateCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 121B37891E5C3BB40010EBED /* RRFRebateCell.m */; };
+		121B37A71E5C3BB40010EBED /* RRFRebateView.m in Sources */ = {isa = PBXBuildFile; fileRef = 121B378B1E5C3BB40010EBED /* RRFRebateView.m */; };
+		121B37A81E5C3BB40010EBED /* RRFRecruitView.m in Sources */ = {isa = PBXBuildFile; fileRef = 121B378D1E5C3BB40010EBED /* RRFRecruitView.m */; };
+		121B37A91E5C3BB40010EBED /* RRFXQPlanView.m in Sources */ = {isa = PBXBuildFile; fileRef = 121B378F1E5C3BB40010EBED /* RRFXQPlanView.m */; };
+		121B37AA1E5C3BB40010EBED /* RRFXTDelegateCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 121B37911E5C3BB40010EBED /* RRFXTDelegateCell.m */; };
+		121B37AB1E5C3BB50010EBED /* RRFXTDelegateView.m in Sources */ = {isa = PBXBuildFile; fileRef = 121B37931E5C3BB40010EBED /* RRFXTDelegateView.m */; };
+=======
 		124E10531E5C04F70040BDC9 /* JNQAddressController.m in Sources */ = {isa = PBXBuildFile; fileRef = 124E0F521E5C04F70040BDC9 /* JNQAddressController.m */; };
 		124E10541E5C04F70040BDC9 /* JNQAddressOperateController.m in Sources */ = {isa = PBXBuildFile; fileRef = 124E0F541E5C04F70040BDC9 /* JNQAddressOperateController.m */; };
 		124E10551E5C04F70040BDC9 /* JNQSelectedDistrictController.m in Sources */ = {isa = PBXBuildFile; fileRef = 124E0F561E5C04F70040BDC9 /* JNQSelectedDistrictController.m */; };
@@ -135,6 +159,7 @@
 		124E10CD1E5C04F80040BDC9 /* RRFXQPlanView.m in Sources */ = {isa = PBXBuildFile; fileRef = 124E104E1E5C04F70040BDC9 /* RRFXQPlanView.m */; };
 		124E10CE1E5C04F80040BDC9 /* RRFXTDelegateCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 124E10501E5C04F70040BDC9 /* RRFXTDelegateCell.m */; };
 		124E10CF1E5C04F80040BDC9 /* RRFXTDelegateView.m in Sources */ = {isa = PBXBuildFile; fileRef = 124E10521E5C04F70040BDC9 /* RRFXTDelegateView.m */; };
+>>>>>>> f9d118233e72f9ed1031f0562679145a7bfd92e5
 		133E29F31AD74F7200F7D852 /* libRCTLinking.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 78C398B91ACF4ADC00677621 /* libRCTLinking.a */; };
 		139105C61AF99C1200B5F7CC /* libRCTSettings.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 139105C11AF99BAD00B5F7CC /* libRCTSettings.a */; };
 		139FDEF61B0652A700C62182 /* libRCTWebSocket.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 139FDEF41B06529B00C62182 /* libRCTWebSocket.a */; };
@@ -1049,6 +1074,52 @@
 		00E356EE1AD99517003FC87E /* PuzzleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PuzzleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		00E356F21AD99517003FC87E /* PuzzleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PuzzleTests.m; sourceTree = "<group>"; };
+<<<<<<< HEAD
+		121B37621E5C3BB40010EBED /* RRFApplyForController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RRFApplyForController.h; sourceTree = "<group>"; };
+		121B37631E5C3BB40010EBED /* RRFApplyForController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RRFApplyForController.m; sourceTree = "<group>"; };
+		121B37641E5C3BB40010EBED /* RRFCDelegateController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RRFCDelegateController.h; sourceTree = "<group>"; };
+		121B37651E5C3BB40010EBED /* RRFCDelegateController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RRFCDelegateController.m; sourceTree = "<group>"; };
+		121B37681E5C3BB40010EBED /* RRFJoinController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RRFJoinController.h; sourceTree = "<group>"; };
+		121B37691E5C3BB40010EBED /* RRFJoinController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RRFJoinController.m; sourceTree = "<group>"; };
+		121B376A1E5C3BB40010EBED /* RRFRebateController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RRFRebateController.h; sourceTree = "<group>"; };
+		121B376B1E5C3BB40010EBED /* RRFRebateController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RRFRebateController.m; sourceTree = "<group>"; };
+		121B376C1E5C3BB40010EBED /* RRFRecruitController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RRFRecruitController.h; sourceTree = "<group>"; };
+		121B376D1E5C3BB40010EBED /* RRFRecruitController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RRFRecruitController.m; sourceTree = "<group>"; };
+		121B376E1E5C3BB40010EBED /* RRFXTDelegateController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RRFXTDelegateController.h; sourceTree = "<group>"; };
+		121B376F1E5C3BB40010EBED /* RRFXTDelegateController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RRFXTDelegateController.m; sourceTree = "<group>"; };
+		121B37701E5C3BB40010EBED /* RRFXTNextDelegateController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RRFXTNextDelegateController.h; sourceTree = "<group>"; };
+		121B37711E5C3BB40010EBED /* RRFXTNextDelegateController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RRFXTNextDelegateController.m; sourceTree = "<group>"; };
+		121B37721E5C3BB40010EBED /* RRFXTPlanViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RRFXTPlanViewController.h; sourceTree = "<group>"; };
+		121B37731E5C3BB40010EBED /* RRFXTPlanViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RRFXTPlanViewController.m; sourceTree = "<group>"; };
+		121B37751E5C3BB40010EBED /* RRFApplyDelegaterModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RRFApplyDelegaterModel.h; sourceTree = "<group>"; };
+		121B37761E5C3BB40010EBED /* RRFApplyDelegaterModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RRFApplyDelegaterModel.m; sourceTree = "<group>"; };
+		121B37771E5C3BB40010EBED /* RRFRebateDetailInfoModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RRFRebateDetailInfoModel.h; sourceTree = "<group>"; };
+		121B37781E5C3BB40010EBED /* RRFRebateDetailInfoModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RRFRebateDetailInfoModel.m; sourceTree = "<group>"; };
+		121B37791E5C3BB40010EBED /* RRFRebateModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RRFRebateModel.h; sourceTree = "<group>"; };
+		121B377A1E5C3BB40010EBED /* RRFRebateModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RRFRebateModel.m; sourceTree = "<group>"; };
+		121B377B1E5C3BB40010EBED /* RRFXTDelegateCellModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RRFXTDelegateCellModel.h; sourceTree = "<group>"; };
+		121B377C1E5C3BB40010EBED /* RRFXTDelegateCellModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RRFXTDelegateCellModel.m; sourceTree = "<group>"; };
+		121B377D1E5C3BB40010EBED /* RRFXTDelegateInfoModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RRFXTDelegateInfoModel.h; sourceTree = "<group>"; };
+		121B377E1E5C3BB40010EBED /* RRFXTDelegateInfoModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RRFXTDelegateInfoModel.m; sourceTree = "<group>"; };
+		121B377F1E5C3BB40010EBED /* RRFXTPlanModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RRFXTPlanModel.h; sourceTree = "<group>"; };
+		121B37801E5C3BB40010EBED /* RRFXTPlanModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RRFXTPlanModel.m; sourceTree = "<group>"; };
+		121B37821E5C3BB40010EBED /* RRFApplyForView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RRFApplyForView.h; sourceTree = "<group>"; };
+		121B37831E5C3BB40010EBED /* RRFApplyForView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RRFApplyForView.m; sourceTree = "<group>"; };
+		121B37861E5C3BB40010EBED /* RRFJoinView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RRFJoinView.h; sourceTree = "<group>"; };
+		121B37871E5C3BB40010EBED /* RRFJoinView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RRFJoinView.m; sourceTree = "<group>"; };
+		121B37881E5C3BB40010EBED /* RRFRebateCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RRFRebateCell.h; sourceTree = "<group>"; };
+		121B37891E5C3BB40010EBED /* RRFRebateCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RRFRebateCell.m; sourceTree = "<group>"; };
+		121B378A1E5C3BB40010EBED /* RRFRebateView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RRFRebateView.h; sourceTree = "<group>"; };
+		121B378B1E5C3BB40010EBED /* RRFRebateView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RRFRebateView.m; sourceTree = "<group>"; };
+		121B378C1E5C3BB40010EBED /* RRFRecruitView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RRFRecruitView.h; sourceTree = "<group>"; };
+		121B378D1E5C3BB40010EBED /* RRFRecruitView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RRFRecruitView.m; sourceTree = "<group>"; };
+		121B378E1E5C3BB40010EBED /* RRFXQPlanView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RRFXQPlanView.h; sourceTree = "<group>"; };
+		121B378F1E5C3BB40010EBED /* RRFXQPlanView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RRFXQPlanView.m; sourceTree = "<group>"; };
+		121B37901E5C3BB40010EBED /* RRFXTDelegateCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RRFXTDelegateCell.h; sourceTree = "<group>"; };
+		121B37911E5C3BB40010EBED /* RRFXTDelegateCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RRFXTDelegateCell.m; sourceTree = "<group>"; };
+		121B37921E5C3BB40010EBED /* RRFXTDelegateView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RRFXTDelegateView.h; sourceTree = "<group>"; };
+		121B37931E5C3BB40010EBED /* RRFXTDelegateView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RRFXTDelegateView.m; sourceTree = "<group>"; };
+=======
 		124E0F511E5C04F70040BDC9 /* JNQAddressController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JNQAddressController.h; sourceTree = "<group>"; };
 		124E0F521E5C04F70040BDC9 /* JNQAddressController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JNQAddressController.m; sourceTree = "<group>"; };
 		124E0F531E5C04F70040BDC9 /* JNQAddressOperateController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JNQAddressOperateController.h; sourceTree = "<group>"; };
@@ -1293,6 +1364,7 @@
 		124E10501E5C04F70040BDC9 /* RRFXTDelegateCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RRFXTDelegateCell.m; sourceTree = "<group>"; };
 		124E10511E5C04F70040BDC9 /* RRFXTDelegateView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RRFXTDelegateView.h; sourceTree = "<group>"; };
 		124E10521E5C04F70040BDC9 /* RRFXTDelegateView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RRFXTDelegateView.m; sourceTree = "<group>"; };
+>>>>>>> f9d118233e72f9ed1031f0562679145a7bfd92e5
 		139105B61AF99BAD00B5F7CC /* RCTSettings.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTSettings.xcodeproj; path = "../node_modules/react-native/Libraries/Settings/RCTSettings.xcodeproj"; sourceTree = "<group>"; };
 		139FDEE61B06529A00C62182 /* RCTWebSocket.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTWebSocket.xcodeproj; path = "../node_modules/react-native/Libraries/WebSocket/RCTWebSocket.xcodeproj"; sourceTree = "<group>"; };
 		13B07F961A680F5B00A75B9A /* Puzzle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Puzzle.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -2630,6 +2702,14 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+<<<<<<< HEAD
+		121B37601E5C3BB40010EBED /* xique */ = {
+			isa = PBXGroup;
+			children = (
+				121B37611E5C3BB40010EBED /* Controller */,
+				121B37741E5C3BB40010EBED /* Model */,
+				121B37811E5C3BB40010EBED /* View */,
+=======
 		124E0F4F1E5C04F70040BDC9 /* Me */ = {
 			isa = PBXGroup;
 			children = (
@@ -2884,10 +2964,32 @@
 				124E10201E5C04F70040BDC9 /* Controller */,
 				124E10331E5C04F70040BDC9 /* Model */,
 				124E10401E5C04F70040BDC9 /* View */,
+>>>>>>> f9d118233e72f9ed1031f0562679145a7bfd92e5
 			);
 			path = xique;
 			sourceTree = "<group>";
 		};
+<<<<<<< HEAD
+		121B37611E5C3BB40010EBED /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				121B37621E5C3BB40010EBED /* RRFApplyForController.h */,
+				121B37631E5C3BB40010EBED /* RRFApplyForController.m */,
+				121B37641E5C3BB40010EBED /* RRFCDelegateController.h */,
+				121B37651E5C3BB40010EBED /* RRFCDelegateController.m */,
+				121B37681E5C3BB40010EBED /* RRFJoinController.h */,
+				121B37691E5C3BB40010EBED /* RRFJoinController.m */,
+				121B376A1E5C3BB40010EBED /* RRFRebateController.h */,
+				121B376B1E5C3BB40010EBED /* RRFRebateController.m */,
+				121B376C1E5C3BB40010EBED /* RRFRecruitController.h */,
+				121B376D1E5C3BB40010EBED /* RRFRecruitController.m */,
+				121B376E1E5C3BB40010EBED /* RRFXTDelegateController.h */,
+				121B376F1E5C3BB40010EBED /* RRFXTDelegateController.m */,
+				121B37701E5C3BB40010EBED /* RRFXTNextDelegateController.h */,
+				121B37711E5C3BB40010EBED /* RRFXTNextDelegateController.m */,
+				121B37721E5C3BB40010EBED /* RRFXTPlanViewController.h */,
+				121B37731E5C3BB40010EBED /* RRFXTPlanViewController.m */,
+=======
 		124E10201E5C04F70040BDC9 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
@@ -2907,10 +3009,28 @@
 				124E10301E5C04F70040BDC9 /* RRFXTNextDelegateController.m */,
 				124E10311E5C04F70040BDC9 /* RRFXTPlanViewController.h */,
 				124E10321E5C04F70040BDC9 /* RRFXTPlanViewController.m */,
+>>>>>>> f9d118233e72f9ed1031f0562679145a7bfd92e5
 			);
 			path = Controller;
 			sourceTree = "<group>";
 		};
+<<<<<<< HEAD
+		121B37741E5C3BB40010EBED /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				121B37751E5C3BB40010EBED /* RRFApplyDelegaterModel.h */,
+				121B37761E5C3BB40010EBED /* RRFApplyDelegaterModel.m */,
+				121B37771E5C3BB40010EBED /* RRFRebateDetailInfoModel.h */,
+				121B37781E5C3BB40010EBED /* RRFRebateDetailInfoModel.m */,
+				121B37791E5C3BB40010EBED /* RRFRebateModel.h */,
+				121B377A1E5C3BB40010EBED /* RRFRebateModel.m */,
+				121B377B1E5C3BB40010EBED /* RRFXTDelegateCellModel.h */,
+				121B377C1E5C3BB40010EBED /* RRFXTDelegateCellModel.m */,
+				121B377D1E5C3BB40010EBED /* RRFXTDelegateInfoModel.h */,
+				121B377E1E5C3BB40010EBED /* RRFXTDelegateInfoModel.m */,
+				121B377F1E5C3BB40010EBED /* RRFXTPlanModel.h */,
+				121B37801E5C3BB40010EBED /* RRFXTPlanModel.m */,
+=======
 		124E10331E5C04F70040BDC9 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -2926,10 +3046,32 @@
 				124E103D1E5C04F70040BDC9 /* RRFXTDelegateInfoModel.m */,
 				124E103E1E5C04F70040BDC9 /* RRFXTPlanModel.h */,
 				124E103F1E5C04F70040BDC9 /* RRFXTPlanModel.m */,
+>>>>>>> f9d118233e72f9ed1031f0562679145a7bfd92e5
 			);
 			path = Model;
 			sourceTree = "<group>";
 		};
+<<<<<<< HEAD
+		121B37811E5C3BB40010EBED /* View */ = {
+			isa = PBXGroup;
+			children = (
+				121B37821E5C3BB40010EBED /* RRFApplyForView.h */,
+				121B37831E5C3BB40010EBED /* RRFApplyForView.m */,
+				121B37861E5C3BB40010EBED /* RRFJoinView.h */,
+				121B37871E5C3BB40010EBED /* RRFJoinView.m */,
+				121B37881E5C3BB40010EBED /* RRFRebateCell.h */,
+				121B37891E5C3BB40010EBED /* RRFRebateCell.m */,
+				121B378A1E5C3BB40010EBED /* RRFRebateView.h */,
+				121B378B1E5C3BB40010EBED /* RRFRebateView.m */,
+				121B378C1E5C3BB40010EBED /* RRFRecruitView.h */,
+				121B378D1E5C3BB40010EBED /* RRFRecruitView.m */,
+				121B378E1E5C3BB40010EBED /* RRFXQPlanView.h */,
+				121B378F1E5C3BB40010EBED /* RRFXQPlanView.m */,
+				121B37901E5C3BB40010EBED /* RRFXTDelegateCell.h */,
+				121B37911E5C3BB40010EBED /* RRFXTDelegateCell.m */,
+				121B37921E5C3BB40010EBED /* RRFXTDelegateView.h */,
+				121B37931E5C3BB40010EBED /* RRFXTDelegateView.m */,
+=======
 		124E10401E5C04F70040BDC9 /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -2949,6 +3091,7 @@
 				124E10501E5C04F70040BDC9 /* RRFXTDelegateCell.m */,
 				124E10511E5C04F70040BDC9 /* RRFXTDelegateView.h */,
 				124E10521E5C04F70040BDC9 /* RRFXTDelegateView.m */,
+>>>>>>> f9d118233e72f9ed1031f0562679145a7bfd92e5
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -3028,6 +3171,10 @@
 				124E0F4F1E5C04F70040BDC9 /* Me */,
 				758652C01E5B0515007D17BE /* Home */,
 				758653321E5B0516007D17BE /* Login */,
+<<<<<<< HEAD
+				7586534D1E5B0516007D17BE /* Me */,
+=======
+>>>>>>> f9d118233e72f9ed1031f0562679145a7bfd92e5
 				758654521E5B0516007D17BE /* PuzzleBar */,
 				758654D41E5B0516007D17BE /* ReactModule */,
 				758654D71E5B0516007D17BE /* RedPaper */,
@@ -4831,6 +4978,259 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+<<<<<<< HEAD
+		7586534D1E5B0516007D17BE /* Me */ = {
+			isa = PBXGroup;
+			children = (
+				121B37601E5C3BB40010EBED /* xique */,
+				7586534E1E5B0516007D17BE /* Controller */,
+				758653911E5B0516007D17BE /* Model */,
+				758653B81E5B0516007D17BE /* Tool */,
+				758653BF1E5B0516007D17BE /* View */,
+			);
+			path = Me;
+			sourceTree = "<group>";
+		};
+		7586534E1E5B0516007D17BE /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				758653711E5B0516007D17BE /* RRFMeController.h */,
+				758653721E5B0516007D17BE /* RRFMeController.m */,
+				758653731E5B0516007D17BE /* RRFMeInfoController.h */,
+				758653741E5B0516007D17BE /* RRFMeInfoController.m */,
+				758653571E5B0516007D17BE /* RRFAboutController.h */,
+				758653581E5B0516007D17BE /* RRFAboutController.m */,
+				758653591E5B0516007D17BE /* RRFAccountController.h */,
+				7586535A1E5B0516007D17BE /* RRFAccountController.m */,
+				7586535B1E5B0516007D17BE /* RRFAssetsController.h */,
+				7586535C1E5B0516007D17BE /* RRFAssetsController.m */,
+				7586535D1E5B0516007D17BE /* RRFattestationController.h */,
+				7586535E1E5B0516007D17BE /* RRFattestationController.m */,
+				7586535F1E5B0516007D17BE /* RRFBettingRecordController.h */,
+				758653601E5B0516007D17BE /* RRFBettingRecordController.m */,
+				758653611E5B0516007D17BE /* RRFBFriendController.h */,
+				758653621E5B0516007D17BE /* RRFBFriendController.m */,
+				758653631E5B0516007D17BE /* RRFBillListController.h */,
+				758653641E5B0516007D17BE /* RRFBillListController.m */,
+				7586537B1E5B0516007D17BE /* RRFMyOrderViewController.h */,
+				7586537C1E5B0516007D17BE /* RRFMyOrderViewController.m */,
+				758653831E5B0516007D17BE /* RRFOrderListController.h */,
+				758653841E5B0516007D17BE /* RRFOrderListController.m */,
+				758653811E5B0516007D17BE /* RRFOrderDetailController.h */,
+				758653821E5B0516007D17BE /* RRFOrderDetailController.m */,
+				7586538D1E5B0516007D17BE /* RRFWiningOrderDetailController.h */,
+				7586538E1E5B0516007D17BE /* RRFWiningOrderDetailController.m */,
+				7586538F1E5B0516007D17BE /* RRFWiningOrderListController.h */,
+				758653901E5B0516007D17BE /* RRFWiningOrderListController.m */,
+				758653651E5B0516007D17BE /* RRFChooseSexController.h */,
+				758653661E5B0516007D17BE /* RRFChooseSexController.m */,
+				758653671E5B0516007D17BE /* RRFDetailInfoController.h */,
+				758653681E5B0516007D17BE /* RRFDetailInfoController.m */,
+				758653691E5B0516007D17BE /* RRFExceptionalListController.h */,
+				7586536A1E5B0516007D17BE /* RRFExceptionalListController.m */,
+				7586536B1E5B0516007D17BE /* RRFFattestationWorkInfoControlle.h */,
+				7586536C1E5B0516007D17BE /* RRFFattestationWorkInfoControlle.m */,
+				7586536D1E5B0516007D17BE /* RRFGeneralController.h */,
+				7586536E1E5B0516007D17BE /* RRFGeneralController.m */,
+				7586536F1E5B0516007D17BE /* RRFInviteViewController.h */,
+				758653701E5B0516007D17BE /* RRFInviteViewController.m */,
+				758653751E5B0516007D17BE /* RRFModifyNameController.h */,
+				758653761E5B0516007D17BE /* RRFModifyNameController.m */,
+				758653771E5B0516007D17BE /* RRFModifyPwdController.h */,
+				758653781E5B0516007D17BE /* RRFModifyPwdController.m */,
+				758653791E5B0516007D17BE /* RRFMyFriendController.h */,
+				7586537A1E5B0516007D17BE /* RRFMyFriendController.m */,
+				7586537D1E5B0516007D17BE /* RRFNoticeListController.h */,
+				7586537E1E5B0516007D17BE /* RRFNoticeListController.m */,
+				7586537F1E5B0516007D17BE /* RRFOrderCommentsController.h */,
+				758653801E5B0516007D17BE /* RRFOrderCommentsController.m */,
+				758653851E5B0516007D17BE /* RRFPersonalHomePageController.h */,
+				758653861E5B0516007D17BE /* RRFPersonalHomePageController.m */,
+				758653871E5B0516007D17BE /* RRFPrizeController.h */,
+				758653881E5B0516007D17BE /* RRFPrizeController.m */,
+				758653891E5B0516007D17BE /* RRFSettingController.h */,
+				7586538A1E5B0516007D17BE /* RRFSettingController.m */,
+				7586538B1E5B0516007D17BE /* RRFSignatureController.h */,
+				7586538C1E5B0516007D17BE /* RRFSignatureController.m */,
+				7586534F1E5B0516007D17BE /* JNQAddressController.h */,
+				758653501E5B0516007D17BE /* JNQAddressController.m */,
+				758653511E5B0516007D17BE /* JNQAddressOperateController.h */,
+				758653521E5B0516007D17BE /* JNQAddressOperateController.m */,
+				758653531E5B0516007D17BE /* JNQSelectedDistrictController.h */,
+				758653541E5B0516007D17BE /* JNQSelectedDistrictController.m */,
+				758653551E5B0516007D17BE /* JNQShoppingCartViewController.h */,
+				758653561E5B0516007D17BE /* JNQShoppingCartViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		758653911E5B0516007D17BE /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				758653921E5B0516007D17BE /* JNQAddressModel.h */,
+				758653931E5B0516007D17BE /* JNQAddressModel.m */,
+				758653941E5B0516007D17BE /* JNQProvinceCityModel.h */,
+				758653951E5B0516007D17BE /* JNQProvinceCityModel.m */,
+				758653961E5B0516007D17BE /* RRFAddressListModel.h */,
+				758653971E5B0516007D17BE /* RRFAddressListModel.m */,
+				758653981E5B0516007D17BE /* RRFAddressModel.h */,
+				758653991E5B0516007D17BE /* RRFAddressModel.m */,
+				7586539A1E5B0516007D17BE /* RRFBettingStatisticalModel.h */,
+				7586539B1E5B0516007D17BE /* RRFBettingStatisticalModel.m */,
+				7586539C1E5B0516007D17BE /* RRFBillCellModel.h */,
+				7586539D1E5B0516007D17BE /* RRFBillCellModel.m */,
+				7586539E1E5B0516007D17BE /* RRFBillListSectionModel.h */,
+				7586539F1E5B0516007D17BE /* RRFBillListSectionModel.m */,
+				758653A01E5B0516007D17BE /* RRFDetailInfoModel.h */,
+				758653A11E5B0516007D17BE /* RRFDetailInfoModel.m */,
+				758653A21E5B0516007D17BE /* RRFDrawModel.h */,
+				758653A31E5B0516007D17BE /* RRFDrawModel.m */,
+				758653A41E5B0516007D17BE /* RRFFattestationModel.h */,
+				758653A51E5B0516007D17BE /* RRFFattestationModel.m */,
+				758653A61E5B0516007D17BE /* RRFMyOrderModel.h */,
+				758653A71E5B0516007D17BE /* RRFMyOrderModel.m */,
+				758653A81E5B0516007D17BE /* RRFNoticeModel.h */,
+				758653A91E5B0516007D17BE /* RRFNoticeModel.m */,
+				758653AA1E5B0516007D17BE /* RRFOrderListModel.h */,
+				758653AB1E5B0516007D17BE /* RRFOrderListModel.m */,
+				758653AC1E5B0516007D17BE /* RRFPraiseListModel.h */,
+				758653AD1E5B0516007D17BE /* RRFPraiseListModel.m */,
+				758653AE1E5B0516007D17BE /* RRFPrizeInfoModel.h */,
+				758653AF1E5B0516007D17BE /* RRFPrizeInfoModel.m */,
+				758653B01E5B0516007D17BE /* RRFProductModel.h */,
+				758653B11E5B0516007D17BE /* RRFProductModel.m */,
+				758653B21E5B0516007D17BE /* RRFQuestionBarMsgModel.h */,
+				758653B31E5B0516007D17BE /* RRFQuestionBarMsgModel.m */,
+				758653B41E5B0516007D17BE /* RRFWiningOrderDetailModel.h */,
+				758653B51E5B0516007D17BE /* RRFWiningOrderDetailModel.m */,
+				758653B61E5B0516007D17BE /* RRFWiningOrderModel.h */,
+				758653B71E5B0516007D17BE /* RRFWiningOrderModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		758653B81E5B0516007D17BE /* Tool */ = {
+			isa = PBXGroup;
+			children = (
+				758653B91E5B0516007D17BE /* RRFCacheManager.h */,
+				758653BA1E5B0516007D17BE /* RRFCacheManager.m */,
+				758653BB1E5B0516007D17BE /* RRFMeTool.h */,
+				758653BC1E5B0516007D17BE /* RRFMeTool.m */,
+				758653BD1E5B0516007D17BE /* RRFPlanTool.h */,
+				758653BE1E5B0516007D17BE /* RRFPlanTool.m */,
+			);
+			path = Tool;
+			sourceTree = "<group>";
+		};
+		758653BF1E5B0516007D17BE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				758653C01E5B0516007D17BE /* JNQAddrCell.h */,
+				758653C11E5B0516007D17BE /* JNQAddrCell.m */,
+				758653C21E5B0516007D17BE /* JNQAddressOperateView.h */,
+				758653C31E5B0516007D17BE /* JNQAddressOperateView.m */,
+				758653C41E5B0516007D17BE /* JNQAddrView.h */,
+				758653C51E5B0516007D17BE /* JNQAddrView.m */,
+				758653C61E5B0516007D17BE /* JNQCountOperateView.h */,
+				758653C71E5B0516007D17BE /* JNQCountOperateView.m */,
+				758653C81E5B0516007D17BE /* JNQProcitiesView.h */,
+				758653C91E5B0516007D17BE /* JNQProcitiesView.m */,
+				758653CA1E5B0516007D17BE /* JNQShoppingCartCell.h */,
+				758653CB1E5B0516007D17BE /* JNQShoppingCartCell.m */,
+				758653CC1E5B0516007D17BE /* JNQShoppingCartView.h */,
+				758653CD1E5B0516007D17BE /* JNQShoppingCartView.m */,
+				758653CE1E5B0516007D17BE /* JNQXTBExchangeView.h */,
+				758653CF1E5B0516007D17BE /* JNQXTBExchangeView.m */,
+				758653D01E5B0516007D17BE /* PZChooseAddrCell.h */,
+				758653D11E5B0516007D17BE /* PZChooseAddrCell.m */,
+				758653D21E5B0516007D17BE /* RRFAssetButton.h */,
+				758653D31E5B0516007D17BE /* RRFAssetButton.m */,
+				758653D41E5B0516007D17BE /* RRFAssetsView.h */,
+				758653D51E5B0516007D17BE /* RRFAssetsView.m */,
+				758653D61E5B0516007D17BE /* RRFattestationView.h */,
+				758653D71E5B0516007D17BE /* RRFattestationView.m */,
+				758653D81E5B0516007D17BE /* RRFBettingCell.h */,
+				758653D91E5B0516007D17BE /* RRFBettingCell.m */,
+				758653DA1E5B0516007D17BE /* RRFBettingLabel.h */,
+				758653DB1E5B0516007D17BE /* RRFBettingLabel.m */,
+				758653DC1E5B0516007D17BE /* RRFBillBtn.h */,
+				758653DD1E5B0516007D17BE /* RRFBillBtn.m */,
+				758653DE1E5B0516007D17BE /* RRFBillDetailView.h */,
+				758653DF1E5B0516007D17BE /* RRFBillDetailView.m */,
+				758653E01E5B0516007D17BE /* RRFBillListCell.h */,
+				758653E11E5B0516007D17BE /* RRFBillListCell.m */,
+				758653E21E5B0516007D17BE /* RRFBillListView.h */,
+				758653E31E5B0516007D17BE /* RRFBillListView.m */,
+				758653E41E5B0516007D17BE /* RRFDetailInfoHeadView.h */,
+				758653E51E5B0516007D17BE /* RRFDetailInfoHeadView.m */,
+				758653E61E5B0516007D17BE /* RRFExceptionalListCell.h */,
+				758653E71E5B0516007D17BE /* RRFExceptionalListCell.m */,
+				758653E81E5B0516007D17BE /* RRFExchangeView.h */,
+				758653E91E5B0516007D17BE /* RRFExchangeView.m */,
+				758653EA1E5B0516007D17BE /* RRFFattestationWorkInfoView.h */,
+				758653EB1E5B0516007D17BE /* RRFFattestationWorkInfoView.m */,
+				758653EC1E5B0516007D17BE /* RRFInviteView.h */,
+				758653ED1E5B0516007D17BE /* RRFInviteView.m */,
+				758653EE1E5B0516007D17BE /* RRFMeInfoHeadView.h */,
+				758653EF1E5B0516007D17BE /* RRFMeInfoHeadView.m */,
+				758653F01E5B0516007D17BE /* RRFMeView.h */,
+				758653F11E5B0516007D17BE /* RRFMeView.m */,
+				758653F21E5B0516007D17BE /* RRFModifyNameView.h */,
+				758653F31E5B0516007D17BE /* RRFModifyNameView.m */,
+				758653F41E5B0516007D17BE /* RRFMyFriendCell.h */,
+				758653F51E5B0516007D17BE /* RRFMyFriendCell.m */,
+				758653F61E5B0516007D17BE /* RRFMyFriendHeadView.h */,
+				758653F71E5B0516007D17BE /* RRFMyFriendHeadView.m */,
+				758653F81E5B0516007D17BE /* RRFMyOrderView.h */,
+				758653F91E5B0516007D17BE /* RRFMyOrderView.m */,
+				758653FA1E5B0516007D17BE /* RRFNoLoginMyInfoView.h */,
+				758653FB1E5B0516007D17BE /* RRFNoLoginMyInfoView.m */,
+				758653FC1E5B0516007D17BE /* RRFNoticeCell.h */,
+				758653FD1E5B0516007D17BE /* RRFNoticeCell.m */,
+				758653FE1E5B0516007D17BE /* RRFOrderCommentsHeadView.h */,
+				758653FF1E5B0516007D17BE /* RRFOrderCommentsHeadView.m */,
+				758654001E5B0516007D17BE /* RRFOrderDetailView.h */,
+				758654011E5B0516007D17BE /* RRFOrderDetailView.m */,
+				758654021E5B0516007D17BE /* RRFOrderListCell.h */,
+				758654031E5B0516007D17BE /* RRFOrderListCell.m */,
+				758654041E5B0516007D17BE /* RRFOrderListView.h */,
+				758654051E5B0516007D17BE /* RRFOrderListView.m */,
+				758654061E5B0516007D17BE /* RRFPersonalHomePageCell.h */,
+				758654071E5B0516007D17BE /* RRFPersonalHomePageCell.m */,
+				758654081E5B0516007D17BE /* RRFPersonalHomePageView.h */,
+				758654091E5B0516007D17BE /* RRFPersonalHomePageView.m */,
+				7586540A1E5B0516007D17BE /* RRFPrizeView.h */,
+				7586540B1E5B0516007D17BE /* RRFPrizeView.m */,
+				7586540C1E5B0516007D17BE /* RRFRecordView.h */,
+				7586540D1E5B0516007D17BE /* RRFRecordView.m */,
+				7586540E1E5B0516007D17BE /* RRFSettingDefaultView.h */,
+				7586540F1E5B0516007D17BE /* RRFSettingDefaultView.m */,
+				758654101E5B0516007D17BE /* RRFSettingView.h */,
+				758654111E5B0516007D17BE /* RRFSettingView.m */,
+				758654121E5B0516007D17BE /* RRFSignatureView.h */,
+				758654131E5B0516007D17BE /* RRFSignatureView.m */,
+				758654141E5B0516007D17BE /* RRFStar.h */,
+				758654151E5B0516007D17BE /* RRFStar.m */,
+				758654161E5B0516007D17BE /* RRFWillCommentPanel.h */,
+				758654171E5B0516007D17BE /* RRFWillCommentPanel.m */,
+				758654181E5B0516007D17BE /* RRFWiningOrderDetailView.h */,
+				758654191E5B0516007D17BE /* RRFWiningOrderDetailView.m */,
+				7586541A1E5B0516007D17BE /* RRFWiningOrderListCell.h */,
+				7586541B1E5B0516007D17BE /* RRFWiningOrderListCell.m */,
+				7586541C1E5B0516007D17BE /* xique */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		7586541C1E5B0516007D17BE /* xique */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = xique;
+			sourceTree = "<group>";
+		};
+=======
+>>>>>>> f9d118233e72f9ed1031f0562679145a7bfd92e5
 		758654521E5B0516007D17BE /* PuzzleBar */ = {
 			isa = PBXGroup;
 			children = (
@@ -5286,6 +5686,10 @@
 					};
 					13B07F861A680F5B00A75B9A = {
 						DevelopmentTeam = VYW4NN9SFF;
+<<<<<<< HEAD
+						ProvisioningStyle = Automatic;
+=======
+>>>>>>> f9d118233e72f9ed1031f0562679145a7bfd92e5
 					};
 				};
 			};
@@ -5884,6 +6288,7 @@
 				124E10CF1E5C04F80040BDC9 /* RRFXTDelegateView.m in Sources */,
 				758655131E5B0516007D17BE /* JCHATLoadMessageTableViewCell.m in Sources */,
 				758657301E5B0519007D17BE /* RRFHomeHeaderView.m in Sources */,
+				121B37AB1E5C3BB50010EBED /* RRFXTDelegateView.m in Sources */,
 				758656701E5B0518007D17BE /* JNQPageViewController.m in Sources */,
 				124E109B1E5C04F80040BDC9 /* RRFBillListView.m in Sources */,
 				758657DE1E5B051A007D17BE /* ZFModalTransitionAnimator.m in Sources */,
@@ -5896,6 +6301,7 @@
 				758657351E5B0519007D17BE /* RRFResetPwdController.m in Sources */,
 				124E109E1E5C04F80040BDC9 /* RRFExchangeView.m in Sources */,
 				758656DB1E5B0518007D17BE /* JNQXTBExchangeModel.m in Sources */,
+				121B37951E5C3BB40010EBED /* RRFCDelegateController.m in Sources */,
 				758657CC1E5B051A007D17BE /* NSString+Additions.m in Sources */,
 				758657DB1E5B051A007D17BE /* NewsHttpTool.m in Sources */,
 				758657BE1E5B051A007D17BE /* RRFFocusController.m in Sources */,
@@ -5908,6 +6314,7 @@
 				124E10701E5C04F70040BDC9 /* RRFSettingController.m in Sources */,
 				758657FA1E5B051A007D17BE /* JNQRedPaperCell.m in Sources */,
 				758656451E5B0518007D17BE /* XTChatUtil.m in Sources */,
+				121B37981E5C3BB40010EBED /* RRFRebateController.m in Sources */,
 				758657D51E5B051A007D17BE /* DDSortCell.m in Sources */,
 				758654F91E5B0516007D17BE /* JCHATTimeOutManager.m in Sources */,
 				758656E11E5B0519007D17BE /* JNQHttpTool.m in Sources */,
@@ -5934,6 +6341,11 @@
 				124E10BB1E5C04F80040BDC9 /* RRFJoinController.m in Sources */,
 				758656771E5B0518007D17BE /* JNQRankViewController.m in Sources */,
 				758656DD1E5B0518007D17BE /* RRFFriendCircleModel.m in Sources */,
+<<<<<<< HEAD
+				121B37971E5C3BB40010EBED /* RRFJoinController.m in Sources */,
+				758657871E5B0519007D17BE /* RRFExceptionalListCell.m in Sources */,
+=======
+>>>>>>> f9d118233e72f9ed1031f0562679145a7bfd92e5
 				758657F61E5B051A007D17BE /* RedPaperSeleController.m in Sources */,
 				758656531E5B0518007D17BE /* PZVerticalButton.m in Sources */,
 				7586566D1E5B0518007D17BE /* JNQFriendsCircleViewController.m in Sources */,
@@ -5951,6 +6363,7 @@
 				124E105C1E5C04F70040BDC9 /* RRFBFriendController.m in Sources */,
 				758657021E5B0519007D17BE /* HomePostCommentController.m in Sources */,
 				758656BE1E5B0518007D17BE /* FreeBuyCell.m in Sources */,
+				121B379D1E5C3BB40010EBED /* RRFApplyDelegaterModel.m in Sources */,
 				758656671E5B0518007D17BE /* JNQDiamondPayConfirmViewController.m in Sources */,
 				7586573C1E5B0519007D17BE /* RRFResetPwdView.m in Sources */,
 				124E109A1E5C04F80040BDC9 /* RRFBillListCell.m in Sources */,
@@ -5975,6 +6388,7 @@
 				758656741E5B0518007D17BE /* JNQPresentClassifyViewController.m in Sources */,
 				124E10C51E5C04F80040BDC9 /* RRFXTDelegateInfoModel.m in Sources */,
 				758657FE1E5B051A007D17BE /* RedPaperInputCell.m in Sources */,
+				121B37A11E5C3BB40010EBED /* RRFXTDelegateInfoModel.m in Sources */,
 				758657071E5B0519007D17BE /* colorModel.m in Sources */,
 				758656D21E5B0518007D17BE /* JNQPresentModel.m in Sources */,
 				124E108E1E5C04F80040BDC9 /* JNQProcitiesView.m in Sources */,
@@ -5993,6 +6407,11 @@
 				7586570A1E5B0519007D17BE /* getData.m in Sources */,
 				124E10861E5C04F80040BDC9 /* RRFWiningOrderModel.m in Sources */,
 				758657EE1E5B051A007D17BE /* RRFPuzzleBarView.m in Sources */,
+<<<<<<< HEAD
+				121B379E1E5C3BB40010EBED /* RRFRebateDetailInfoModel.m in Sources */,
+				758657541E5B0519007D17BE /* RRFNoticeListController.m in Sources */,
+=======
+>>>>>>> f9d118233e72f9ed1031f0562679145a7bfd92e5
 				758656DA1E5B0518007D17BE /* JNQVIPModel.m in Sources */,
 				758655661E5B0517007D17BE /* MJPhotoView.m in Sources */,
 				758656D91E5B0518007D17BE /* JNQVIPExchangeModel.m in Sources */,
@@ -6026,8 +6445,12 @@
 				124E10CB1E5C04F80040BDC9 /* RRFRebateView.m in Sources */,
 				124E10AD1E5C04F80040BDC9 /* RRFPersonalHomePageCell.m in Sources */,
 				758657191E5B0519007D17BE /* PZContact.m in Sources */,
+<<<<<<< HEAD
+				121B37A71E5C3BB40010EBED /* RRFRebateView.m in Sources */,
+=======
 				124E10881E5C04F80040BDC9 /* RRFMeTool.m in Sources */,
 				124E10811E5C04F70040BDC9 /* RRFPraiseListModel.m in Sources */,
+>>>>>>> f9d118233e72f9ed1031f0562679145a7bfd92e5
 				758657141E5B0519007D17BE /* GameModel.m in Sources */,
 				7586572C1E5B0519007D17BE /* HomeWenBarCell.m in Sources */,
 				124E10B11E5C04F80040BDC9 /* RRFSettingDefaultView.m in Sources */,
@@ -6071,7 +6494,11 @@
 				7586567C1E5B0518007D17BE /* RRFDynamicController.m in Sources */,
 				758656A91E5B0518007D17BE /* PurchaseGameActivity.m in Sources */,
 				758656A51E5B0518007D17BE /* FBShareOrderListModel.m in Sources */,
+<<<<<<< HEAD
+				121B37941E5C3BB40010EBED /* RRFApplyForController.m in Sources */,
+=======
 				124E105B1E5C04F70040BDC9 /* RRFBettingRecordController.m in Sources */,
+>>>>>>> f9d118233e72f9ed1031f0562679145a7bfd92e5
 				7586571B1E5B0519007D17BE /* StockDetailModel.m in Sources */,
 				124E10A81E5C04F80040BDC9 /* RRFNoticeCell.m in Sources */,
 				758656041E5B0517007D17BE /* ViewUtil.m in Sources */,
@@ -6100,7 +6527,12 @@
 				758656071E5B0517007D17BE /* NSString+TimeConvert.m in Sources */,
 				758655401E5B0517007D17BE /* JCHATSetting_Cell.m in Sources */,
 				758657EA1E5B051A007D17BE /* RRFCustomNumBtn.m in Sources */,
+<<<<<<< HEAD
+				121B37A51E5C3BB40010EBED /* RRFJoinView.m in Sources */,
+				758657701E5B0519007D17BE /* RRFWiningOrderModel.m in Sources */,
+=======
 				124E10C91E5C04F80040BDC9 /* RRFJoinView.m in Sources */,
+>>>>>>> f9d118233e72f9ed1031f0562679145a7bfd92e5
 				758656481E5B0518007D17BE /* HBLoadingView.m in Sources */,
 				758656201E5B0518007D17BE /* MD5DataSigner.m in Sources */,
 				124E10761E5C04F70040BDC9 /* RRFAddressListModel.m in Sources */,
@@ -6148,8 +6580,13 @@
 				124E10BF1E5C04F80040BDC9 /* RRFXTNextDelegateController.m in Sources */,
 				124E10591E5C04F70040BDC9 /* RRFAssetsController.m in Sources */,
 				758656491E5B0518007D17BE /* InsetsLabel.m in Sources */,
+<<<<<<< HEAD
+				121B379F1E5C3BB40010EBED /* RRFRebateModel.m in Sources */,
+				121B379B1E5C3BB40010EBED /* RRFXTNextDelegateController.m in Sources */,
+=======
 				124E10A91E5C04F80040BDC9 /* RRFOrderCommentsHeadView.m in Sources */,
 				124E10531E5C04F70040BDC9 /* JNQAddressController.m in Sources */,
+>>>>>>> f9d118233e72f9ed1031f0562679145a7bfd92e5
 				758657D41E5B051A007D17BE /* BonusPaperSortPanel.m in Sources */,
 				758657C21E5B051A007D17BE /* RRFRewardController.m in Sources */,
 				758656B61E5B0518007D17BE /* RRFReceiveView.m in Sources */,
@@ -6249,6 +6686,7 @@
 				124E10CC1E5C04F80040BDC9 /* RRFRecruitView.m in Sources */,
 				124E10AC1E5C04F80040BDC9 /* RRFOrderListView.m in Sources */,
 				758657BA1E5B051A007D17BE /* PZBarContainerController.m in Sources */,
+				121B37A81E5C3BB40010EBED /* RRFRecruitView.m in Sources */,
 				758656361E5B0518007D17BE /* STEmojiCollectionView.m in Sources */,
 				758656441E5B0518007D17BE /* Singleton.m in Sources */,
 				7586569B1E5B0518007D17BE /* JNQCalculateDetailViewController.m in Sources */,
@@ -6273,6 +6711,7 @@
 				758656B81E5B0518007D17BE /* FBTool.m in Sources */,
 				124E10C61E5C04F80040BDC9 /* RRFXTPlanModel.m in Sources */,
 				7586552A1E5B0517007D17BE /* JCHATMoreView.m in Sources */,
+				121B37A21E5C3BB40010EBED /* RRFXTPlanModel.m in Sources */,
 				758656601E5B0518007D17BE /* VerifyFriendCell.m in Sources */,
 				124E108A1E5C04F80040BDC9 /* JNQAddrCell.m in Sources */,
 				758656BD1E5B0518007D17BE /* FBSharePanel.m in Sources */,
@@ -6288,6 +6727,11 @@
 				124E10CD1E5C04F80040BDC9 /* RRFXQPlanView.m in Sources */,
 				124E10641E5C04F70040BDC9 /* RRFMeController.m in Sources */,
 				7586561E1E5B0518007D17BE /* DataSigner.m in Sources */,
+<<<<<<< HEAD
+				121B37A91E5C3BB40010EBED /* RRFXQPlanView.m in Sources */,
+				7586579A1E5B0519007D17BE /* RRFRecordView.m in Sources */,
+=======
+>>>>>>> f9d118233e72f9ed1031f0562679145a7bfd92e5
 				758656CC1E5B0518007D17BE /* JNQConfirmOrderModel.m in Sources */,
 				758656AB1E5B0518007D17BE /* RRFFreeBuyOrderViewController.m in Sources */,
 				758657F91E5B051A007D17BE /* BonusPaperTool.m in Sources */,
@@ -6312,6 +6756,7 @@
 				124E109F1E5C04F80040BDC9 /* RRFFattestationWorkInfoView.m in Sources */,
 				758656EC1E5B0519007D17BE /* JNQFreCircleRankCell.m in Sources */,
 				758655111E5B0516007D17BE /* JCHATGroupSettingCell.m in Sources */,
+				121B37A01E5C3BB40010EBED /* RRFXTDelegateCellModel.m in Sources */,
 				758657261E5B0519007D17BE /* HomeHeadView.m in Sources */,
 				758655341E5B0517007D17BE /* JCHATContactsViewController.m in Sources */,
 				7586555C1E5B0517007D17BE /* ThumbImageCollectionViewCell.m in Sources */,
@@ -6325,22 +6770,31 @@
 				7586568E1E5B0518007D17BE /* FortuneStar.m in Sources */,
 				124E109C1E5C04F80040BDC9 /* RRFDetailInfoHeadView.m in Sources */,
 				758657F31E5B051A007D17BE /* XTBExchangeResultView.m in Sources */,
+<<<<<<< HEAD
+				121B379C1E5C3BB40010EBED /* RRFXTPlanViewController.m in Sources */,
+=======
 				124E10C01E5C04F80040BDC9 /* RRFXTPlanViewController.m in Sources */,
+>>>>>>> f9d118233e72f9ed1031f0562679145a7bfd92e5
 				758656F41E5B0519007D17BE /* JNQPresentClassifyCell.m in Sources */,
 				758656681E5B0518007D17BE /* JNQDiamondViewController.m in Sources */,
 				758656A31E5B0518007D17BE /* FBProductListModel.m in Sources */,
 				7586564E1E5B0518007D17BE /* PZShoppingCartPlusMinusView.m in Sources */,
 				758655601E5B0517007D17BE /* MJPhoto.m in Sources */,
 				758656861E5B0518007D17BE /* LunarSolarTransform.m in Sources */,
+				121B37AA1E5C3BB40010EBED /* RRFXTDelegateCell.m in Sources */,
 				758656CE1E5B0518007D17BE /* JNQDiamondModel.m in Sources */,
 				124E10CE1E5C04F80040BDC9 /* RRFXTDelegateCell.m in Sources */,
 				124E10661E5C04F70040BDC9 /* RRFModifyNameController.m in Sources */,
 				758657121E5B0519007D17BE /* EChatTitle.m in Sources */,
 				758657031E5B0519007D17BE /* RankDetailController.m in Sources */,
 				7586572D1E5B0519007D17BE /* PayPasswordPanel.m in Sources */,
+<<<<<<< HEAD
+				121B37991E5C3BB40010EBED /* RRFRecruitController.m in Sources */,
+=======
 				124E10BD1E5C04F80040BDC9 /* RRFRecruitController.m in Sources */,
 				124E10A71E5C04F80040BDC9 /* RRFNoLoginMyInfoView.m in Sources */,
 				124E10891E5C04F80040BDC9 /* RRFPlanTool.m in Sources */,
+>>>>>>> f9d118233e72f9ed1031f0562679145a7bfd92e5
 				758656211E5B0518007D17BE /* NSDataEx.m in Sources */,
 				7586571D1E5B0519007D17BE /* HomeTool.m in Sources */,
 				7586564D1E5B0518007D17BE /* PZMenuView.m in Sources */,
@@ -6380,11 +6834,20 @@
 				124E10CA1E5C04F80040BDC9 /* RRFRebateCell.m in Sources */,
 				7586553C1E5B0517007D17BE /* JCHATMsgAlertStateTableViewCell.m in Sources */,
 				758656F11E5B0519007D17BE /* JNQPayView.m in Sources */,
+<<<<<<< HEAD
+				121B37A61E5C3BB40010EBED /* RRFRebateCell.m in Sources */,
+=======
 				124E106D1E5C04F70040BDC9 /* RRFOrderListController.m in Sources */,
 				124E107F1E5C04F70040BDC9 /* RRFNoticeModel.m in Sources */,
 				124E10BE1E5C04F80040BDC9 /* RRFXTDelegateController.m in Sources */,
+>>>>>>> f9d118233e72f9ed1031f0562679145a7bfd92e5
 				758655071E5B0516007D17BE /* JCHATChatModel.m in Sources */,
 				758656521E5B0518007D17BE /* PZTitleInputView.m in Sources */,
+<<<<<<< HEAD
+				7586576A1E5B0519007D17BE /* RRFOrderListModel.m in Sources */,
+				121B379A1E5C3BB40010EBED /* RRFXTDelegateController.m in Sources */,
+=======
+>>>>>>> f9d118233e72f9ed1031f0562679145a7bfd92e5
 				758657EF1E5B051A007D17BE /* RRFRedPaperView.m in Sources */,
 				758656611E5B0518007D17BE /* FriendCircleContainerController.m in Sources */,
 				758655651E5B0517007D17BE /* MJPhotoToolbar.m in Sources */,
@@ -6413,7 +6876,11 @@
 				758656901E5B0518007D17BE /* FPPopoverController.m in Sources */,
 				7586572A1E5B0519007D17BE /* HomeScrollRecentBet.m in Sources */,
 				758656D51E5B0518007D17BE /* JNQProductExchangeModel.m in Sources */,
+<<<<<<< HEAD
+				121B37A31E5C3BB40010EBED /* RRFApplyForView.m in Sources */,
+=======
 				124E10C71E5C04F80040BDC9 /* RRFApplyForView.m in Sources */,
+>>>>>>> f9d118233e72f9ed1031f0562679145a7bfd92e5
 				7586554D1E5B0517007D17BE /* JCHATPhotoSelectViewController.m in Sources */,
 				758657221E5B0519007D17BE /* CompositeIndexPanel.m in Sources */,
 				758657F01E5B051A007D17BE /* RRFResplyToResplyCell.m in Sources */,
@@ -6485,11 +6952,18 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+<<<<<<< HEAD
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = NO;
+				DEVELOPMENT_TEAM = VYW4NN9SFF;
+=======
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CURRENT_PROJECT_VERSION = 1;
 				DEAD_CODE_STRIPPING = NO;
 				DEVELOPMENT_TEAM = VYW4NN9SFF;
 				ENABLE_BITCODE = NO;
+>>>>>>> f9d118233e72f9ed1031f0562679145a7bfd92e5
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Module/Common/Lib/jpush",
@@ -6529,8 +7003,13 @@
 					"$(PROJECT_DIR)/Module/Common/Lib/pay/AliPay",
 				);
 				INFOPLIST_FILE = Puzzle/Info.plist;
+<<<<<<< HEAD
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+=======
 				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
+>>>>>>> f9d118233e72f9ed1031f0562679145a7bfd92e5
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Module/Common/Lib/pay/AliPay",
@@ -6555,10 +7034,16 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+<<<<<<< HEAD
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = VYW4NN9SFF;
+=======
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = VYW4NN9SFF;
 				ENABLE_BITCODE = NO;
+>>>>>>> f9d118233e72f9ed1031f0562679145a7bfd92e5
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Module/Common/Lib/jpush",
@@ -6598,8 +7083,13 @@
 					"$(PROJECT_DIR)/Module/Common/Lib/pay/AliPay",
 				);
 				INFOPLIST_FILE = Puzzle/Info.plist;
+<<<<<<< HEAD
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+=======
 				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
+>>>>>>> f9d118233e72f9ed1031f0562679145a7bfd92e5
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Module/Common/Lib/pay/AliPay",
@@ -6656,8 +7146,12 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+<<<<<<< HEAD
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+=======
 				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+>>>>>>> f9d118233e72f9ed1031f0562679145a7bfd92e5
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -6695,8 +7189,12 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+<<<<<<< HEAD
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+=======
 				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+>>>>>>> f9d118233e72f9ed1031f0562679145a7bfd92e5
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;

@@ -97,7 +97,14 @@ class SendComment extends Component {
         })
     }
 
+<<<<<<< HEAD
     _addPicture(images) {
+=======
+<<<<<<< HEAD
+=======
+    _addPicture(images){
+        alert('images')
+>>>>>>> fbca9c3ef1dbffe354de606b708236a34f29efae
         var pics = this.state.pictures
         this.setState({
             pictures: [...images, ...pics]
@@ -105,7 +112,12 @@ class SendComment extends Component {
         this.store.dispatch(actionCreators.setImages(this.state.pictures))
     }
 
+<<<<<<< HEAD
     _getPictures() {
+=======
+>>>>>>> f9d118233e72f9ed1031f0562679145a7bfd92e5
+    _getPictures(){
+>>>>>>> fbca9c3ef1dbffe354de606b708236a34f29efae
         var pics = this.state.pictures
         var picViews = pics.map((pic, index) => {
             return <Image source={{uri:pic.path}}
