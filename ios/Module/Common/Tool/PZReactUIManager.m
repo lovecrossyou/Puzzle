@@ -8,7 +8,7 @@
 
 #import "PZReactUIManager.h"
 #import <React/RCTRootView.h>
-//#import <CodePush/CodePush.h>
+#import <CodePush/CodePush.h>
 
 @implementation PZReactUIManager
 

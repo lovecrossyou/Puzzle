@@ -19,6 +19,10 @@
 #import "RRFMeTool.h"
 #import "PZParamTool.h"
 #import "CommonTableViewCell.h"
+<<<<<<< HEAD
+=======
+#import "RRFApplyForController.h"
+>>>>>>> f9d118233e72f9ed1031f0562679145a7bfd92e5
 #import "RRFPersonalHomePageController.h"
 #import "RRFNoticeListController.h"
 #import "RRFNoLoginMyInfoView.h"
@@ -28,8 +32,11 @@
 #import "HomeTool.h"
 #import "RRFMyOrderViewController.h"
 #import "RRFXTPlanViewController.h"
+<<<<<<< HEAD
 #import "RRFApplyForController.h"
 
+=======
+>>>>>>> f9d118233e72f9ed1031f0562679145a7bfd92e5
 
 @interface RRFMeController ()<UITableViewDelegate,UITableViewDataSource>
 {
@@ -176,7 +183,10 @@
         NSString *str = json;
         NSString *title = @"喜鹊计划";
         if ([str isEqualToString:@"already_apply"]) {
+<<<<<<< HEAD
           
+=======
+>>>>>>> f9d118233e72f9ed1031f0562679145a7bfd92e5
             RRFXTPlanViewController *desc = [[RRFXTPlanViewController alloc]init];
             desc.title = title;
             [self.navigationController pushViewController:desc animated:YES];

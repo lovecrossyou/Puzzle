@@ -14,7 +14,8 @@ import {
     ScrollView,
     TouchableOpacity,
     PixelRatio,
-    NavigatorIOS
+    NavigatorIOS,
+    Image
 } from 'react-native';
 import Toast, {DURATION} from 'react-native-easy-toast'
 import ImagePicker from 'react-native-image-crop-picker';
@@ -32,6 +33,7 @@ const MIN_COMPOSER_HEIGHT = 60
 
 class KeyboardTool extends Component {
     render() {
+        var sendAction = this.props.sendAction
         return <View
             style={{backgroundColor:'#f7f7f8',height:MIN_COMPOSER_HEIGHT,flexDirection:'row',justifyContent:'space-between'}}>
             <View style={{flexDirection:'row',alignItems:'center',margin:10}}>
@@ -49,7 +51,7 @@ class KeyboardTool extends Component {
                     onPress={()=>{
                         ImagePicker.openPicker({multiple: true})
                             .then(images => {
-                                console.log(images);
+                                sendAction(images)
                             })}}>
                     <Text>相册</Text>
                 </TouchableOpacity>
@@ -89,6 +91,17 @@ class SendComment extends Component {
         })
     }
 
+<<<<<<< HEAD
+=======
+    _addPicture(images){
+        alert('images')
+        var pics = this.state.pictures
+        this.setState({
+            pictures:[...images,...pics]
+        })
+    }
+
+>>>>>>> f9d118233e72f9ed1031f0562679145a7bfd92e5
     _getPictures(){
         var pics = this.state.pictures
         var picViews = pics.map((pic,index)=>{
@@ -182,7 +195,7 @@ class SendComment extends Component {
                 scrollEnabled={false}
                 onLayout={this.onMainViewLayout.bind(this)}>
                 {this.renderMainView()}
-                <KeyboardTool/>
+                <KeyboardTool sendAction={this._addPicture.bind(this)}/>
                 <Toast ref="toast" position='top'/>
             </ScrollView>
         );

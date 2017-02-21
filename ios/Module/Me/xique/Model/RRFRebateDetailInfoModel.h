@@ -40,4 +40,20 @@
 @property(nonatomic,assign)double rebateForCConsumer;
 
 
+//a级代理的 返利比
+@property(nonatomic,strong)NSString *levelADelegateRate;
+//b级代理的 返利比
+@property(nonatomic,strong)NSString *levelBDelegateRate;
+//一级返利的金额
+@property(nonatomic,assign)double rebateForADelegate;
+//二级返利的金额
+@property(nonatomic,assign)double rebateForBDelegate;
+//代理返利的总金额
+@property(nonatomic,assign)double rebateDelegateCount;
+//返利的 总共金额
+@property(nonatomic,assign)double rebateAll;
+//购买钻石的总共返利金额
+@property(nonatomic,assign)double rebateBuyDiamond;
+
+
 @end

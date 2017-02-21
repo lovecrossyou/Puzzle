@@ -10,6 +10,7 @@
 @class RRFRebateDetailInfoModel,RRFRebateMonthModel;
 @interface RRFRebateView : UIView
 @property(nonatomic,strong)RRFRebateDetailInfoModel *model;
+@property(nonatomic,assign)BOOL hidden;
 @end
 
 
