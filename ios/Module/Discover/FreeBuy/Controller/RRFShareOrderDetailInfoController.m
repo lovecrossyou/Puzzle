@@ -17,7 +17,7 @@
 #import "HMScanner.h"
 #import "RRFWiningOrderDetailModel.h"
 #import <React/RCTRootView.h>
-//#import <CodePush/CodePush.h>
+#import <CodePush/CodePush.h>
 #import "PZReactUIManager.h"
 
 @interface RRFShareOrderDetailInfoController ()
