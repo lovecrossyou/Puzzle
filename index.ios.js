@@ -22,7 +22,7 @@ import UserInfoView from './app/order/ShareOrderDetail'
 //分享
 import CommentShareView from './app/share/CommentShareView'
 //发表评论
-import SendComment from './app/comment/SendComment'
+import NavigatorIOSComment from './app/comment/SendComment'
 import codePush from 'react-native-code-push'
 
 let codePushOptions = {checkFrequency: codePush.CheckFrequency.ON_APP_RESUME};
@@ -57,7 +57,7 @@ class Puzzle extends React.Component {
                 return <CommentShareView />
             }
             case 'send_comment':{
-                return (<SendComment />)
+                return (<NavigatorIOSComment />)
             }
         }
     }
