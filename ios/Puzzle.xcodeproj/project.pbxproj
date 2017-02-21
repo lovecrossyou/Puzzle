@@ -6341,7 +6341,6 @@
 				DEAD_CODE_STRIPPING = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/Puzzle/Module/Common/Lib/pay/AliPay",
 					"$(PROJECT_DIR)/Module/Common/Lib/jpush",
 					"$(PROJECT_DIR)/Module/Common/Lib/pay/AliPay",
 				);
@@ -6406,7 +6405,6 @@
 				CURRENT_PROJECT_VERSION = 1;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/Puzzle/Module/Common/Lib/pay/AliPay",
 					"$(PROJECT_DIR)/Module/Common/Lib/jpush",
 					"$(PROJECT_DIR)/Module/Common/Lib/pay/AliPay",
 				);
