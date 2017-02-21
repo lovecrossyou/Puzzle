@@ -13,7 +13,7 @@
 #import "JNQPersonalHomepageViewController.h"
 #import "PZParamTool.h"
 #import "RRFDetailInfoController.h"
-//#import <CodePush/CodePush.h>
+#import <CodePush/CodePush.h>
 #import <React/RCTBundleURLProvider.h>
 #import "PZReactUIManager.h"
 @interface RecentBetController ()
