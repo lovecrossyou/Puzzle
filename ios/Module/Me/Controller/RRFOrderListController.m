@@ -34,9 +34,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [self setUIView];
-    
-//    [self settingTableView];
+    [self settingTableView];
+//    [self setUIView];
+  
 }
 -(void)settingTableView
 {
