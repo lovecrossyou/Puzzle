@@ -51,7 +51,6 @@ class Puzzle extends React.Component {
                 var orderId = this.props['orderId']
                 var shareType = this.props['shareType']
                 var url = this.props['url']
-                alert(orderId+'--' + shareType + '--' + url)
                 return <UserInfoView orderId={orderId} shareType={shareType} url={url}/>
             }
             case 'share_comment':{
