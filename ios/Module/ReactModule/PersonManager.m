@@ -35,6 +35,11 @@ RCT_EXPORT_METHOD(goLogin)
 
 }
 
+RCT_EXPORT_METHOD(getMd5:(NSString*)param)
+{
+  
+}
+
 
 RCT_EXPORT_METHOD(shareTo:(NSString*)platform){
     [[NSNotificationCenter defaultCenter] postNotificationName:@"ReactShareNotificate" object:platform];

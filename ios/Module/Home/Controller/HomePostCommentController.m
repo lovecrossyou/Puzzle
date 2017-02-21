@@ -35,6 +35,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+  
   UIView* rootView = [PZReactUIManager createWithPage:@"send_comment" params:nil size:CGSizeZero];
   self.view = rootView ;
   
