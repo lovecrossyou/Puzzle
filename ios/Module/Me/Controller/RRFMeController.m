@@ -19,7 +19,6 @@
 #import "RRFMeTool.h"
 #import "PZParamTool.h"
 #import "CommonTableViewCell.h"
-//#import "RRFApplyForController.h"
 #import "RRFPersonalHomePageController.h"
 #import "RRFNoticeListController.h"
 #import "RRFNoLoginMyInfoView.h"
@@ -28,7 +27,9 @@
 #import "PZCache.h"
 #import "HomeTool.h"
 #import "RRFMyOrderViewController.h"
-//#import "RRFXTPlanViewController.h"
+#import "RRFXTPlanViewController.h"
+#import "RRFApplyForController.h"
+
 
 @interface RRFMeController ()<UITableViewDelegate,UITableViewDataSource>
 {
@@ -174,7 +175,7 @@
     [RRFMeTool checkIsDelegaterWithSuccess:^(id json) {
         NSString *str = json;
         NSString *title = @"喜鹊计划";
-        /*if ([str isEqualToString:@"already_apply"]) {
+        if ([str isEqualToString:@"already_apply"]) {
           
             RRFXTPlanViewController *desc = [[RRFXTPlanViewController alloc]init];
             desc.title = title;
@@ -183,7 +184,7 @@
             RRFApplyForController *desc  = [[RRFApplyForController alloc]init];
             desc.title = title;
             [weakSelf.navigationController pushViewController:desc animated:YES];
-        }*/
+        }
         [MBProgressHUD dismiss];
     } failBlock:^(id json) {
         [MBProgressHUD dismiss];
