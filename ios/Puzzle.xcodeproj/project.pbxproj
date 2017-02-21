@@ -13,7 +13,6 @@
 		00C302E91ABCBA2D00DB3ED1 /* libRCTNetwork.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C302DC1ABCB9D200DB3ED1 /* libRCTNetwork.a */; };
 		00C302EA1ABCBA2D00DB3ED1 /* libRCTVibration.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C302E41ABCB9EE00DB3ED1 /* libRCTVibration.a */; };
 		00E356F31AD99517003FC87E /* PuzzleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* PuzzleTests.m */; };
-<<<<<<< HEAD
 		121B37941E5C3BB40010EBED /* RRFApplyForController.m in Sources */ = {isa = PBXBuildFile; fileRef = 121B37631E5C3BB40010EBED /* RRFApplyForController.m */; };
 		121B37951E5C3BB40010EBED /* RRFCDelegateController.m in Sources */ = {isa = PBXBuildFile; fileRef = 121B37651E5C3BB40010EBED /* RRFCDelegateController.m */; };
 		121B37971E5C3BB40010EBED /* RRFJoinController.m in Sources */ = {isa = PBXBuildFile; fileRef = 121B37691E5C3BB40010EBED /* RRFJoinController.m */; };
@@ -36,7 +35,6 @@
 		121B37A91E5C3BB40010EBED /* RRFXQPlanView.m in Sources */ = {isa = PBXBuildFile; fileRef = 121B378F1E5C3BB40010EBED /* RRFXQPlanView.m */; };
 		121B37AA1E5C3BB40010EBED /* RRFXTDelegateCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 121B37911E5C3BB40010EBED /* RRFXTDelegateCell.m */; };
 		121B37AB1E5C3BB50010EBED /* RRFXTDelegateView.m in Sources */ = {isa = PBXBuildFile; fileRef = 121B37931E5C3BB40010EBED /* RRFXTDelegateView.m */; };
-=======
 		124E10531E5C04F70040BDC9 /* JNQAddressController.m in Sources */ = {isa = PBXBuildFile; fileRef = 124E0F521E5C04F70040BDC9 /* JNQAddressController.m */; };
 		124E10541E5C04F70040BDC9 /* JNQAddressOperateController.m in Sources */ = {isa = PBXBuildFile; fileRef = 124E0F541E5C04F70040BDC9 /* JNQAddressOperateController.m */; };
 		124E10551E5C04F70040BDC9 /* JNQSelectedDistrictController.m in Sources */ = {isa = PBXBuildFile; fileRef = 124E0F561E5C04F70040BDC9 /* JNQSelectedDistrictController.m */; };
@@ -159,7 +157,6 @@
 		124E10CD1E5C04F80040BDC9 /* RRFXQPlanView.m in Sources */ = {isa = PBXBuildFile; fileRef = 124E104E1E5C04F70040BDC9 /* RRFXQPlanView.m */; };
 		124E10CE1E5C04F80040BDC9 /* RRFXTDelegateCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 124E10501E5C04F70040BDC9 /* RRFXTDelegateCell.m */; };
 		124E10CF1E5C04F80040BDC9 /* RRFXTDelegateView.m in Sources */ = {isa = PBXBuildFile; fileRef = 124E10521E5C04F70040BDC9 /* RRFXTDelegateView.m */; };
->>>>>>> f9d118233e72f9ed1031f0562679145a7bfd92e5
 		133E29F31AD74F7200F7D852 /* libRCTLinking.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 78C398B91ACF4ADC00677621 /* libRCTLinking.a */; };
 		139105C61AF99C1200B5F7CC /* libRCTSettings.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 139105C11AF99BAD00B5F7CC /* libRCTSettings.a */; };
 		139FDEF61B0652A700C62182 /* libRCTWebSocket.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 139FDEF41B06529B00C62182 /* libRCTWebSocket.a */; };
@@ -1119,7 +1116,6 @@
 		121B37911E5C3BB40010EBED /* RRFXTDelegateCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RRFXTDelegateCell.m; sourceTree = "<group>"; };
 		121B37921E5C3BB40010EBED /* RRFXTDelegateView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RRFXTDelegateView.h; sourceTree = "<group>"; };
 		121B37931E5C3BB40010EBED /* RRFXTDelegateView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RRFXTDelegateView.m; sourceTree = "<group>"; };
-=======
 		124E0F511E5C04F70040BDC9 /* JNQAddressController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JNQAddressController.h; sourceTree = "<group>"; };
 		124E0F521E5C04F70040BDC9 /* JNQAddressController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JNQAddressController.m; sourceTree = "<group>"; };
 		124E0F531E5C04F70040BDC9 /* JNQAddressOperateController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JNQAddressOperateController.h; sourceTree = "<group>"; };
@@ -1364,7 +1360,6 @@
 		124E10501E5C04F70040BDC9 /* RRFXTDelegateCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RRFXTDelegateCell.m; sourceTree = "<group>"; };
 		124E10511E5C04F70040BDC9 /* RRFXTDelegateView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RRFXTDelegateView.h; sourceTree = "<group>"; };
 		124E10521E5C04F70040BDC9 /* RRFXTDelegateView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RRFXTDelegateView.m; sourceTree = "<group>"; };
->>>>>>> f9d118233e72f9ed1031f0562679145a7bfd92e5
 		139105B61AF99BAD00B5F7CC /* RCTSettings.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTSettings.xcodeproj; path = "../node_modules/react-native/Libraries/Settings/RCTSettings.xcodeproj"; sourceTree = "<group>"; };
 		139FDEE61B06529A00C62182 /* RCTWebSocket.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTWebSocket.xcodeproj; path = "../node_modules/react-native/Libraries/WebSocket/RCTWebSocket.xcodeproj"; sourceTree = "<group>"; };
 		13B07F961A680F5B00A75B9A /* Puzzle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Puzzle.app; sourceTree = BUILT_PRODUCTS_DIR; };
