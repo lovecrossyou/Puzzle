@@ -143,7 +143,6 @@
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		140ED2AC1D01E1AD002B40FF /* libReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 146834041AC3E56700842450 /* libReact.a */; };
 		146834051AC3E58100842450 /* libReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 146834041AC3E56700842450 /* libReact.a */; };
-		30F9DDF9ED3048E398BB23F9 /* libimageCropPicker.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 403BDADCE10D40179C09428B /* libimageCropPicker.a */; };
 		5E9157361DD0AC6A00FF2AA8 /* libRCTAnimation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E9157331DD0AC6500FF2AA8 /* libRCTAnimation.a */; };
 		75864E901E5AEE6A007D17BE /* libicucore.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 75864E8F1E5AEE6A007D17BE /* libicucore.tbd */; };
 		75864E911E5AEE90007D17BE /* libresolv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 75864E221E5AE6F0007D17BE /* libresolv.tbd */; };
@@ -810,6 +809,12 @@
 		758657FE1E5B051A007D17BE /* RedPaperInputCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 758654EF1E5B0516007D17BE /* RedPaperInputCell.m */; };
 		758658021E5B0C83007D17BE /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 758658011E5B0C83007D17BE /* CoreMotion.framework */; };
 		758658461E5BD665007D17BE /* libCodePush.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 758658451E5BD651007D17BE /* libCodePush.a */; };
+		7586589C1E5C120B007D17BE /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7586589B1E5C120B007D17BE /* SystemConfiguration.framework */; };
+		7586589E1E5C121D007D17BE /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7586589D1E5C121C007D17BE /* CoreTelephony.framework */; };
+		758658A01E5C1279007D17BE /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 7586589F1E5C1278007D17BE /* libsqlite3.tbd */; };
+		75ABF1201E5C137200300ED2 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75ABF11F1E5C137200300ED2 /* ImageIO.framework */; };
+		75ABF1251E5C14DE00300ED2 /* libimageCropPicker.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 758658811E5C0BC1007D17BE /* libimageCropPicker.a */; };
+		75ABF1271E5C16CB00300ED2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75ABF1261E5C16CB00300ED2 /* Foundation.framework */; };
 		832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 832341B51AAA6A8300B99B32 /* libRCTText.a */; };
 		C9D9B77C082C671E8A8693DB /* libPods-Puzzle.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B2205D05EF420292F39F940F /* libPods-Puzzle.a */; };
 /* End PBXBuildFile section */
@@ -1276,7 +1281,6 @@
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = Puzzle/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = Puzzle/main.m; sourceTree = "<group>"; };
 		146833FF1AC3E56700842450 /* React.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = React.xcodeproj; path = "../node_modules/react-native/React/React.xcodeproj"; sourceTree = "<group>"; };
-		403BDADCE10D40179C09428B /* libimageCropPicker.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libimageCropPicker.a; sourceTree = "<group>"; };
 		5E91572D1DD0AC6500FF2AA8 /* RCTAnimation.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTAnimation.xcodeproj; path = "../node_modules/react-native/Libraries/NativeAnimation/RCTAnimation.xcodeproj"; sourceTree = "<group>"; };
 		75864E221E5AE6F0007D17BE /* libresolv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libresolv.tbd; path = usr/lib/libresolv.tbd; sourceTree = SDKROOT; };
 		75864E3F1E5AE708007D17BE /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
@@ -2476,6 +2480,11 @@
 		758658001E5B0615007D17BE /* Puzzle.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Puzzle.pch; path = Puzzle/Puzzle.pch; sourceTree = "<group>"; };
 		758658011E5B0C83007D17BE /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
 		758658401E5BD651007D17BE /* CodePush.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = CodePush.xcodeproj; path = "../node_modules/react-native-code-push/ios/CodePush.xcodeproj"; sourceTree = "<group>"; };
+		7586589B1E5C120B007D17BE /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		7586589D1E5C121C007D17BE /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		7586589F1E5C1278007D17BE /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		75ABF11F1E5C137200300ED2 /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
+		75ABF1261E5C16CB00300ED2 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		78C398B01ACF4ADC00677621 /* RCTLinking.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTLinking.xcodeproj; path = "../node_modules/react-native/Libraries/LinkingIOS/RCTLinking.xcodeproj"; sourceTree = "<group>"; };
 		832341B01AAA6A8300B99B32 /* RCTText.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTText.xcodeproj; path = "../node_modules/react-native/Libraries/Text/RCTText.xcodeproj"; sourceTree = "<group>"; };
 		AF490A7DD3901BACA66B781C /* Pods-Puzzle.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Puzzle.release.xcconfig"; path = "Pods/Target Support Files/Pods-Puzzle/Pods-Puzzle.release.xcconfig"; sourceTree = "<group>"; };
@@ -2497,6 +2506,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				75ABF1271E5C16CB00300ED2 /* Foundation.framework in Frameworks */,
+				75ABF1251E5C14DE00300ED2 /* libimageCropPicker.a in Frameworks */,
+				75ABF1201E5C137200300ED2 /* ImageIO.framework in Frameworks */,
+				7586589E1E5C121D007D17BE /* CoreTelephony.framework in Frameworks */,
+				758658A01E5C1279007D17BE /* libsqlite3.tbd in Frameworks */,
+				7586589C1E5C120B007D17BE /* SystemConfiguration.framework in Frameworks */,
 				758658461E5BD665007D17BE /* libCodePush.a in Frameworks */,
 				758658021E5B0C83007D17BE /* CoreMotion.framework in Frameworks */,
 				75864E991E5AF46C007D17BE /* libz.tbd in Frameworks */,
@@ -2523,7 +2538,6 @@
 				00C302EA1ABCBA2D00DB3ED1 /* libRCTVibration.a in Frameworks */,
 				139FDEF61B0652A700C62182 /* libRCTWebSocket.a in Frameworks */,
 				C9D9B77C082C671E8A8693DB /* libPods-Puzzle.a in Frameworks */,
-				30F9DDF9ED3048E398BB23F9 /* libimageCropPicker.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -5166,6 +5180,11 @@
 		A8E6EE9798EE1EBD182FAF50 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				75ABF1261E5C16CB00300ED2 /* Foundation.framework */,
+				75ABF11F1E5C137200300ED2 /* ImageIO.framework */,
+				7586589F1E5C1278007D17BE /* libsqlite3.tbd */,
+				7586589D1E5C121C007D17BE /* CoreTelephony.framework */,
+				7586589B1E5C120B007D17BE /* SystemConfiguration.framework */,
 				758658011E5B0C83007D17BE /* CoreMotion.framework */,
 				75864E971E5AF451007D17BE /* libz.1.2.5.tbd */,
 				75864E941E5AEF01007D17BE /* CFNetwork.framework */,
