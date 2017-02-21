@@ -15,25 +15,33 @@ import {
     TouchableOpacity,
     PixelRatio,
     NavigatorIOS,
-    Image
+    Image,
+    Dimensions
 } from 'react-native';
 import Toast, {DURATION} from 'react-native-easy-toast'
-import ImagePicker from 'react-native-image-crop-picker';
-var options = {
-    title: 'Select Avatar',
-    customButtons: [
-        {name: 'fb', title: 'Choose Photo from Facebook'},
-    ],
-    storageOptions: {
-        skipBackup: true,
-        path: 'images'
-    }
-}
-const MIN_COMPOSER_HEIGHT = 60
+import ImagePicker from 'react-native-image-crop-picker'
 
+import {actionCreators} from './SendCommentReducer'
+
+const MIN_COMPOSER_HEIGHT = 60
+const {width, height} = Dimensions.get('window')
+
+const picMargin = 10
+const picRowCount = 4
+const picSize = (width - picMargin * (picRowCount + 1)) / picRowCount
+
+import {getUploadImageUrls} from '../util/NetUtil'
 class KeyboardTool extends Component {
-    render() {
+    _openPicker() {
         var sendAction = this.props.sendAction
+        ImagePicker.openPicker({
+            multiple: true
+        }).then(images => {
+            sendAction(images)
+        })
+    }
+
+    render() {
         return <View
             style={{backgroundColor:'#f7f7f8',height:MIN_COMPOSER_HEIGHT,flexDirection:'row',justifyContent:'space-between'}}>
             <View style={{flexDirection:'row',alignItems:'center',margin:10}}>
@@ -48,11 +56,7 @@ class KeyboardTool extends Component {
                 </TouchableOpacity>
                 <TouchableOpacity
                     style={styles.item}
-                    onPress={()=>{
-                        ImagePicker.openPicker({multiple: true})
-                            .then(images => {
-                                sendAction(images)
-                            })}}>
+                    onPress={this._openPicker.bind(this)}>
                     <Text>相册</Text>
                 </TouchableOpacity>
             </View>
@@ -63,20 +67,22 @@ class KeyboardTool extends Component {
                     <Text>关闭</Text>
                 </TouchableOpacity>
             </View>
+            <Toast ref="toast" position='top'/>
+
         </View>
     }
 }
 
 class SendComment extends Component {
-
     constructor(props) {
         super(props)
-
+        const {store} = this.props
+        this.store = store
         this._keyboardHeight = 0;
         this.state = {
             composerHeight: MIN_COMPOSER_HEIGHT,
             messagesContainerHeight: null,
-            pictures:[]
+            pictures: []
         }
         this.keyboardWillShowListener = Keyboard.addListener('keyboardWillShow', this.onKeyboardWillShow.bind(this));
         this.keyboardDidHideListener = Keyboard.addListener('keyboardWillHide', this.onKeyboardWillHide.bind(this));
@@ -85,25 +91,29 @@ class SendComment extends Component {
 
     onMainViewLayout(e) {
         const layout = e.nativeEvent.layout
-        this.setMaxHeight(layout.height-64);
+        this.setMaxHeight(layout.height - 64);
         this.setState({
-            messagesContainerHeight: this.prepareMessagesContainerHeight(layout.height-64)
+            messagesContainerHeight: this.prepareMessagesContainerHeight(layout.height - 64)
         })
     }
 
-    _addPicture(images){
-        alert('images')
+    _addPicture(images) {
         var pics = this.state.pictures
         this.setState({
-            pictures:[...images,...pics]
+            pictures: [...images, ...pics]
         })
+        this.store.dispatch(actionCreators.setImages(this.state.pictures))
     }
 
-    _getPictures(){
+    _getPictures() {
         var pics = this.state.pictures
-        var picViews = pics.map((pic,index)=>{
-            return <Image source={pic} style={{width:60,height:60}}></Image>
+        var picViews = pics.map((pic, index) => {
+            return <Image source={{uri:pic.path}}
+                          style={{width:picSize,height:picSize,marginLeft:picMargin,marginTop:picMargin}}
+                          key={index}
+            />
         })
+        return picViews
     }
 
     renderMainView() {
@@ -114,16 +124,24 @@ class SendComment extends Component {
                     <TextInput
                         placeholder='请输入标题'
                         editable={true}
-                        style={{height:24,margin:10}}/>
+                        style={{height:24,margin:10}}
+                        onChangeText={(text)=>{
+                            this.store.dispatch(actionCreators.setTitle(text))
+                        }}
+                    />
                 </View>
-                <View style={{alignItems:'center',justifyContent:'center',backgroundColor:'green',paddingLeft:10}}>
+                <View style={{alignItems:'center',justifyContent:'center',paddingLeft:10}}>
                     <TextInput
                         placeholder='正文'
                         editable={true}
                         multiline={true}
-                        style={{height:100}}/>
+                        style={{height:100}}
+                        onChangeText={(text)=>{
+                             this.store.dispatch(actionCreators.setContent(text))
+                        }}
+                    />
                 </View>
-                <View style={{flexDirection:'row'}}>
+                <View style={{flexDirection:'row',flexWrap:'wrap'}}>
                     {this._getPictures()}
                 </View>
             </Animated.View>
@@ -155,7 +173,6 @@ class SendComment extends Component {
         this.setKeyboardHeight(e.endCoordinates ? e.endCoordinates.height : e.end.height);
         const newMsgRawHeight = this.getMaxHeight() - (this.state.composerHeight) - this.getKeyboardHeight()
         const newMessagesContainerHeight = this.prepareMessagesContainerHeight(newMsgRawHeight);
-        this.refs.toast.show('Show!' + newMsgRawHeight);
         LayoutAnimation.easeInEaseOut();
 
         this.setState({
@@ -175,7 +192,6 @@ class SendComment extends Component {
         this.setKeyboardHeight(0);
         const newMsgRawHeight = this.getMaxHeight() - this.getKeyboardHeight()
         const newMessagesContainerHeight = this.prepareMessagesContainerHeight(newMsgRawHeight);
-        this.refs.toast.show('Hide!' + newMsgRawHeight);
         LayoutAnimation.easeInEaseOut();
 
         this.setState({
@@ -200,18 +216,26 @@ class SendComment extends Component {
 }
 
 export default class NavigatorIOSComment extends Component {
-    _handleNavigationRequest(){
-        alert('xxxx')
+    _handleNavigationRequest() {
+        const {store} = this.props
+        const {title, content, images} = store.getState()
+        var p = getUploadImageUrls('uploads',images)
+        p.then((rep)=>{
+            alert(rep)
+        })
+
     }
 
     render() {
+        const {store} = this.props
+        const {title, content} = store.getState()
         return (
             <NavigatorIOS
                 initialRoute={{
                     component: SendComment,
                     title: '发表评论',
                     rightButtonTitle: '发布',
-                    passProps: { sendClickProp:this._handleNavigationRequest.bind(this)},
+                    passProps:{store:store},
                     onRightButtonPress: () => this._handleNavigationRequest()}}
                 barTintColor='#4964ef'
                 tintColor="#ffffff"

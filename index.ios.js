@@ -24,6 +24,10 @@ import CommentShareView from './app/share/CommentShareView'
 //发表评论
 import NavigatorIOSComment from './app/comment/SendComment'
 import codePush from 'react-native-code-push'
+import { createStore } from 'redux'
+import {reducer} from './app/comment/SendCommentReducer'
+
+const store = createStore(reducer)
 
 let codePushOptions = {checkFrequency: codePush.CheckFrequency.ON_APP_RESUME};
 
@@ -57,7 +61,7 @@ class Puzzle extends React.Component {
                 return <CommentShareView />
             }
             case 'send_comment':{
-                return (<NavigatorIOSComment />)
+                return (<NavigatorIOSComment store={store}/>)
             }
         }
     }
