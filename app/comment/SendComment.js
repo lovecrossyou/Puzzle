@@ -91,8 +91,6 @@ class SendComment extends Component {
         })
     }
 
-<<<<<<< HEAD
-=======
     _addPicture(images){
         alert('images')
         var pics = this.state.pictures
@@ -101,7 +99,6 @@ class SendComment extends Component {
         })
     }
 
->>>>>>> a0d40803e9a7a46678fcb5c7310fcc7f3ffc3cd0
     _getPictures(){
         var pics = this.state.pictures
         var picViews = pics.map((pic,index)=>{
