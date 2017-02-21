@@ -11,14 +11,12 @@
 #import "PZParamTool.h"
 #import "PZAccessInfo.h"
 #import "LoginModel.h"
-//#import "RRFApplyDelegaterModel.h"
+#import "RRFApplyDelegaterModel.h"
 
 @implementation RRFPlanTool
-
 // 申请认证
 +(void)requestApplyDelegaterWithModel:(RRFApplyDelegaterModel *)model Success:(PZRequestSuccess)success failBlock:(PZRequestFailure)fail
 {
-  /*
     NSDictionary *param = [NSMutableDictionary dictionaryWithDictionary:[model yy_modelToJSONObject]];
     PZAccessInfo *accessInfo = [PZParamTool createAccessInfo];
     [param setValue:[accessInfo yy_modelToJSONObject] forKey:@"accessInfo"];
@@ -26,7 +24,7 @@
         success(json);
     } fail:^(id json) {
         fail(json);
-    }];*/
+    }];
 }
 
 //5、喜鹊计划

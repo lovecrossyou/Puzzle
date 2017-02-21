@@ -25,6 +25,7 @@
 @property(nonatomic,strong)NSString *userIconUrl;
 @property(nonatomic,assign)NSInteger userId;
 @property(nonatomic,strong)NSString *userName;
-
+// 是否是代理 noDelegate"//isDelegate
+@property(nonatomic,strong)NSString *isDelegate;
 
 @end

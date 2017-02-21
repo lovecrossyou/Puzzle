@@ -20,6 +20,7 @@
 #import "RRFWillCommentPanel.h"
 #import "RRFShareOrderDetailInfoController.h"
 #import "RRFRemarkViewController.h"
+#import "PZReactUIManager.h"
 @interface RRFOrderListController ()<UITableViewDelegate,UITableViewDataSource>
 @property(nonatomic,strong)JNQFailFooterView *failFootView;
 @property(nonatomic,strong)NSMutableArray *allData;
@@ -32,8 +33,14 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.pageNo = 0;
     
+    [self setUIView];
+    
+//    [self settingTableView];
+}
+-(void)settingTableView
+{
+    self.pageNo = 0;
     UITableView *tableView = [[UITableView alloc]initWithFrame:CGRectZero style:UITableViewStyleGrouped];
     tableView.delegate = self;
     tableView.dataSource = self;
@@ -76,6 +83,18 @@
     }
     
     [self.tableView.mj_footer beginRefreshing];
+}
+-(void)setUIView
+{
+   NSString *isSwitch = self.showSwitchPanel == YES?@"true":@"false";
+    UIView* rootView = [PZReactUIManager createWithPage:@"giftOrder" params:@{
+                                                                          @"status":@(self.status),
+                                                                          @"url":@"exchange/list",
+                                                                          @"isSwitch":isSwitch
+                                                                          } size:CGSizeZero];
+    rootView.frame = self.view.bounds ;
+    [self.view addSubview:rootView];
+    
 }
 -(NSMutableArray *)allData
 {

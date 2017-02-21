@@ -62,6 +62,7 @@
     [self.headView.WinningOrder setWiningOrderWaitAcceptCount:model.stockWinOrderWaitSendCount WiningOrderWaitEvaluateCount:model.stockWinOrderWaitReceiveCount WiningOrderWaitLotteryCount:model.stockWinOrderWaitEvaluateCount];
 }
 - (void)goOrderListVcWithType:(int)type{
+//    type 10 0 1 2
     NSString *titleStr;
     BOOL showSwitchPanel = NO;
     if (type == 10) {

@@ -66,11 +66,33 @@ class KeyboardTool extends Component {
 }
 
 class SendComment extends Component {
+
+    constructor(props) {
+        super(props)
+
+        this._keyboardHeight = 0;
+        this.state = {
+            composerHeight: MIN_COMPOSER_HEIGHT,
+            messagesContainerHeight: null,
+            pictures:[]
+        }
+        this.keyboardWillShowListener = Keyboard.addListener('keyboardWillShow', this.onKeyboardWillShow.bind(this));
+        this.keyboardDidHideListener = Keyboard.addListener('keyboardWillHide', this.onKeyboardWillHide.bind(this));
+        this.keyboardWillChangeFrameListener = Keyboard.addListener('keyboardWillChangeFrame', this.keyboardWillChangeFrame.bind(this))
+    }
+
     onMainViewLayout(e) {
         const layout = e.nativeEvent.layout
         this.setMaxHeight(layout.height-64);
         this.setState({
             messagesContainerHeight: this.prepareMessagesContainerHeight(layout.height-64)
+        })
+    }
+
+    _getPictures(){
+        var pics = this.state.pictures
+        var picViews = pics.map((pic,index)=>{
+            return <Image source={pic} style={{width:60,height:60}}></Image>
         })
     }
 
@@ -84,12 +106,15 @@ class SendComment extends Component {
                         editable={true}
                         style={{height:24,margin:10}}/>
                 </View>
-                <View style={{alignItems:'center',marginLeft:10}}>
+                <View style={{alignItems:'center',justifyContent:'center',backgroundColor:'green',paddingLeft:10}}>
                     <TextInput
                         placeholder='正文'
                         editable={true}
                         multiline={true}
                         style={{height:100}}/>
+                </View>
+                <View style={{flexDirection:'row'}}>
+                    {this._getPictures()}
                 </View>
             </Animated.View>
         );
@@ -98,19 +123,6 @@ class SendComment extends Component {
     componentWillMount() {
         LayoutAnimation.linear();
 
-    }
-
-    constructor(props) {
-        super(props)
-
-        this._keyboardHeight = 0;
-        this.state = {
-            composerHeight: MIN_COMPOSER_HEIGHT,
-            messagesContainerHeight: null,
-        }
-        this.keyboardWillShowListener = Keyboard.addListener('keyboardWillShow', this.onKeyboardWillShow.bind(this));
-        this.keyboardDidHideListener = Keyboard.addListener('keyboardWillHide', this.onKeyboardWillHide.bind(this));
-        this.keyboardWillChangeFrameListener = Keyboard.addListener('keyboardWillChangeFrame', this.keyboardWillChangeFrame.bind(this))
     }
 
     setKeyboardHeight(height) {
@@ -178,15 +190,21 @@ class SendComment extends Component {
 }
 
 export default class NavigatorIOSComment extends Component {
+    _handleNavigationRequest(){
+        alert('xxxx')
+    }
+
     render() {
         return (
             <NavigatorIOS
                 initialRoute={{
-          component: SendComment,
-          title: '发表评论',
-          rightButtonTitle: '发布'
-        }}
+                    component: SendComment,
+                    title: '发表评论',
+                    rightButtonTitle: '发布',
+                    passProps: { sendClickProp:this._handleNavigationRequest.bind(this)},
+                    onRightButtonPress: () => this._handleNavigationRequest()}}
                 barTintColor='#4964ef'
+                tintColor="#ffffff"
                 titleTextColor="#ffffff"
                 style={{flex: 1}}
             />
