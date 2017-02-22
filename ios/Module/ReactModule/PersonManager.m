@@ -10,6 +10,7 @@
 #import "WXApi.h"
 #import "PZAccessInfo.h"
 #import "PZParamTool.h"
+#import "PZMMD5.h"
 @implementation PersonManager
 RCT_EXPORT_MODULE();
 
@@ -35,9 +36,11 @@ RCT_EXPORT_METHOD(goLogin)
 
 }
 
-RCT_EXPORT_METHOD(getMd5:(NSString*)param)
+RCT_EXPORT_METHOD(getMd5:(NSString*)param callback:(RCTResponseSenderBlock)callBack)
 {
-  
+  NSArray* events = @[[PZMMD5 digest:param]];
+  callBack(@[[NSNull null], events]);
+
 }
 
 
