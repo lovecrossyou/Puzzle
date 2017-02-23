@@ -75,17 +75,15 @@ class Content extends Component {
 class Footer extends Component {
     render() {
         return <View
-            style={[styles.row,{marginTop:20,justifyContent:'space-between',borderBottomColor:'#f5f5f5',borderBottomWidth:1}]}>
-            <View style={[styles.row,{paddingBottom:15}]}>
+            style={[styles.row,{marginTop:20,justifyContent:'space-between',alignItems:'center',borderBottomColor:'#f5f5f5',borderBottomWidth:1}]}>
+            <View style={[styles.row,{paddingBottom:6}]}>
                 <Text style={styles.footerText}>100 点赞</Text>
                 <Text style={styles.footerText}>200 赞赏</Text>
                 <Text style={styles.footerText}>999 评论</Text>
             </View>
-            <View style={{marginRight:10}}>
-                <TouchableOpacity>
-                    <Text>更多</Text>
-                </TouchableOpacity>
-            </View>
+            <TouchableOpacity style={{marginRight:10,paddingBottom:6}}>
+                    <Image source={require('../../assets/operation_more.png')} style={{width:28,height:28}}/>
+            </TouchableOpacity>
         </View>
     }
 }
