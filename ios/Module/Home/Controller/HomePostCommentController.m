@@ -16,6 +16,8 @@
 #import <TZImagePickerController/TZImagePickerController.h>
 #import "TZImageManager.h"
 #import "PZReactUIManager.h"
+#import "ReactSingleTool.h"
+
 @interface HomePostCommentController ()<TZImagePickerControllerDelegate,UITextViewDelegate>
 @property (nonatomic, strong) STInputBar *inputBar;
 @property(weak,nonatomic)HomePostCommentContent* headView ;
@@ -35,7 +37,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-  
+  [ReactSingleTool sharedInstance].currentCotroller = self ;
   UIView* rootView = [PZReactUIManager createWithPage:@"send_comment" params:nil size:CGSizeZero];
   self.view = rootView ;
   

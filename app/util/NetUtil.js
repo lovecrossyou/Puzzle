@@ -9,8 +9,8 @@ import {NativeModules} from 'react-native'
 const Base_url = "http://114.251.53.22/xitenggamejar/"
 const ImageUrl = "http://114.251.53.22/imageserver/"
 
-const  AppKey = "b5958b665e0b4d8cae77d28e1ad3f521"
-const  AppSecret = "71838ae252714085bc0fb2fc3f420110"
+const AppKey = "b5958b665e0b4d8cae77d28e1ad3f521"
+const AppSecret = "71838ae252714085bc0fb2fc3f420110"
 
 
 var PersonManager = NativeModules.PersonManager
@@ -38,38 +38,46 @@ function getAccessInfo() {
     return p
 }
 
-function uploadImageRequest(url,param) {
+function getMd5(param) {
+    return new Promise(function (res, rej) {
+        PersonManager.getMd5(param, (err, info) => {
+            res(info)
+        })
+    })
+}
+
+export function uploadImageRequest(url, images) {
     var getAccInfo = getAccessInfo()
     return new Promise(function (resolve, reject) {
         getAccInfo.then((accessInfo) => {
-            // @"app_key":AppKey,
-            //     @"access_token":@"",
-            // @"signature":[PZMMD5 digest:AppSecret]
+            getMd5(AppSecret).then((signature)=>{
+                var accessInfo = {
+                    'app_key': AppKey,
+                    'access_token': '',
+                    'signature': signature
+                }
 
-
-
-
-            param["accessInfo"] = accessInfo
-            url = ImageUrl + url
-            let formData = new FormData()
-            var imageFiles = images.map((uri, index) => {
-                return {uri: uri, type: 'multipart/form-data', name: index + '.jpg'}
-            })
-            formData.append("file", imageFiles)
-            return fetch(url, {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'multipart/form-data',
-                },
-                body: formData,
-            })
-                .then((response) => response.text())
-                .then((responseData) => {
-                    resolve(p.then((responseData) => responseData))
+                url = ImageUrl + url
+                var formData = new FormData()
+                images.forEach(function(uri,index){
+                    let file = {uri: uri.path, type: 'multipart/form-data', name: index + '.jpg'}
+                    formData.append("file", file)
                 })
-                .catch((error) => {
-                    console.error('error', error)
+                return fetch(url, {
+                    method: 'POST',
+                    body: formData,
+                    headers: {
+                        'Content-Type': 'multipart/form-data'
+                    }
                 })
+                    .then((response) => response.json())
+                    .then((responseData) => {
+                        resolve(responseData)
+                    })
+                    .catch((error) => {
+                        reject(error)
+                    })
+            })
         })
     })
 }
@@ -87,7 +95,9 @@ function requestData(url, param, method) {
                     'Content-Type': 'application/json',
                 },
             })
-            resolve(p.then((data) => data))
+            resolve(p.then((data) => data).catch((error) => {
+                reject(error)
+            }))
         })
     })
 }
@@ -134,27 +144,20 @@ export function shareOrderDetail(orderId, shareType, url, method = 'post') {
     return requestData(url, params, method)
 }
 
-
-export function getUploadImageUrls(images, url) {
-    let formData = new FormData()
-    var imageFiles = images.map((uri, index) => {
-        return {uri: uri, type: 'multipart/form-data', name: index + '.jpg'}
-    })
-    formData.append("file", imageFiles)
-    return fetch(url, {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'multipart/form-data',
-        },
-        body: formData,
-    })
-        .then((response) => response.text())
-        .then((responseData) => {
-
-            console.log('responseData', responseData)
-        })
-        .catch((error) => {
-            console.error('error', error)
-        })
+/**
+ * 发表评论
+ * @param url
+ * @param stockGameId
+ * @param imageUrls
+ * @param content
+ * @returns {*}
+ */
+export function sendComment(url,stockGameId=0,imageUrls,content) {
+    var params = {
+        "stockGameId": stockGameId,
+        "imageUrls": imageUrls,
+        "content": content,
+    }
+    return requestData(url, params, 'POST')
 }
 

@@ -11,6 +11,8 @@
 #import "PZAccessInfo.h"
 #import "PZParamTool.h"
 #import "PZMMD5.h"
+#import "ReactSingleTool.h"
+
 @implementation PersonManager
 RCT_EXPORT_MODULE();
 
@@ -84,6 +86,21 @@ RCT_EXPORT_METHOD(isWeChatInstall:(RCTResponseSenderBlock)callBack){
     NSArray* events = @[flag];
     callBack(@[[NSNull null], events]);
 }
+
+
+//--------------控制器相关操作
+RCT_EXPORT_METHOD(popView){
+  if ([ReactSingleTool sharedInstance].currentCotroller) {
+    [[ReactSingleTool sharedInstance].currentCotroller.navigationController popViewControllerAnimated:YES];
+  }
+}
+
+RCT_EXPORT_METHOD(dismissView){
+  if ([ReactSingleTool sharedInstance].currentCotroller) {
+    [[ReactSingleTool sharedInstance].currentCotroller dismissViewControllerAnimated:YES completion:nil];
+  }
+}
+
 
 
 - (dispatch_queue_t)methodQueue

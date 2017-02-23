@@ -16,12 +16,15 @@ import {
     PixelRatio,
     NavigatorIOS,
     Image,
-    Dimensions
+    Dimensions,
+    Modal,
+    NativeModules
 } from 'react-native';
 import Toast, {DURATION} from 'react-native-easy-toast'
 import ImagePicker from 'react-native-image-crop-picker'
 
 import {actionCreators} from './SendCommentReducer'
+var personManager = NativeModules.PersonManager
 
 const MIN_COMPOSER_HEIGHT = 60
 const {width, height} = Dimensions.get('window')
@@ -30,7 +33,7 @@ const picMargin = 10
 const picRowCount = 4
 const picSize = (width - picMargin * (picRowCount + 1)) / picRowCount
 
-import {getUploadImageUrls} from '../util/NetUtil'
+import {uploadImageRequest, sendComment} from '../util/NetUtil'
 class KeyboardTool extends Component {
     _openPicker() {
         var sendAction = this.props.sendAction
@@ -42,6 +45,7 @@ class KeyboardTool extends Component {
     }
 
     render() {
+        var sendAction = this.props.sendAction
         return <View
             style={{backgroundColor:'#f7f7f8',height:MIN_COMPOSER_HEIGHT,flexDirection:'row',justifyContent:'space-between'}}>
             <View style={{flexDirection:'row',alignItems:'center',margin:10}}>
@@ -50,25 +54,31 @@ class KeyboardTool extends Component {
                     onPress={()=>{
                         ImagePicker.openCamera({width: 300,height: 400,cropping: true})
                             .then(image => {
-                                console.log(image)
+                                alert('xxxx')
+                               sendAction(image)
                             })}}>
-                    <Text>拍照</Text>
+                    <Image
+                        source={require('../../assets/icon_camera.png')}
+                        style={{width:40,height:40}}/>
                 </TouchableOpacity>
                 <TouchableOpacity
                     style={styles.item}
                     onPress={this._openPicker.bind(this)}>
-                    <Text>相册</Text>
+                    <Image
+                        source={require('../../assets/blacklist.png')}
+                        style={{width:34,height:34}}/>
                 </TouchableOpacity>
             </View>
-            <View style={{flexDirection:'row',alignItems:'center',marginRight:10}}>
+            <View style={{flexDirection:'row',alignItems:'center',marginRight:15}}>
                 <TouchableOpacity onPress={()=>{
                     Keyboard.dismiss()
                 }}>
-                    <Text>关闭</Text>
+                    <Image
+                        source={require('../../assets/arrow_down.png')}
+                        style={{width:20,height:10}}/>
                 </TouchableOpacity>
             </View>
             <Toast ref="toast" position='top'/>
-
         </View>
     }
 }
@@ -77,16 +87,19 @@ class SendComment extends Component {
     constructor(props) {
         super(props)
         const {store} = this.props
+        const {uploadOn} = store.getState()
         this.store = store
-        this._keyboardHeight = 0;
+        this._keyboardHeight = 0
         this.state = {
             composerHeight: MIN_COMPOSER_HEIGHT,
             messagesContainerHeight: null,
-            pictures: []
+            pictures: [],
+            uploadOn: uploadOn
         }
         this.keyboardWillShowListener = Keyboard.addListener('keyboardWillShow', this.onKeyboardWillShow.bind(this));
         this.keyboardDidHideListener = Keyboard.addListener('keyboardWillHide', this.onKeyboardWillHide.bind(this));
         this.keyboardWillChangeFrameListener = Keyboard.addListener('keyboardWillChangeFrame', this.keyboardWillChangeFrame.bind(this))
+
     }
 
     onMainViewLayout(e) {
@@ -97,15 +110,16 @@ class SendComment extends Component {
         })
     }
 
-    _addPicture(images){
-        alert('images')
+
+    _addPicture(images) {
         var pics = this.state.pictures
         this.setState({
             pictures: [...images, ...pics]
         })
-        this.store.dispatch(actionCreators.setImages(this.state.pictures))
+        this.store.dispatch(actionCreators.setImages(images))
     }
-    _getPictures(){
+
+    _getPictures() {
         var pics = this.state.pictures
         var picViews = pics.map((pic, index) => {
             return <Image source={{uri:pic.path}}
@@ -149,8 +163,23 @@ class SendComment extends Component {
     }
 
     componentWillMount() {
-        LayoutAnimation.linear();
+        LayoutAnimation.linear()
+    }
 
+
+    componentDidMount() {
+        const {store} = this.props
+
+        this.unsubscribe = store.subscribe(() => {
+            var {uploadOn} = store.getState()
+            this.setState({
+                uploadOn: uploadOn
+            })
+        })
+    }
+
+    componentWillUnmount() {
+        this.unsubscribe()
     }
 
     setKeyboardHeight(height) {
@@ -209,6 +238,16 @@ class SendComment extends Component {
                 onLayout={this.onMainViewLayout.bind(this)}>
                 {this.renderMainView()}
                 <KeyboardTool sendAction={this._addPicture.bind(this)}/>
+                <Modal
+                    visible={this.state.uploadOn}
+                    transparent={true}
+                    animationType="fade"
+                    underlayColor="#a9d9d4">
+                    <View
+                        style={{flex:1,justifyContent:'center',alignItems:'center',opacity:0.4,backgroundColor:'black'}}>
+                        <Text style={{color:'white'}}>正在发布...</Text>
+                    </View>
+                </Modal>
                 <Toast ref="toast" position='top'/>
             </ScrollView>
         );
@@ -219,11 +258,41 @@ export default class NavigatorIOSComment extends Component {
     _handleNavigationRequest() {
         const {store} = this.props
         const {title, content, images} = store.getState()
-        var p = getUploadImageUrls('uploads',images)
-        p.then((rep)=>{
-            alert(rep)
-        })
+        store.dispatch(actionCreators.uploadOn(true))
+        //图片上传
+        if (images.length) {
+            this._uploadImageRequest(images).then((imageUrls) => {
+                this._sendComment(imageUrls, content)
+            })
+        }
+        else {
+            this._sendComment(images, content)
+        }
+    }
 
+    _uploadImageRequest(images) {
+        const {store} = this.props
+        return new Promise((res, rej) => {
+            uploadImageRequest('uploads', images).then((imageDatas) => {
+                var imageUrls = [];
+                imageDatas.forEach(function (imgData, index) {
+                    var {big_img, head_img} = imgData
+                    imageUrls.push({
+                        'big_img': big_img,
+                        'head_img': head_img
+                    })
+                })
+                res(imageUrls)
+            })
+        })
+    }
+
+    _sendComment(imageUrls, content) {
+        const {store} = this.props
+        sendComment('addComment', 0, imageUrls, content).then((res) => {
+            store.dispatch(actionCreators.uploadOn(false))
+            personManager.popView()
+        })
     }
 
     render() {
@@ -232,18 +301,22 @@ export default class NavigatorIOSComment extends Component {
         return (
             <NavigatorIOS
                 initialRoute={{
-                    component: SendComment,
-                    title: '发表评论',
-                    rightButtonTitle: '发布',
-                    passProps:{store:store},
-                    onRightButtonPress: () => this._handleNavigationRequest()}}
+                component: SendComment,
+                title: '发表评论',
+                rightButtonTitle: '发布',
+                leftButtonTitle: '取消',
+                passProps:{store:store},
+                onRightButtonPress: () => this._handleNavigationRequest(),
+                onLeftButtonPress:()=>{
+                     personManager.popView()
+                }}}
                 barTintColor='#4964ef'
                 tintColor="#ffffff"
                 titleTextColor="#ffffff"
                 style={{flex: 1}}
-            />
-        )
-    }
+                />
+            )
+        }
 }
 
 

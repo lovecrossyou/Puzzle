@@ -26,8 +26,9 @@ import NavigatorIOSComment from './app/comment/SendComment'
 import codePush from 'react-native-code-push'
 import { createStore } from 'redux'
 import {reducer} from './app/comment/SendCommentReducer'
+import devToolsEnhancer from 'remote-redux-devtools';
 
-const store = createStore(reducer)
+const store = createStore(reducer,devToolsEnhancer())
 
 let codePushOptions = {checkFrequency: codePush.CheckFrequency.ON_APP_RESUME};
 

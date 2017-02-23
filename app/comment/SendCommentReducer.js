@@ -9,12 +9,15 @@ export const types = {
     setTitle:'SET_TITLE',
     setContent:'SET_CONTENT',
     setImages:'SET_IMAGES',
+    setUploadOn:'UploadOn'
+
 }
 
 const initialState = {
     title:'评论标题',
     content:'评论内容',
-    images:[]
+    images:[],
+    uploadOn:false
 }
 
 export const actionCreators = {
@@ -26,24 +29,43 @@ export const actionCreators = {
     },
     setImages:(images)=>{
         return {type:'SET_IMAGES',images:images}
+    },
+    uploadOn:(isOn)=>{
+        return {
+            type:'UploadOn',uploadOn:isOn
+        }
     }
 }
 
 export const reducer = (state=initialState,action)=>{
-    var {title,content,images} = action
+    var {title,content,images,uploadOn} = action
     switch(action.type){
-        case types.sendComment:{
-
-        }
         case types.setTitle:{
-            return {...state,title}
+            return {
+                ...state,
+                title:title
+            }
         }
         case types.setContent:{
-            return {...state,content}
+            return {
+                ...state,
+                content:content
+            }
         }
         case types.setImages:{
-            return {...state,images}
+            return {
+                ...state,
+                images:[...images]
+            }
         }
+        case types.setUploadOn:{
+            return {
+                ...state,
+                uploadOn:uploadOn
+            }
+        }
+        default:
+            return state
     }
 
     return state

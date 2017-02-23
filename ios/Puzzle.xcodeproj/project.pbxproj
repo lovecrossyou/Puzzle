@@ -813,6 +813,7 @@
 		758657FE1E5B051A007D17BE /* RedPaperInputCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 758654EF1E5B0516007D17BE /* RedPaperInputCell.m */; };
 		758658021E5B0C83007D17BE /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 758658011E5B0C83007D17BE /* CoreMotion.framework */; };
 		758658461E5BD665007D17BE /* libCodePush.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 758658451E5BD651007D17BE /* libCodePush.a */; };
+		75ABF2141E5E888700300ED2 /* ReactSingleTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 75ABF2131E5E888700300ED2 /* ReactSingleTool.m */; };
 		832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 832341B51AAA6A8300B99B32 /* libRCTText.a */; };
 		9F71F68716894B0C9647EAF2 /* libimageCropPicker.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EA419545530D45CE963C5CE5 /* libimageCropPicker.a */; };
 		C9D9B77C082C671E8A8693DB /* libPods-Puzzle.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B2205D05EF420292F39F940F /* libPods-Puzzle.a */; };
@@ -2503,6 +2504,9 @@
 		758658001E5B0615007D17BE /* Puzzle.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Puzzle.pch; path = Puzzle/Puzzle.pch; sourceTree = "<group>"; };
 		758658011E5B0C83007D17BE /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
 		758658401E5BD651007D17BE /* CodePush.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = CodePush.xcodeproj; path = "../node_modules/react-native-code-push/ios/CodePush.xcodeproj"; sourceTree = "<group>"; };
+		75ABF2121E5E888700300ED2 /* ReactSingleTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReactSingleTool.h; sourceTree = "<group>"; };
+		75ABF2131E5E888700300ED2 /* ReactSingleTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReactSingleTool.m; sourceTree = "<group>"; };
+		75ABF2151E5EA9C500300ED2 /* Puzzle.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; name = Puzzle.entitlements; path = Puzzle/Puzzle.entitlements; sourceTree = "<group>"; };
 		78C398B01ACF4ADC00677621 /* RCTLinking.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTLinking.xcodeproj; path = "../node_modules/react-native/Libraries/LinkingIOS/RCTLinking.xcodeproj"; sourceTree = "<group>"; };
 		82C0DCA9523044A393EB3F86 /* imageCropPicker.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = imageCropPicker.xcodeproj; path = "../node_modules/react-native-image-crop-picker/ios/imageCropPicker.xcodeproj"; sourceTree = "<group>"; };
 		832341B01AAA6A8300B99B32 /* RCTText.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTText.xcodeproj; path = "../node_modules/react-native/Libraries/Text/RCTText.xcodeproj"; sourceTree = "<group>"; };
@@ -2716,6 +2720,7 @@
 		13B07FAE1A68108700A75B9A /* Puzzle */ = {
 			isa = PBXGroup;
 			children = (
+				75ABF2151E5EA9C500300ED2 /* Puzzle.entitlements */,
 				758657FF1E5B05AF007D17BE /* Supporting Files */,
 				75864ED31E5B0513007D17BE /* Module */,
 				008F07F21AC5B25A0029DE68 /* main.jsbundle */,
@@ -5062,6 +5067,8 @@
 			children = (
 				758654D51E5B0516007D17BE /* PersonManager.h */,
 				758654D61E5B0516007D17BE /* PersonManager.m */,
+				75ABF2121E5E888700300ED2 /* ReactSingleTool.h */,
+				75ABF2131E5E888700300ED2 /* ReactSingleTool.m */,
 			);
 			path = ReactModule;
 			sourceTree = "<group>";
@@ -5281,6 +5288,14 @@
 					13B07F861A680F5B00A75B9A = {
 						DevelopmentTeam = VYW4NN9SFF;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -6247,6 +6262,7 @@
 				7586577D1E5B0519007D17BE /* RRFAssetButton.m in Sources */,
 				758656F51E5B0519007D17BE /* JNQPresentStoreCell.m in Sources */,
 				758657781E5B0519007D17BE /* JNQProcitiesView.m in Sources */,
+				75ABF2141E5E888700300ED2 /* ReactSingleTool.m in Sources */,
 				758657971E5B0519007D17BE /* RRFPersonalHomePageCell.m in Sources */,
 				7586553E1E5B0517007D17BE /* JCHATPersonInfoCell.m in Sources */,
 				7586568D1E5B0518007D17BE /* FortuneHeader.m in Sources */,
@@ -6501,6 +6517,8 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_ENTITLEMENTS = Puzzle/Puzzle.entitlements;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
 				DEAD_CODE_STRIPPING = NO;
@@ -6545,7 +6563,7 @@
 					"$(PROJECT_DIR)/Module/Common/Lib/pay/AliPay",
 				);
 				INFOPLIST_FILE = Puzzle/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -6570,6 +6588,8 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_ENTITLEMENTS = Puzzle/Puzzle.entitlements;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = VYW4NN9SFF;
@@ -6613,7 +6633,7 @@
 					"$(PROJECT_DIR)/Module/Common/Lib/pay/AliPay",
 				);
 				INFOPLIST_FILE = Puzzle/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
