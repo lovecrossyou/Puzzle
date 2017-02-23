@@ -10,12 +10,12 @@ import {
     View,
     PixelRatio,
     NavigatorIOS,
-    Image,
     Dimensions,
     TouchableOpacity,
-    ListView
+    ListView,
 } from 'react-native';
-
+import Image from 'react-native-image-progress'
+import ProgressPie from 'react-native-progress/Pie'
 import {shalongcommentlist} from '../util/NetUtil'
 
 const {width, height} = Dimensions.get('window')
@@ -35,6 +35,12 @@ class Header extends Component {
         }
         return <View style={styles.userinfo_container}>
             <Image
+                indicator={ProgressPie}
+                indicatorProps={{
+                size: 40,
+                borderWidth: 0,
+                color: '#F8F8FF',
+                unfilledColor: 'white'}}
                 style={{width: 40, height: 40, borderRadius: 3, marginLeft: 10}}
                 source={{uri: userIconUrl}}/>
             <View style={{marginLeft: 10,justifyContent:'center'}}>
@@ -56,6 +62,12 @@ class Content extends Component {
         var contentImageViews = contentImages.map((img,index)=>{
             return <Image
                 style={styles.imageItem}
+                indicator={ProgressPie}
+                indicatorProps={{
+                size: picSize,
+                borderWidth: 0,
+                color: '#F8F8FF',
+                unfilledColor: 'white'}}
                 source={{uri: img.head_img}}
                 key={index}/>
         })
