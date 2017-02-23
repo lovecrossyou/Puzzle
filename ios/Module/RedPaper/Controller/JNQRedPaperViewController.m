@@ -40,7 +40,7 @@
         }
     } else {
         //收方已拆
-        _rpArray = _isSend&&[_pModel.isReceive isEqualToString:@"alreadyReceive"]&&[_pModel.status isEqualToString:@"empty_finish"] ? [NSMutableArray arrayWithObject:_pModel.acceptModel] : [NSMutableArray array];
+        _rpArray = _isSend&&[_pModel.isReceive isEqualToString:@"alreadyReceive"]&&![_pModel.status isEqualToString:@"running"] ? [NSMutableArray arrayWithObject:_pModel.acceptModel] : [NSMutableArray array];
     }
     [self buildUI];
     [self setNav];

@@ -14,6 +14,7 @@
 @property(nonatomic,weak)UILabel *nameLabel;
 @property(nonatomic,weak)UILabel *numberLabel;
 @property(nonatomic,weak)UILabel *typeLabel;
+@property(nonatomic,weak)UIImageView *delegateIcon;
 
 @end
 @implementation RRFXTDelegateCell
@@ -43,6 +44,8 @@
             make.right.mas_lessThanOrEqualTo(-100);
         }];
         
+       
+        
         
         UILabel *numberLabel = [[UILabel alloc]init];
         numberLabel.textColor = [UIColor colorWithHexString:@"333333"];
@@ -66,6 +69,17 @@
             make.centerY.mas_equalTo(iconBtn.mas_centerY);
             make.right.mas_equalTo(numberLabel.mas_left).offset(-10);
         }];
+        
+        UIImageView *delegateIcon = [[UIImageView alloc]init];
+        delegateIcon.image = [UIImage imageNamed:@"xique_icon_agent"];
+        self.delegateIcon = delegateIcon;
+        [self.contentView addSubview:delegateIcon];
+        [delegateIcon mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.left.mas_equalTo(nameLabel.mas_right).offset(8);
+            make.size.mas_equalTo(CGSizeMake(13, 13));
+            make.centerY.mas_equalTo(nameLabel.mas_centerY);
+            make.right.mas_greaterThanOrEqualTo(typeLabel.mas_left).offset(4);
+        }];
     }
     return self;
 }
@@ -78,6 +92,7 @@
     self.nameLabel.attributedText = str;
     self.numberLabel.text = [NSString stringWithFormat:@"%ld",model.diamondAmount];
     self.typeLabel.text = model.operationType;
+    self.delegateIcon.hidden = [model.isDelegate isEqualToString:@"isDelegate"];
 }
 
 @end

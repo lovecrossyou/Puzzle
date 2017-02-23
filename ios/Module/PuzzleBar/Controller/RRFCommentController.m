@@ -29,7 +29,7 @@
 #import "JNQFailFooterView.h"
 #import "HBLoadingView.h"
 #import "RRFDetailInfoController.h"
-
+#import "PZReactUIManager.h"
 #define commentPanelHeight 224 - 64
 @interface RRFCommentController ()<UITableViewDelegate,UITableViewDataSource>
 
@@ -50,6 +50,11 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+  
+    UIView* rootView = [PZReactUIManager createWithPage:@"commentlist" params:nil size:CGSizeZero];
+  self.view = rootView ;
+  
+  return;
     WEAKSELF
     self.pageNo = 0;
     UITableView *tableView = [[UITableView alloc]init];

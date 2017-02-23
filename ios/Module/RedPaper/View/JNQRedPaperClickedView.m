@@ -110,15 +110,14 @@
     [_headImgV sd_setImageWithURL:[NSURL URLWithString:prePModel.sendIconUrl] placeholderImage:[UIImage imageNamed:@""]];
     _userNameL.text = prePModel.sendUserName;
     _blessL.text = [prePModel.desInfo isEqualToString:@""] || prePModel.desInfo == nil ? @"恭喜发财，财源滚滚！" : prePModel.desInfo;
-    if ((_isSend && ([prePModel.bonusType isEqualToString:@"average"] ||
-                     [prePModel.place isEqualToString:@"single"])) ||
-        (!_isSend&&![prePModel.status isEqualToString:@"empty_finish"])) {
-        _getListBtn.hidden = YES;
-    } else if (([prePModel.bonusType isEqualToString:@"random"]&&(_isSend||(!_isSend&&[prePModel.status isEqualToString:@"empty_finish"]))) ||
-               (!_isSend&&([prePModel.bonusType isEqualToString:@"average"]||[prePModel.place isEqualToString:@"single"]))) {
-        _getListBtn.hidden = NO;
-    }
-//    _getListBtn.hidden = [prePModel.place isEqualToString:@"group"] && [prePModel.bonusType isEqualToString:@"random"] ? NO : YES;
+  if ((_isSend && ([prePModel.bonusType isEqualToString:@"average"] ||
+                   [prePModel.place isEqualToString:@"single"])) ||
+      (!_isSend&&(![prePModel.status isEqualToString:@"empty_finish"] ||
+                  ([prePModel.status isEqualToString:@"empty_finish"]&&[prePModel.bonusType isEqualToString:@"average"])))) {
+    _getListBtn.hidden = YES;
+  } else if ([prePModel.bonusType isEqualToString:@"random"]&&(_isSend||(!_isSend&&[prePModel.status isEqualToString:@"empty_finish"]))) {
+    _getListBtn.hidden = NO;
+  }
     _attenL.text = [prePModel.bonusType isEqualToString:@"random"] && ([prePModel.place isEqualToString:@"friendCircle"] || [prePModel.place isEqualToString:@"group"]) ? @"发了一个红包，金额随机" : @"给你发了一个红包";
 }
 
@@ -207,14 +206,14 @@
     } else if ([overPModel.bonusType isEqualToString:@"average"]&&[overPModel.status isEqualToString:@"empty_finish"]) {
         _attenL.text = @"该红包已被领取";
     }
-    if ((_isSend && ([overPModel.bonusType isEqualToString:@"average"] ||
-                     [overPModel.place isEqualToString:@"single"])) ||
-        (!_isSend&&![overPModel.status isEqualToString:@"empty_finish"])) {
-        _getListBtn.hidden = YES;
-    } else if (([overPModel.bonusType isEqualToString:@"random"]&&(_isSend||(!_isSend&&[overPModel.status isEqualToString:@"empty_finish"]))) ||
-               (!_isSend&&([overPModel.bonusType isEqualToString:@"average"]||[overPModel.place isEqualToString:@"single"]))) {
-        _getListBtn.hidden = NO;
-    }
+  if ((_isSend && ([overPModel.bonusType isEqualToString:@"average"] ||
+                   [overPModel.place isEqualToString:@"single"])) ||
+      (!_isSend&&(![overPModel.status isEqualToString:@"empty_finish"] ||
+                  ([overPModel.status isEqualToString:@"empty_finish"]&&[overPModel.bonusType isEqualToString:@"average"])))) {
+    _getListBtn.hidden = YES;
+  } else if ([overPModel.bonusType isEqualToString:@"random"]&&(_isSend||(!_isSend&&[overPModel.status isEqualToString:@"empty_finish"]))) {
+    _getListBtn.hidden = NO;
+  }
 }
 @end
 

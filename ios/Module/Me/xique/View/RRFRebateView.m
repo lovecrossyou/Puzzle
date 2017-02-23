@@ -43,6 +43,9 @@
 }
 @end
 @interface RRFRebateView ()
+
+@property(nonatomic,weak)UILabel *totalCountLabel;
+
 @property(nonatomic,weak)RRFRebateCellView *joinPorfitCell;
 @property(nonatomic,weak)RRFRebateCellView *joinOneCell;
 @property(nonatomic,weak)RRFRebateCellView *joinTowCell;
@@ -63,6 +66,18 @@
         
         
         self.backgroundColor = [UIColor colorWithHexString:@"f5f5f5"];
+        UILabel *totalCountLabel = [[UILabel alloc]init];
+        totalCountLabel.textAlignment = NSTextAlignmentCenter;
+        totalCountLabel.textColor = [UIColor whiteColor];
+        totalCountLabel.numberOfLines = 2;
+        totalCountLabel.backgroundColor = [UIColor colorWithHexString:@"7c7d82"];
+        self.totalCountLabel = totalCountLabel;
+        [self addSubview:totalCountLabel];
+        [totalCountLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.left.right.top.mas_equalTo(0);
+            make.height.mas_equalTo(90);
+        }];
+        
         
         RRFRebateCellView *joinPorfitCell = [[RRFRebateCellView alloc]init];
         joinPorfitCell.backgroundColor = [UIColor whiteColor];
@@ -73,7 +88,7 @@
         [joinPorfitCell mas_makeConstraints:^(MASConstraintMaker *make) {
             make.left.right.mas_equalTo(0);
             make.height.mas_equalTo(44);
-            make.top.mas_equalTo(12);
+            make.top.mas_equalTo(totalCountLabel.mas_bottom).offset(12);
 
         }];
         
@@ -170,16 +185,22 @@
 }
 -(void)setModel:(RRFRebateDetailInfoModel *)model
 {
+    self.totalCountLabel.text = [NSString stringWithFormat:@"¥%.2f\n返利合计",model.rebateAll];
+    self.joinPorfitCell.subTitleLabel.text = [NSString stringWithFormat:@"¥%.2f",model.rebateDelegateCount];
     
-    NSMutableAttributedString *oneDelegateStr = [[NSMutableAttributedString alloc]initWithString:[NSString stringWithFormat:@"一级代理(%@)",model.levelARate]];
+    NSMutableAttributedString *oneDelegateStr = [[NSMutableAttributedString alloc]initWithString:[NSString stringWithFormat:@"一级代理(%@)",model.levelADelegateRate]];
     [oneDelegateStr addAttribute:NSFontAttributeName value:[UIFont systemFontOfSize:16] range:NSMakeRange(0, 4)];
     [oneDelegateStr addAttribute:NSFontAttributeName value:[UIFont systemFontOfSize:12] range:NSMakeRange(4,oneDelegateStr.length- 4)];
     self.joinOneCell.titleLabel.attributedText = oneDelegateStr;
+    self.joinOneCell.subTitleLabel.text = [NSString stringWithFormat:@"¥%.2f",model.rebateForADelegate];
+
     
-    NSMutableAttributedString *twoDelegateStr = [[NSMutableAttributedString alloc]initWithString:[NSString stringWithFormat:@"二级代理(%@)",model.levelBRate]];
+    NSMutableAttributedString *twoDelegateStr = [[NSMutableAttributedString alloc]initWithString:[NSString stringWithFormat:@"二级代理(%@)",model.levelBDelegateRate]];
     [twoDelegateStr addAttribute:NSFontAttributeName value:[UIFont systemFontOfSize:16] range:NSMakeRange(0, 4)];
     [twoDelegateStr addAttribute:NSFontAttributeName value:[UIFont systemFontOfSize:12] range:NSMakeRange(4, twoDelegateStr.length -4)];
     self.joinTowCell.titleLabel.attributedText = twoDelegateStr;
+    self.joinTowCell.subTitleLabel.text = [NSString stringWithFormat:@"¥%.2f",model.rebateForBDelegate];
+
     
     NSMutableAttributedString *mineStr = [[NSMutableAttributedString alloc]initWithString:[NSString stringWithFormat:@"我(%@)",model.rebateselfRate]];
     [mineStr addAttribute:NSFontAttributeName value:[UIFont systemFontOfSize:16] range:NSMakeRange(0, 1)];
@@ -203,7 +224,7 @@
     [threeStr addAttribute:NSFontAttributeName value:[UIFont systemFontOfSize:12] range:NSMakeRange(4, threeStr.length - 4)];
     self.threeCell.titleLabel.attributedText = threeStr;
     
-    self.titleCell.subTitleLabel.text = [NSString stringWithFormat:@"¥%.2f",model.rebateCount];
+    self.titleCell.subTitleLabel.text = [NSString stringWithFormat:@"¥%.2f",model.rebateBuyDiamond];
     self.titleCell.subTitleLabel.textColor = [UIColor redColor];
     
     self.mineCell.subTitleLabel.text = [NSString stringWithFormat:@"%.2f",model.rebateForMySelf];
@@ -213,7 +234,10 @@
 
 
 }
-
+-(void)setHidden:(BOOL)hidden
+{
+    self.infoCell.hidden = hidden;
+}
 @end
 @interface RRFRebateSectionHeaderView ()
 @property(nonatomic,weak)UIButton *titleBtn;
