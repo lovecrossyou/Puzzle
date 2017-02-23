@@ -13,9 +13,12 @@ import {
     Dimensions,
     TouchableOpacity,
     ListView,
+    Modal
 } from 'react-native';
 import Image from 'react-native-image-progress'
 import ProgressPie from 'react-native-progress/Pie'
+import SGListView from 'react-native-sglistview'
+import ImageViewer from 'react-native-image-zoom-viewer'
 import {shalongcommentlist} from '../util/NetUtil'
 
 const {width, height} = Dimensions.get('window')
@@ -28,19 +31,13 @@ const picSize = (width - picMargin * (picRowCount + 1)) / picRowCount
 
 class Header extends Component {
     render() {
-        const {userIconUrl,userName,time,sex}  = this.props.data
+        const {userIconUrl, userName, time, sex}  = this.props.data
         var sexUrl = require('../../assets/man.png')
         if (sex != '男') {
             sexUrl = require('../../assets/woman.png')
         }
         return <View style={styles.userinfo_container}>
             <Image
-                indicator={ProgressPie}
-                indicatorProps={{
-                size: 40,
-                borderWidth: 0,
-                color: '#F8F8FF',
-                unfilledColor: 'white'}}
                 style={{width: 40, height: 40, borderRadius: 3, marginLeft: 10}}
                 source={{uri: userIconUrl}}/>
             <View style={{marginLeft: 10,justifyContent:'center'}}>
@@ -57,19 +54,36 @@ class Header extends Component {
 }
 
 class Content extends Component {
+    constructor() {
+        super()
+        this.state = {
+            showModal: false,
+            showIndex:0
+        }
+    }
+
     render() {
-        const {content,contentImages}  = this.props.data
-        var contentImageViews = contentImages.map((img,index)=>{
-            return <Image
-                style={styles.imageItem}
-                indicator={ProgressPie}
-                indicatorProps={{
-                size: picSize,
-                borderWidth: 0,
-                color: '#F8F8FF',
-                unfilledColor: 'white'}}
-                source={{uri: img.head_img}}
-                key={index}/>
+        const {content, contentImages}  = this.props.data
+        var imgUrls = []
+        contentImages.forEach(function (img,index) {
+            imgUrls.push({'url': img.big_img})
+        })
+
+        var contentImageViews = contentImages.map((img, index) => {
+            return <TouchableOpacity
+                onPress={()=>{
+                    var showModal = !this.state.showModal
+                    this.setState({
+                    showModal:showModal,
+                    showIndex:index
+                })
+                key={index}
+            }}>
+                <Image
+                    style={styles.imageItem}
+                    source={{uri: img.head_img}}
+                />
+            </TouchableOpacity>
         })
 
         return <View style={styles.container}>
@@ -79,6 +93,17 @@ class Content extends Component {
             <View style={{flexDirection:'row',flexWrap:'wrap'}}>
                 {contentImageViews}
             </View>
+            <Modal visible={this.state.showModal} transparent={false}>
+                <ImageViewer
+                    imageUrls={imgUrls}
+                    index={this.state.showIndex}
+                    onClick={()=>{
+                    var showModal = !this.state.showModal
+                    this.setState({
+                    showModal:showModal,
+                   })}}
+                />
+            </Modal>
         </View>
     }
 }
@@ -94,7 +119,7 @@ class Footer extends Component {
                 <Text style={styles.footerText}>999 评论</Text>
             </View>
             <TouchableOpacity style={{marginRight:10,paddingBottom:6}}>
-                    <Image source={require('../../assets/operation_more.png')} style={{width:28,height:28}}/>
+                <Image source={require('../../assets/operation_more.png')} style={{width:28,height:28}}/>
             </TouchableOpacity>
         </View>
     }
@@ -112,59 +137,64 @@ class ShalongCell extends Component {
 }
 
 export default class ShalongList extends Component {
-    constructor(){
+    constructor() {
         super()
         this.state = {
-            commentlist:[],
+            commentlist: [],
             dataSource: new ListView.DataSource({
                 rowHasChanged: (row1, row2) => row1 !== row2,
             }),
-            isLast:false
+            isLast: false
         }
     }
+
     componentDidMount() {
         this.fetchData()
     }
 
-    fetchData(){
-        shalongcommentlist(pageNo,pageSize).then((data)=>{
+    fetchData() {
+        shalongcommentlist(pageNo, pageSize).then((data) => {
             var list = data["content"]
             var last = data.last
             var oldlist = this.state.commentlist
-            if(list.length){
+            if (list.length) {
                 oldlist = oldlist.concat(list)
                 pageNo++
             }
             this.setState({
-                commentlist:oldlist,
+                commentlist: oldlist,
                 dataSource: this.state.dataSource.cloneWithRows(oldlist),
-                last:last
+                last: last
             })
         })
     }
 
 
-    renderData(data){
+    renderData(data) {
         return <ShalongCell data={data}/>
     }
 
     render() {
-        return <ListView
+        return <SGListView
             style={styles.flex}
             dataSource={this.state.dataSource}
             renderRow={this.renderData}
+            initialListSize={1}
             onEndReached={this.fetchData.bind(this)}
             onEndReachedThreshold={10}
+            pageSize={pageSize}
+            scrollRenderAheadDistance={1}
+            stickyHeaderIndices={[]}
             renderFooter={()=>{
                 if(this.state.isLast)return null
                 return <LoadMoreFooter/>
             }}>
-        </ListView>
+        </SGListView>
     }
 }
 
-class LoadMoreFooter extends Component{
-    render(){
+class LoadMoreFooter extends Component {
+    render() {
         return <View style={{height:44,justifyContent:'center',alignItems:'center'}}>
             <Image style={{height:30,width:30}} source={require('../../assets/loading.gif')}/>
         </View>
@@ -185,8 +215,8 @@ const styles = {
         alignItems: 'center',
         borderBottomColor: '#f5f5f5',
         borderBottomWidth: 1,
-        paddingBottom:10,
-        paddingTop:10
+        paddingBottom: 10,
+        paddingTop: 10
     },
     imageItem: {
         width: picSize,
