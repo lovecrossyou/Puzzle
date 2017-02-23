@@ -27,7 +27,7 @@ project.xcworkspace
 android/
 build/
 .idea
-.gradle
+*.gradle
 local.properties
 *.iml
 *.pch
