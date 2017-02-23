@@ -86,6 +86,17 @@ class KeyboardTool extends Component {
 }
 
 class SendComment extends Component {
+<<<<<<< HEAD
+
+    constructor(props) {
+        super(props)
+
+        this._keyboardHeight = 0;
+        this.state = {
+            composerHeight: MIN_COMPOSER_HEIGHT,
+            messagesContainerHeight: null,
+            pictures:[]
+=======
     constructor(props) {
         super(props)
         const {store} = this.props
@@ -97,11 +108,15 @@ class SendComment extends Component {
             messagesContainerHeight: null,
             pictures: [],
             uploadOn: uploadOn
+>>>>>>> 31a3d874c3381e06a302b8a96b343d64143e1262
         }
         this.keyboardWillShowListener = Keyboard.addListener('keyboardWillShow', this.onKeyboardWillShow.bind(this));
         this.keyboardDidHideListener = Keyboard.addListener('keyboardWillHide', this.onKeyboardWillHide.bind(this));
         this.keyboardWillChangeFrameListener = Keyboard.addListener('keyboardWillChangeFrame', this.keyboardWillChangeFrame.bind(this))
+<<<<<<< HEAD
+=======
 
+>>>>>>> 31a3d874c3381e06a302b8a96b343d64143e1262
     }
 
     onMainViewLayout(e) {
@@ -112,6 +127,13 @@ class SendComment extends Component {
         })
     }
 
+<<<<<<< HEAD
+    _getPictures(){
+        var pics = this.state.pictures
+        var picViews = pics.map((pic,index)=>{
+            return <Image source={pic} style={{width:60,height:60}}></Image>
+        })
+=======
 
     _addPicture(images) {
         var pics = this.state.pictures
@@ -130,6 +152,7 @@ class SendComment extends Component {
             />
         })
         return picViews
+>>>>>>> 31a3d874c3381e06a302b8a96b343d64143e1262
     }
 
     renderMainView() {
@@ -146,7 +169,11 @@ class SendComment extends Component {
                         }}
                     />
                 </View>
+<<<<<<< HEAD
+                <View style={{alignItems:'center',justifyContent:'center',backgroundColor:'green',paddingLeft:10}}>
+=======
                 <View style={{alignItems:'center',justifyContent:'center',paddingLeft:10}}>
+>>>>>>> 31a3d874c3381e06a302b8a96b343d64143e1262
                     <TextInput
                         placeholder='正文'
                         editable={true}
@@ -160,6 +187,9 @@ class SendComment extends Component {
                 <View style={{flexDirection:'row',flexWrap:'wrap'}}>
                     {this._getPictures()}
                 </View>
+                <View style={{flexDirection:'row'}}>
+                    {this._getPictures()}
+                </View>
             </Animated.View>
         );
     }
@@ -168,6 +198,8 @@ class SendComment extends Component {
         LayoutAnimation.linear()
     }
 
+<<<<<<< HEAD
+=======
 
     componentDidMount() {
         const {store} = this.props
@@ -184,6 +216,7 @@ class SendComment extends Component {
         this.unsubscribe()
     }
 
+>>>>>>> 31a3d874c3381e06a302b8a96b343d64143e1262
     setKeyboardHeight(height) {
         this._keyboardHeight = height;
     }
@@ -257,6 +290,10 @@ class SendComment extends Component {
 }
 
 export default class NavigatorIOSComment extends Component {
+<<<<<<< HEAD
+    _handleNavigationRequest(){
+        alert('xxxx')
+=======
     _handleNavigationRequest() {
         const {store} = this.props
         const {title, content, images} = store.getState()
@@ -295,6 +332,7 @@ export default class NavigatorIOSComment extends Component {
             store.dispatch(actionCreators.uploadOn(false))
             personManager.popView()
         })
+>>>>>>> 31a3d874c3381e06a302b8a96b343d64143e1262
     }
 
     render() {
@@ -303,6 +341,13 @@ export default class NavigatorIOSComment extends Component {
         return (
             <NavigatorIOS
                 initialRoute={{
+<<<<<<< HEAD
+                    component: SendComment,
+                    title: '发表评论',
+                    rightButtonTitle: '发布',
+                    passProps: { sendClickProp:this._handleNavigationRequest.bind(this)},
+                    onRightButtonPress: () => this._handleNavigationRequest()}}
+=======
                 component: SendComment,
                 title: '发表评论',
                 rightButtonTitle: '发布',
@@ -312,6 +357,7 @@ export default class NavigatorIOSComment extends Component {
                 onLeftButtonPress:()=>{
                      personManager.popView()
                 }}}
+>>>>>>> 31a3d874c3381e06a302b8a96b343d64143e1262
                 barTintColor='#4964ef'
                 tintColor="#ffffff"
                 titleTextColor="#ffffff"
