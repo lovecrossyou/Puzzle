@@ -195,7 +195,7 @@
     }];
 }
 
-//inviteTwoPersonList
+//邀请奖励
 +(void)inviteTwoPersonListWithPageNo:(int)no pageSize:(int)size otherUserId:(int)otherUserId successBlock:(PZRequestSuccess)success fail:(PZRequestFailure)failBlock{
     PZAccessInfo* accessInfo = [PZParamTool createAccessInfo];
     NSDictionary* params = @{

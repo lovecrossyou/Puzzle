@@ -13,6 +13,32 @@
 		00C302E91ABCBA2D00DB3ED1 /* libRCTNetwork.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C302DC1ABCB9D200DB3ED1 /* libRCTNetwork.a */; };
 		00C302EA1ABCBA2D00DB3ED1 /* libRCTVibration.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C302E41ABCB9EE00DB3ED1 /* libRCTVibration.a */; };
 		00E356F31AD99517003FC87E /* PuzzleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* PuzzleTests.m */; };
+		12071BCE1E5C490600C3A632 /* RSKImageCropper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 12071BCD1E5C490600C3A632 /* RSKImageCropper.framework */; };
+		12071BCF1E5C490600C3A632 /* RSKImageCropper.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 12071BCD1E5C490600C3A632 /* RSKImageCropper.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		12071BD11E5C490600C3A632 /* QBImagePicker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 12071BD01E5C490600C3A632 /* QBImagePicker.framework */; };
+		12071BD21E5C490600C3A632 /* QBImagePicker.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 12071BD01E5C490600C3A632 /* QBImagePicker.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		123A8E711E5C41BC00A5D76E /* RRFApplyForController.m in Sources */ = {isa = PBXBuildFile; fileRef = 123A8E401E5C41BC00A5D76E /* RRFApplyForController.m */; };
+		123A8E721E5C41BC00A5D76E /* RRFCDelegateController.m in Sources */ = {isa = PBXBuildFile; fileRef = 123A8E421E5C41BC00A5D76E /* RRFCDelegateController.m */; };
+		123A8E741E5C41BC00A5D76E /* RRFJoinController.m in Sources */ = {isa = PBXBuildFile; fileRef = 123A8E461E5C41BC00A5D76E /* RRFJoinController.m */; };
+		123A8E751E5C41BC00A5D76E /* RRFRebateController.m in Sources */ = {isa = PBXBuildFile; fileRef = 123A8E481E5C41BC00A5D76E /* RRFRebateController.m */; };
+		123A8E761E5C41BC00A5D76E /* RRFRecruitController.m in Sources */ = {isa = PBXBuildFile; fileRef = 123A8E4A1E5C41BC00A5D76E /* RRFRecruitController.m */; };
+		123A8E771E5C41BC00A5D76E /* RRFXTDelegateController.m in Sources */ = {isa = PBXBuildFile; fileRef = 123A8E4C1E5C41BC00A5D76E /* RRFXTDelegateController.m */; };
+		123A8E781E5C41BC00A5D76E /* RRFXTNextDelegateController.m in Sources */ = {isa = PBXBuildFile; fileRef = 123A8E4E1E5C41BC00A5D76E /* RRFXTNextDelegateController.m */; };
+		123A8E791E5C41BC00A5D76E /* RRFXTPlanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 123A8E501E5C41BC00A5D76E /* RRFXTPlanViewController.m */; };
+		123A8E7A1E5C41BC00A5D76E /* RRFApplyDelegaterModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 123A8E531E5C41BC00A5D76E /* RRFApplyDelegaterModel.m */; };
+		123A8E7B1E5C41BC00A5D76E /* RRFRebateDetailInfoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 123A8E551E5C41BC00A5D76E /* RRFRebateDetailInfoModel.m */; };
+		123A8E7C1E5C41BC00A5D76E /* RRFRebateModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 123A8E571E5C41BC00A5D76E /* RRFRebateModel.m */; };
+		123A8E7D1E5C41BC00A5D76E /* RRFXTDelegateCellModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 123A8E591E5C41BC00A5D76E /* RRFXTDelegateCellModel.m */; };
+		123A8E7E1E5C41BC00A5D76E /* RRFXTDelegateInfoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 123A8E5B1E5C41BC00A5D76E /* RRFXTDelegateInfoModel.m */; };
+		123A8E7F1E5C41BC00A5D76E /* RRFXTPlanModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 123A8E5D1E5C41BC00A5D76E /* RRFXTPlanModel.m */; };
+		123A8E801E5C41BC00A5D76E /* RRFApplyForView.m in Sources */ = {isa = PBXBuildFile; fileRef = 123A8E601E5C41BC00A5D76E /* RRFApplyForView.m */; };
+		123A8E821E5C41BC00A5D76E /* RRFJoinView.m in Sources */ = {isa = PBXBuildFile; fileRef = 123A8E641E5C41BC00A5D76E /* RRFJoinView.m */; };
+		123A8E831E5C41BC00A5D76E /* RRFRebateCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 123A8E661E5C41BC00A5D76E /* RRFRebateCell.m */; };
+		123A8E841E5C41BC00A5D76E /* RRFRebateView.m in Sources */ = {isa = PBXBuildFile; fileRef = 123A8E681E5C41BC00A5D76E /* RRFRebateView.m */; };
+		123A8E851E5C41BC00A5D76E /* RRFRecruitView.m in Sources */ = {isa = PBXBuildFile; fileRef = 123A8E6A1E5C41BC00A5D76E /* RRFRecruitView.m */; };
+		123A8E861E5C41BC00A5D76E /* RRFXQPlanView.m in Sources */ = {isa = PBXBuildFile; fileRef = 123A8E6C1E5C41BC00A5D76E /* RRFXQPlanView.m */; };
+		123A8E871E5C41BC00A5D76E /* RRFXTDelegateCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 123A8E6E1E5C41BC00A5D76E /* RRFXTDelegateCell.m */; };
+		123A8E881E5C41BC00A5D76E /* RRFXTDelegateView.m in Sources */ = {isa = PBXBuildFile; fileRef = 123A8E701E5C41BC00A5D76E /* RRFXTDelegateView.m */; };
 		133E29F31AD74F7200F7D852 /* libRCTLinking.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 78C398B91ACF4ADC00677621 /* libRCTLinking.a */; };
 		139105C61AF99C1200B5F7CC /* libRCTSettings.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 139105C11AF99BAD00B5F7CC /* libRCTSettings.a */; };
 		139FDEF61B0652A700C62182 /* libRCTWebSocket.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 139FDEF41B06529B00C62182 /* libRCTWebSocket.a */; };
@@ -642,7 +668,6 @@
 		758657521E5B0519007D17BE /* RRFMyFriendController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7586537A1E5B0516007D17BE /* RRFMyFriendController.m */; };
 		758657531E5B0519007D17BE /* RRFMyOrderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7586537C1E5B0516007D17BE /* RRFMyOrderViewController.m */; };
 		758657541E5B0519007D17BE /* RRFNoticeListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7586537E1E5B0516007D17BE /* RRFNoticeListController.m */; };
-		758657551E5B0519007D17BE /* RRFOrderCommentsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 758653801E5B0516007D17BE /* RRFOrderCommentsController.m */; };
 		758657561E5B0519007D17BE /* RRFOrderDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = 758653821E5B0516007D17BE /* RRFOrderDetailController.m */; };
 		758657571E5B0519007D17BE /* RRFOrderListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 758653841E5B0516007D17BE /* RRFOrderListController.m */; };
 		758657581E5B0519007D17BE /* RRFPersonalHomePageController.m in Sources */ = {isa = PBXBuildFile; fileRef = 758653861E5B0516007D17BE /* RRFPersonalHomePageController.m */; };
@@ -1001,6 +1026,21 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		12071BEF1E5C490700C3A632 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				12071BCF1E5C490600C3A632 /* RSKImageCropper.framework in Embed Frameworks */,
+				12071BD21E5C490600C3A632 /* QBImagePicker.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		008F07F21AC5B25A0029DE68 /* main.jsbundle */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = main.jsbundle; sourceTree = "<group>"; };
 		00C302A71ABCB8CE00DB3ED1 /* RCTActionSheet.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTActionSheet.xcodeproj; path = "../node_modules/react-native/Libraries/ActionSheetIOS/RCTActionSheet.xcodeproj"; sourceTree = "<group>"; };
@@ -1011,6 +1051,52 @@
 		00E356EE1AD99517003FC87E /* PuzzleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PuzzleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		00E356F21AD99517003FC87E /* PuzzleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PuzzleTests.m; sourceTree = "<group>"; };
+		12071BCD1E5C490600C3A632 /* RSKImageCropper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = RSKImageCropper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		12071BD01E5C490600C3A632 /* QBImagePicker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = QBImagePicker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		123A8E3F1E5C41BC00A5D76E /* RRFApplyForController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RRFApplyForController.h; sourceTree = "<group>"; };
+		123A8E401E5C41BC00A5D76E /* RRFApplyForController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RRFApplyForController.m; sourceTree = "<group>"; };
+		123A8E411E5C41BC00A5D76E /* RRFCDelegateController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RRFCDelegateController.h; sourceTree = "<group>"; };
+		123A8E421E5C41BC00A5D76E /* RRFCDelegateController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RRFCDelegateController.m; sourceTree = "<group>"; };
+		123A8E451E5C41BC00A5D76E /* RRFJoinController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RRFJoinController.h; sourceTree = "<group>"; };
+		123A8E461E5C41BC00A5D76E /* RRFJoinController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RRFJoinController.m; sourceTree = "<group>"; };
+		123A8E471E5C41BC00A5D76E /* RRFRebateController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RRFRebateController.h; sourceTree = "<group>"; };
+		123A8E481E5C41BC00A5D76E /* RRFRebateController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RRFRebateController.m; sourceTree = "<group>"; };
+		123A8E491E5C41BC00A5D76E /* RRFRecruitController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RRFRecruitController.h; sourceTree = "<group>"; };
+		123A8E4A1E5C41BC00A5D76E /* RRFRecruitController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RRFRecruitController.m; sourceTree = "<group>"; };
+		123A8E4B1E5C41BC00A5D76E /* RRFXTDelegateController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RRFXTDelegateController.h; sourceTree = "<group>"; };
+		123A8E4C1E5C41BC00A5D76E /* RRFXTDelegateController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RRFXTDelegateController.m; sourceTree = "<group>"; };
+		123A8E4D1E5C41BC00A5D76E /* RRFXTNextDelegateController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RRFXTNextDelegateController.h; sourceTree = "<group>"; };
+		123A8E4E1E5C41BC00A5D76E /* RRFXTNextDelegateController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RRFXTNextDelegateController.m; sourceTree = "<group>"; };
+		123A8E4F1E5C41BC00A5D76E /* RRFXTPlanViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RRFXTPlanViewController.h; sourceTree = "<group>"; };
+		123A8E501E5C41BC00A5D76E /* RRFXTPlanViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RRFXTPlanViewController.m; sourceTree = "<group>"; };
+		123A8E521E5C41BC00A5D76E /* RRFApplyDelegaterModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RRFApplyDelegaterModel.h; sourceTree = "<group>"; };
+		123A8E531E5C41BC00A5D76E /* RRFApplyDelegaterModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RRFApplyDelegaterModel.m; sourceTree = "<group>"; };
+		123A8E541E5C41BC00A5D76E /* RRFRebateDetailInfoModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RRFRebateDetailInfoModel.h; sourceTree = "<group>"; };
+		123A8E551E5C41BC00A5D76E /* RRFRebateDetailInfoModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RRFRebateDetailInfoModel.m; sourceTree = "<group>"; };
+		123A8E561E5C41BC00A5D76E /* RRFRebateModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RRFRebateModel.h; sourceTree = "<group>"; };
+		123A8E571E5C41BC00A5D76E /* RRFRebateModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RRFRebateModel.m; sourceTree = "<group>"; };
+		123A8E581E5C41BC00A5D76E /* RRFXTDelegateCellModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RRFXTDelegateCellModel.h; sourceTree = "<group>"; };
+		123A8E591E5C41BC00A5D76E /* RRFXTDelegateCellModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RRFXTDelegateCellModel.m; sourceTree = "<group>"; };
+		123A8E5A1E5C41BC00A5D76E /* RRFXTDelegateInfoModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RRFXTDelegateInfoModel.h; sourceTree = "<group>"; };
+		123A8E5B1E5C41BC00A5D76E /* RRFXTDelegateInfoModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RRFXTDelegateInfoModel.m; sourceTree = "<group>"; };
+		123A8E5C1E5C41BC00A5D76E /* RRFXTPlanModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RRFXTPlanModel.h; sourceTree = "<group>"; };
+		123A8E5D1E5C41BC00A5D76E /* RRFXTPlanModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RRFXTPlanModel.m; sourceTree = "<group>"; };
+		123A8E5F1E5C41BC00A5D76E /* RRFApplyForView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RRFApplyForView.h; sourceTree = "<group>"; };
+		123A8E601E5C41BC00A5D76E /* RRFApplyForView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RRFApplyForView.m; sourceTree = "<group>"; };
+		123A8E631E5C41BC00A5D76E /* RRFJoinView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RRFJoinView.h; sourceTree = "<group>"; };
+		123A8E641E5C41BC00A5D76E /* RRFJoinView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RRFJoinView.m; sourceTree = "<group>"; };
+		123A8E651E5C41BC00A5D76E /* RRFRebateCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RRFRebateCell.h; sourceTree = "<group>"; };
+		123A8E661E5C41BC00A5D76E /* RRFRebateCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RRFRebateCell.m; sourceTree = "<group>"; };
+		123A8E671E5C41BC00A5D76E /* RRFRebateView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RRFRebateView.h; sourceTree = "<group>"; };
+		123A8E681E5C41BC00A5D76E /* RRFRebateView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RRFRebateView.m; sourceTree = "<group>"; };
+		123A8E691E5C41BC00A5D76E /* RRFRecruitView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RRFRecruitView.h; sourceTree = "<group>"; };
+		123A8E6A1E5C41BC00A5D76E /* RRFRecruitView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RRFRecruitView.m; sourceTree = "<group>"; };
+		123A8E6B1E5C41BC00A5D76E /* RRFXQPlanView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RRFXQPlanView.h; sourceTree = "<group>"; };
+		123A8E6C1E5C41BC00A5D76E /* RRFXQPlanView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RRFXQPlanView.m; sourceTree = "<group>"; };
+		123A8E6D1E5C41BC00A5D76E /* RRFXTDelegateCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RRFXTDelegateCell.h; sourceTree = "<group>"; };
+		123A8E6E1E5C41BC00A5D76E /* RRFXTDelegateCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RRFXTDelegateCell.m; sourceTree = "<group>"; };
+		123A8E6F1E5C41BC00A5D76E /* RRFXTDelegateView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RRFXTDelegateView.h; sourceTree = "<group>"; };
+		123A8E701E5C41BC00A5D76E /* RRFXTDelegateView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RRFXTDelegateView.m; sourceTree = "<group>"; };
 		139105B61AF99BAD00B5F7CC /* RCTSettings.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTSettings.xcodeproj; path = "../node_modules/react-native/Libraries/Settings/RCTSettings.xcodeproj"; sourceTree = "<group>"; };
 		139FDEE61B06529A00C62182 /* RCTWebSocket.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTWebSocket.xcodeproj; path = "../node_modules/react-native/Libraries/WebSocket/RCTWebSocket.xcodeproj"; sourceTree = "<group>"; };
 		13B07F961A680F5B00A75B9A /* Puzzle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Puzzle.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -2126,8 +2212,6 @@
 		7586537C1E5B0516007D17BE /* RRFMyOrderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RRFMyOrderViewController.m; sourceTree = "<group>"; };
 		7586537D1E5B0516007D17BE /* RRFNoticeListController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RRFNoticeListController.h; sourceTree = "<group>"; };
 		7586537E1E5B0516007D17BE /* RRFNoticeListController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RRFNoticeListController.m; sourceTree = "<group>"; };
-		7586537F1E5B0516007D17BE /* RRFOrderCommentsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RRFOrderCommentsController.h; sourceTree = "<group>"; };
-		758653801E5B0516007D17BE /* RRFOrderCommentsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RRFOrderCommentsController.m; sourceTree = "<group>"; };
 		758653811E5B0516007D17BE /* RRFOrderDetailController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RRFOrderDetailController.h; sourceTree = "<group>"; };
 		758653821E5B0516007D17BE /* RRFOrderDetailController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RRFOrderDetailController.m; sourceTree = "<group>"; };
 		758653831E5B0516007D17BE /* RRFOrderListController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RRFOrderListController.h; sourceTree = "<group>"; };
@@ -2447,8 +2531,10 @@
 			files = (
 				758658461E5BD665007D17BE /* libCodePush.a in Frameworks */,
 				758658021E5B0C83007D17BE /* CoreMotion.framework in Frameworks */,
+				12071BCE1E5C490600C3A632 /* RSKImageCropper.framework in Frameworks */,
 				75864E991E5AF46C007D17BE /* libz.tbd in Frameworks */,
 				75864E961E5AF44B007D17BE /* libc++.tbd in Frameworks */,
+				12071BD11E5C490600C3A632 /* QBImagePicker.framework in Frameworks */,
 				75864E911E5AEE90007D17BE /* libresolv.tbd in Frameworks */,
 				75864E951E5AEF01007D17BE /* CFNetwork.framework in Frameworks */,
 				758656261E5B0518007D17BE /* libWeChatSDK.a in Frameworks */,
@@ -2536,6 +2622,81 @@
 				00E356F11AD99517003FC87E /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		123A8E3D1E5C41BC00A5D76E /* xique */ = {
+			isa = PBXGroup;
+			children = (
+				123A8E3E1E5C41BC00A5D76E /* Controller */,
+				123A8E511E5C41BC00A5D76E /* Model */,
+				123A8E5E1E5C41BC00A5D76E /* View */,
+			);
+			path = xique;
+			sourceTree = "<group>";
+		};
+		123A8E3E1E5C41BC00A5D76E /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				123A8E3F1E5C41BC00A5D76E /* RRFApplyForController.h */,
+				123A8E401E5C41BC00A5D76E /* RRFApplyForController.m */,
+				123A8E411E5C41BC00A5D76E /* RRFCDelegateController.h */,
+				123A8E421E5C41BC00A5D76E /* RRFCDelegateController.m */,
+				123A8E451E5C41BC00A5D76E /* RRFJoinController.h */,
+				123A8E461E5C41BC00A5D76E /* RRFJoinController.m */,
+				123A8E471E5C41BC00A5D76E /* RRFRebateController.h */,
+				123A8E481E5C41BC00A5D76E /* RRFRebateController.m */,
+				123A8E491E5C41BC00A5D76E /* RRFRecruitController.h */,
+				123A8E4A1E5C41BC00A5D76E /* RRFRecruitController.m */,
+				123A8E4B1E5C41BC00A5D76E /* RRFXTDelegateController.h */,
+				123A8E4C1E5C41BC00A5D76E /* RRFXTDelegateController.m */,
+				123A8E4D1E5C41BC00A5D76E /* RRFXTNextDelegateController.h */,
+				123A8E4E1E5C41BC00A5D76E /* RRFXTNextDelegateController.m */,
+				123A8E4F1E5C41BC00A5D76E /* RRFXTPlanViewController.h */,
+				123A8E501E5C41BC00A5D76E /* RRFXTPlanViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		123A8E511E5C41BC00A5D76E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				123A8E521E5C41BC00A5D76E /* RRFApplyDelegaterModel.h */,
+				123A8E531E5C41BC00A5D76E /* RRFApplyDelegaterModel.m */,
+				123A8E541E5C41BC00A5D76E /* RRFRebateDetailInfoModel.h */,
+				123A8E551E5C41BC00A5D76E /* RRFRebateDetailInfoModel.m */,
+				123A8E561E5C41BC00A5D76E /* RRFRebateModel.h */,
+				123A8E571E5C41BC00A5D76E /* RRFRebateModel.m */,
+				123A8E581E5C41BC00A5D76E /* RRFXTDelegateCellModel.h */,
+				123A8E591E5C41BC00A5D76E /* RRFXTDelegateCellModel.m */,
+				123A8E5A1E5C41BC00A5D76E /* RRFXTDelegateInfoModel.h */,
+				123A8E5B1E5C41BC00A5D76E /* RRFXTDelegateInfoModel.m */,
+				123A8E5C1E5C41BC00A5D76E /* RRFXTPlanModel.h */,
+				123A8E5D1E5C41BC00A5D76E /* RRFXTPlanModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		123A8E5E1E5C41BC00A5D76E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				123A8E5F1E5C41BC00A5D76E /* RRFApplyForView.h */,
+				123A8E601E5C41BC00A5D76E /* RRFApplyForView.m */,
+				123A8E631E5C41BC00A5D76E /* RRFJoinView.h */,
+				123A8E641E5C41BC00A5D76E /* RRFJoinView.m */,
+				123A8E651E5C41BC00A5D76E /* RRFRebateCell.h */,
+				123A8E661E5C41BC00A5D76E /* RRFRebateCell.m */,
+				123A8E671E5C41BC00A5D76E /* RRFRebateView.h */,
+				123A8E681E5C41BC00A5D76E /* RRFRebateView.m */,
+				123A8E691E5C41BC00A5D76E /* RRFRecruitView.h */,
+				123A8E6A1E5C41BC00A5D76E /* RRFRecruitView.m */,
+				123A8E6B1E5C41BC00A5D76E /* RRFXQPlanView.h */,
+				123A8E6C1E5C41BC00A5D76E /* RRFXQPlanView.m */,
+				123A8E6D1E5C41BC00A5D76E /* RRFXTDelegateCell.h */,
+				123A8E6E1E5C41BC00A5D76E /* RRFXTDelegateCell.m */,
+				123A8E6F1E5C41BC00A5D76E /* RRFXTDelegateView.h */,
+				123A8E701E5C41BC00A5D76E /* RRFXTDelegateView.m */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		139105B71AF99BAD00B5F7CC /* Products */ = {
@@ -2630,7 +2791,6 @@
 				758652C01E5B0515007D17BE /* Home */,
 				758653321E5B0516007D17BE /* Login */,
 				7586534D1E5B0516007D17BE /* Me */,
-				758654511E5B0516007D17BE /* Plan */,
 				758654521E5B0516007D17BE /* PuzzleBar */,
 				758654D41E5B0516007D17BE /* ReactModule */,
 				758654D71E5B0516007D17BE /* RedPaper */,
@@ -4437,6 +4597,7 @@
 		7586534D1E5B0516007D17BE /* Me */ = {
 			isa = PBXGroup;
 			children = (
+				123A8E3D1E5C41BC00A5D76E /* xique */,
 				7586534E1E5B0516007D17BE /* Controller */,
 				758653911E5B0516007D17BE /* Model */,
 				758653B81E5B0516007D17BE /* Tool */,
@@ -4496,8 +4657,6 @@
 				7586537C1E5B0516007D17BE /* RRFMyOrderViewController.m */,
 				7586537D1E5B0516007D17BE /* RRFNoticeListController.h */,
 				7586537E1E5B0516007D17BE /* RRFNoticeListController.m */,
-				7586537F1E5B0516007D17BE /* RRFOrderCommentsController.h */,
-				758653801E5B0516007D17BE /* RRFOrderCommentsController.m */,
 				758653811E5B0516007D17BE /* RRFOrderDetailController.h */,
 				758653821E5B0516007D17BE /* RRFOrderDetailController.m */,
 				758653831E5B0516007D17BE /* RRFOrderListController.h */,
@@ -4681,13 +4840,6 @@
 			children = (
 			);
 			path = xique;
-			sourceTree = "<group>";
-		};
-		758654511E5B0516007D17BE /* Plan */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Plan;
 			sourceTree = "<group>";
 		};
 		758654521E5B0516007D17BE /* PuzzleBar */ = {
@@ -5036,6 +5188,8 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
+				12071BD01E5C490600C3A632 /* QBImagePicker.framework */,
+				12071BCD1E5C490600C3A632 /* RSKImageCropper.framework */,
 				13B07FAE1A68108700A75B9A /* Puzzle */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
 				00E356EF1AD99517003FC87E /* PuzzleTests */,
@@ -5104,6 +5258,7 @@
 				00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */,
 				FEB1C3922976DAB1E0EB21C5 /* [CP] Embed Pods Frameworks */,
 				BF53C0F22E041627F88122F6 /* [CP] Copy Pods Resources */,
+				12071BEF1E5C490700C3A632 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -5125,7 +5280,12 @@
 				TargetAttributes = {
 					00E356ED1AD99517003FC87E = {
 						CreatedOnToolsVersion = 6.2;
+						DevelopmentTeam = VYW4NN9SFF;
 						TestTargetID = 13B07F861A680F5B00A75B9A;
+					};
+					13B07F861A680F5B00A75B9A = {
+						DevelopmentTeam = VYW4NN9SFF;
+						ProvisioningStyle = Automatic;
 					};
 				};
 			};
@@ -5733,6 +5893,7 @@
 				758657591E5B0519007D17BE /* RRFPrizeController.m in Sources */,
 				758655131E5B0516007D17BE /* JCHATLoadMessageTableViewCell.m in Sources */,
 				758657301E5B0519007D17BE /* RRFHomeHeaderView.m in Sources */,
+				123A8E881E5C41BC00A5D76E /* RRFXTDelegateView.m in Sources */,
 				758656701E5B0518007D17BE /* JNQPageViewController.m in Sources */,
 				7586573D1E5B0519007D17BE /* JNQAddressController.m in Sources */,
 				758657DE1E5B051A007D17BE /* ZFModalTransitionAnimator.m in Sources */,
@@ -5743,6 +5904,7 @@
 				758656A21E5B0518007D17BE /* FBNewWinnerModel.m in Sources */,
 				758657351E5B0519007D17BE /* RRFResetPwdController.m in Sources */,
 				758656DB1E5B0518007D17BE /* JNQXTBExchangeModel.m in Sources */,
+				123A8E721E5C41BC00A5D76E /* RRFCDelegateController.m in Sources */,
 				758657CC1E5B051A007D17BE /* NSString+Additions.m in Sources */,
 				758657DB1E5B051A007D17BE /* NewsHttpTool.m in Sources */,
 				758657BE1E5B051A007D17BE /* RRFFocusController.m in Sources */,
@@ -5754,6 +5916,7 @@
 				758655021E5B0516007D17BE /* JCHATGroupDetailViewController.m in Sources */,
 				758657FA1E5B051A007D17BE /* JNQRedPaperCell.m in Sources */,
 				758656451E5B0518007D17BE /* XTChatUtil.m in Sources */,
+				123A8E751E5C41BC00A5D76E /* RRFRebateController.m in Sources */,
 				758657D51E5B051A007D17BE /* DDSortCell.m in Sources */,
 				758654F91E5B0516007D17BE /* JCHATTimeOutManager.m in Sources */,
 				758656E11E5B0519007D17BE /* JNQHttpTool.m in Sources */,
@@ -5780,6 +5943,7 @@
 				7586574F1E5B0519007D17BE /* RRFMeInfoController.m in Sources */,
 				758656771E5B0518007D17BE /* JNQRankViewController.m in Sources */,
 				758656DD1E5B0518007D17BE /* RRFFriendCircleModel.m in Sources */,
+				123A8E741E5C41BC00A5D76E /* RRFJoinController.m in Sources */,
 				758657871E5B0519007D17BE /* RRFExceptionalListCell.m in Sources */,
 				758657F61E5B051A007D17BE /* RedPaperSeleController.m in Sources */,
 				758656531E5B0518007D17BE /* PZVerticalButton.m in Sources */,
@@ -5793,6 +5957,7 @@
 				758657271E5B0519007D17BE /* HomePostCommentContent.m in Sources */,
 				758657021E5B0519007D17BE /* HomePostCommentController.m in Sources */,
 				758656BE1E5B0518007D17BE /* FreeBuyCell.m in Sources */,
+				123A8E7A1E5C41BC00A5D76E /* RRFApplyDelegaterModel.m in Sources */,
 				758656671E5B0518007D17BE /* JNQDiamondPayConfirmViewController.m in Sources */,
 				7586573C1E5B0519007D17BE /* RRFResetPwdView.m in Sources */,
 				758655231E5B0516007D17BE /* JCHATGroupDetailFooterReusableView.m in Sources */,
@@ -5820,6 +5985,7 @@
 				758656741E5B0518007D17BE /* JNQPresentClassifyViewController.m in Sources */,
 				7586574A1E5B0519007D17BE /* RRFExceptionalListController.m in Sources */,
 				758657FE1E5B051A007D17BE /* RedPaperInputCell.m in Sources */,
+				123A8E7E1E5C41BC00A5D76E /* RRFXTDelegateInfoModel.m in Sources */,
 				758657071E5B0519007D17BE /* colorModel.m in Sources */,
 				758656D21E5B0518007D17BE /* JNQPresentModel.m in Sources */,
 				7586568B1E5B0518007D17BE /* FortuneCell.m in Sources */,
@@ -5834,6 +6000,7 @@
 				758656C21E5B0518007D17BE /* JNQCalculateDetailView.m in Sources */,
 				7586570A1E5B0519007D17BE /* getData.m in Sources */,
 				758657EE1E5B051A007D17BE /* RRFPuzzleBarView.m in Sources */,
+				123A8E7B1E5C41BC00A5D76E /* RRFRebateDetailInfoModel.m in Sources */,
 				758657541E5B0519007D17BE /* RRFNoticeListController.m in Sources */,
 				758656DA1E5B0518007D17BE /* JNQVIPModel.m in Sources */,
 				758657791E5B0519007D17BE /* JNQShoppingCartCell.m in Sources */,
@@ -5868,6 +6035,7 @@
 				7586563E1E5B0518007D17BE /* PZDateUtil.m in Sources */,
 				758657BD1E5B051A007D17BE /* RRFCommentController.m in Sources */,
 				758657191E5B0519007D17BE /* PZContact.m in Sources */,
+				123A8E841E5C41BC00A5D76E /* RRFRebateView.m in Sources */,
 				758657141E5B0519007D17BE /* GameModel.m in Sources */,
 				7586572C1E5B0519007D17BE /* HomeWenBarCell.m in Sources */,
 				758657441E5B0519007D17BE /* RRFattestationController.m in Sources */,
@@ -5911,6 +6079,7 @@
 				7586567C1E5B0518007D17BE /* RRFDynamicController.m in Sources */,
 				758656A91E5B0518007D17BE /* PurchaseGameActivity.m in Sources */,
 				758656A51E5B0518007D17BE /* FBShareOrderListModel.m in Sources */,
+				123A8E711E5C41BC00A5D76E /* RRFApplyForController.m in Sources */,
 				7586571B1E5B0519007D17BE /* StockDetailModel.m in Sources */,
 				758656041E5B0517007D17BE /* ViewUtil.m in Sources */,
 				758656711E5B0518007D17BE /* JNQPayViewContoller.m in Sources */,
@@ -5943,6 +6112,7 @@
 				758656071E5B0517007D17BE /* NSString+TimeConvert.m in Sources */,
 				758655401E5B0517007D17BE /* JCHATSetting_Cell.m in Sources */,
 				758657EA1E5B051A007D17BE /* RRFCustomNumBtn.m in Sources */,
+				123A8E821E5C41BC00A5D76E /* RRFJoinView.m in Sources */,
 				758657701E5B0519007D17BE /* RRFWiningOrderModel.m in Sources */,
 				758656481E5B0518007D17BE /* HBLoadingView.m in Sources */,
 				758656201E5B0518007D17BE /* MD5DataSigner.m in Sources */,
@@ -5986,6 +6156,8 @@
 				758655191E5B0516007D17BE /* JCHATSetDisturbTableViewCell.m in Sources */,
 				758656A11E5B0518007D17BE /* JNQPastWinnerViewController.m in Sources */,
 				758656491E5B0518007D17BE /* InsetsLabel.m in Sources */,
+				123A8E7C1E5C41BC00A5D76E /* RRFRebateModel.m in Sources */,
+				123A8E781E5C41BC00A5D76E /* RRFXTNextDelegateController.m in Sources */,
 				758657D41E5B051A007D17BE /* BonusPaperSortPanel.m in Sources */,
 				758657C21E5B051A007D17BE /* RRFRewardController.m in Sources */,
 				758656B61E5B0518007D17BE /* RRFReceiveView.m in Sources */,
@@ -6087,6 +6259,7 @@
 				758656181E5B0517007D17BE /* KxMenu.m in Sources */,
 				758655281E5B0517007D17BE /* JCHATMessageTableView.m in Sources */,
 				758657BA1E5B051A007D17BE /* PZBarContainerController.m in Sources */,
+				123A8E851E5C41BC00A5D76E /* RRFRecruitView.m in Sources */,
 				758656361E5B0518007D17BE /* STEmojiCollectionView.m in Sources */,
 				758656441E5B0518007D17BE /* Singleton.m in Sources */,
 				7586569B1E5B0518007D17BE /* JNQCalculateDetailViewController.m in Sources */,
@@ -6111,6 +6284,7 @@
 				758656B81E5B0518007D17BE /* FBTool.m in Sources */,
 				7586578D1E5B0519007D17BE /* RRFModifyNameView.m in Sources */,
 				7586552A1E5B0517007D17BE /* JCHATMoreView.m in Sources */,
+				123A8E7F1E5C41BC00A5D76E /* RRFXTPlanModel.m in Sources */,
 				758656601E5B0518007D17BE /* VerifyFriendCell.m in Sources */,
 				758656BD1E5B0518007D17BE /* FBSharePanel.m in Sources */,
 				758657131E5B0519007D17BE /* FriendListModel.m in Sources */,
@@ -6124,6 +6298,7 @@
 				758655051E5B0516007D17BE /* JCHATSelectFriendsCtl.m in Sources */,
 				758657331E5B0519007D17BE /* RRFInputPasswordController.m in Sources */,
 				7586561E1E5B0518007D17BE /* DataSigner.m in Sources */,
+				123A8E861E5C41BC00A5D76E /* RRFXQPlanView.m in Sources */,
 				7586579A1E5B0519007D17BE /* RRFRecordView.m in Sources */,
 				758656CC1E5B0518007D17BE /* JNQConfirmOrderModel.m in Sources */,
 				758656AB1E5B0518007D17BE /* RRFFreeBuyOrderViewController.m in Sources */,
@@ -6146,6 +6321,7 @@
 				7586561D1E5B0518007D17BE /* base64.m in Sources */,
 				758656EC1E5B0519007D17BE /* JNQFreCircleRankCell.m in Sources */,
 				758655111E5B0516007D17BE /* JCHATGroupSettingCell.m in Sources */,
+				123A8E7D1E5C41BC00A5D76E /* RRFXTDelegateCellModel.m in Sources */,
 				758657261E5B0519007D17BE /* HomeHeadView.m in Sources */,
 				758655341E5B0517007D17BE /* JCHATContactsViewController.m in Sources */,
 				7586574D1E5B0519007D17BE /* RRFInviteViewController.m in Sources */,
@@ -6162,6 +6338,7 @@
 				758656801E5B0518007D17BE /* FortuneController.m in Sources */,
 				7586568E1E5B0518007D17BE /* FortuneStar.m in Sources */,
 				758657F31E5B051A007D17BE /* XTBExchangeResultView.m in Sources */,
+				123A8E791E5C41BC00A5D76E /* RRFXTPlanViewController.m in Sources */,
 				758656F41E5B0519007D17BE /* JNQPresentClassifyCell.m in Sources */,
 				758656681E5B0518007D17BE /* JNQDiamondViewController.m in Sources */,
 				758656A31E5B0518007D17BE /* FBProductListModel.m in Sources */,
@@ -6169,10 +6346,12 @@
 				758657841E5B0519007D17BE /* RRFBillListCell.m in Sources */,
 				758655601E5B0517007D17BE /* MJPhoto.m in Sources */,
 				758656861E5B0518007D17BE /* LunarSolarTransform.m in Sources */,
+				123A8E871E5C41BC00A5D76E /* RRFXTDelegateCell.m in Sources */,
 				758656CE1E5B0518007D17BE /* JNQDiamondModel.m in Sources */,
 				758657121E5B0519007D17BE /* EChatTitle.m in Sources */,
 				758657031E5B0519007D17BE /* RankDetailController.m in Sources */,
 				7586572D1E5B0519007D17BE /* PayPasswordPanel.m in Sources */,
+				123A8E761E5C41BC00A5D76E /* RRFRecruitController.m in Sources */,
 				758656211E5B0518007D17BE /* NSDataEx.m in Sources */,
 				7586571D1E5B0519007D17BE /* HomeTool.m in Sources */,
 				7586564D1E5B0518007D17BE /* PZMenuView.m in Sources */,
@@ -6204,17 +6383,18 @@
 				758657C61E5B051A007D17BE /* PZNewsCellModel.m in Sources */,
 				758656571E5B0518007D17BE /* YCXMenu.m in Sources */,
 				7586570D1E5B0519007D17BE /* EChatFooter.m in Sources */,
-				758657551E5B0519007D17BE /* RRFOrderCommentsController.m in Sources */,
 				758656591E5B0518007D17BE /* CirclePopMenuController.m in Sources */,
 				758657DC1E5B051A007D17BE /* RRFPuzzleBarTool.m in Sources */,
 				7586575D1E5B0519007D17BE /* RRFWiningOrderListController.m in Sources */,
 				758657D61E5B051A007D17BE /* DDSortCell_first.m in Sources */,
 				7586553C1E5B0517007D17BE /* JCHATMsgAlertStateTableViewCell.m in Sources */,
 				758656F11E5B0519007D17BE /* JNQPayView.m in Sources */,
+				123A8E831E5C41BC00A5D76E /* RRFRebateCell.m in Sources */,
 				758655071E5B0516007D17BE /* JCHATChatModel.m in Sources */,
 				758657641E5B0519007D17BE /* RRFBillListSectionModel.m in Sources */,
 				758656521E5B0518007D17BE /* PZTitleInputView.m in Sources */,
 				7586576A1E5B0519007D17BE /* RRFOrderListModel.m in Sources */,
+				123A8E771E5C41BC00A5D76E /* RRFXTDelegateController.m in Sources */,
 				758657EF1E5B051A007D17BE /* RRFRedPaperView.m in Sources */,
 				758656611E5B0518007D17BE /* FriendCircleContainerController.m in Sources */,
 				758655651E5B0517007D17BE /* MJPhotoToolbar.m in Sources */,
@@ -6245,6 +6425,7 @@
 				7586572A1E5B0519007D17BE /* HomeScrollRecentBet.m in Sources */,
 				758657561E5B0519007D17BE /* RRFOrderDetailController.m in Sources */,
 				758656D51E5B0518007D17BE /* JNQProductExchangeModel.m in Sources */,
+				123A8E801E5C41BC00A5D76E /* RRFApplyForView.m in Sources */,
 				7586554D1E5B0517007D17BE /* JCHATPhotoSelectViewController.m in Sources */,
 				758657221E5B0519007D17BE /* CompositeIndexPanel.m in Sources */,
 				758657F01E5B051A007D17BE /* RRFResplyToResplyCell.m in Sources */,
@@ -6283,6 +6464,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = VYW4NN9SFF;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -6311,6 +6493,7 @@
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
+				DEVELOPMENT_TEAM = VYW4NN9SFF;
 				INFOPLIST_FILE = PuzzleTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -6336,8 +6519,11 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
 				DEAD_CODE_STRIPPING = NO;
+				DEVELOPMENT_TEAM = VYW4NN9SFF;
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Module/Common/Lib/jpush",
@@ -6377,6 +6563,7 @@
 					"$(PROJECT_DIR)/Module/Common/Lib/pay/AliPay",
 				);
 				INFOPLIST_FILE = Puzzle/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -6401,7 +6588,10 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = VYW4NN9SFF;
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Module/Common/Lib/jpush",
@@ -6441,6 +6631,7 @@
 					"$(PROJECT_DIR)/Module/Common/Lib/pay/AliPay",
 				);
 				INFOPLIST_FILE = Puzzle/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",

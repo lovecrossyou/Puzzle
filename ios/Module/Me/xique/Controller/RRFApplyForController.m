@@ -30,7 +30,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     WEAKSELF
-    
     RRFPlanHeaderView *porfitView = [[RRFPlanHeaderView alloc]initWithBackgroundColor:[UIColor whiteColor] TextColor:[UIColor colorWithHexString:@"333333"] ];
     self.porfitView = porfitView;
     [self.view addSubview:porfitView];

@@ -12,7 +12,6 @@
 #import "CommonTableViewCell.h"
 #import "RRFRebateController.h"
 #import "RRFRecruitController.h"
-#import "RRFDelegaterListController.h"
 #import "RRFMeTool.h"
 #import "RRFXTPlanModel.h"
 #import "RRFXTDelegateController.h"
