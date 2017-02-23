@@ -23,12 +23,13 @@ import UserInfoView from './app/order/ShareOrderDetail'
 import CommentShareView from './app/share/CommentShareView'
 //发表评论
 import NavigatorIOSComment from './app/comment/SendComment'
+//沙龙
+import ShalongList from './app/comment/ShalongList'
 import codePush from 'react-native-code-push'
-import { createStore } from 'redux'
+import {createStore} from 'redux'
 import {reducer} from './app/comment/SendCommentReducer'
-import devToolsEnhancer from 'remote-redux-devtools';
 
-const store = createStore(reducer,devToolsEnhancer())
+const store = createStore(reducer)
 
 let codePushOptions = {checkFrequency: codePush.CheckFrequency.ON_APP_RESUME};
 
@@ -58,11 +59,14 @@ class Puzzle extends React.Component {
                 var url = this.props['url']
                 return <UserInfoView orderId={orderId} shareType={shareType} url={url}/>
             }
-            case 'share_comment':{
+            case 'share_comment': {
                 return <CommentShareView />
             }
-            case 'send_comment':{
+            case 'send_comment': {
                 return (<NavigatorIOSComment store={store}/>)
+            }
+            case 'commentlist': {
+                return <ShalongList />
             }
         }
     }

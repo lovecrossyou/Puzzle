@@ -161,3 +161,12 @@ export function sendComment(url,stockGameId=0,imageUrls,content) {
     return requestData(url, params, 'POST')
 }
 
+export function shalongcommentlist(pageNo,pageSize,commentType='all') {
+    var params = {
+        "pageNo": pageNo,
+        "size": pageSize,
+        "commentType": commentType,
+    }
+    return requestData('commentList', params, 'POST')
+}
+

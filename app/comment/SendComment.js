@@ -44,19 +44,21 @@ class KeyboardTool extends Component {
         })
     }
 
+    _openCamera(){
+        ImagePicker.openCamera({width: 300,height: 400,cropping: true})
+            .then(image => {
+                alert('xxxx')
+                sendAction(image)
+            })
+    }
+
     render() {
-        var sendAction = this.props.sendAction
         return <View
             style={{backgroundColor:'#f7f7f8',height:MIN_COMPOSER_HEIGHT,flexDirection:'row',justifyContent:'space-between'}}>
             <View style={{flexDirection:'row',alignItems:'center',margin:10}}>
                 <TouchableOpacity
                     style={styles.item}
-                    onPress={()=>{
-                        ImagePicker.openCamera({width: 300,height: 400,cropping: true})
-                            .then(image => {
-                                alert('xxxx')
-                               sendAction(image)
-                            })}}>
+                    onPress={this._openCamera.bind(this)}>
                     <Image
                         source={require('../../assets/icon_camera.png')}
                         style={{width:40,height:40}}/>
