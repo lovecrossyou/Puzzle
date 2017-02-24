@@ -116,6 +116,13 @@ class Content extends Component {
 
 
 class Footer extends Component {
+    constructor(){
+        super()
+        this.state = {
+            more_opacity:0
+        }
+    }
+
     render() {
         return <View
             style={[styles.row,{marginTop:20,justifyContent:'space-between',alignItems:'center',borderBottomColor:'#f5f5f5',borderBottomWidth:1}]}>
@@ -124,9 +131,31 @@ class Footer extends Component {
                 <Text style={styles.footerText}>200 赞赏</Text>
                 <Text style={styles.footerText}>999 评论</Text>
             </View>
-            <TouchableOpacity style={{marginRight:10,paddingBottom:6}}>
-                <Image source={require('../../assets/operation_more.png')} style={{width:28,height:28}}/>
-            </TouchableOpacity>
+            <View style={[styles.row,{justifyContent:'flex-end'}]}>
+                <View
+                    style={[{paddingRight:10,marginBottom:4,justifyContent:'space-around',alignItems:'center',backgroundColor:'#f5f5f5',borderRadius:4,opacity:this.state.more_opacity},styles.row,styles.border_1]}>
+                    <TouchableOpacity>
+                        <Image source={require('../../assets/operation_more.png')} style={{width:28,height:28}}/>
+                    </TouchableOpacity>
+                    <TouchableOpacity>
+                        <Image source={require('../../assets/operation_more.png')} style={{width:28,height:28}}/>
+                    </TouchableOpacity>
+                    <TouchableOpacity>
+                        <Image source={require('../../assets/operation_more.png')} style={{width:28,height:28}}/>
+                    </TouchableOpacity>
+                </View>
+                <TouchableOpacity
+                    style={{paddingRight:10}}
+                onPress={()=>{
+                    var opacity = this.state.more_opacity
+                    opacity = Math.abs(1-opacity)
+                    this.setState({
+                        more_opacity:opacity
+                    })
+                }}>
+                    <Image source={require('../../assets/operation_more.png')} style={{width:28,height:28}}/>
+                </TouchableOpacity>
+            </View>
         </View>
     }
 }
