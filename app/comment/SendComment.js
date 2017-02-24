@@ -22,9 +22,10 @@ import {
 } from 'react-native';
 import Toast, {DURATION} from 'react-native-easy-toast'
 import ImagePicker from 'react-native-image-crop-picker'
+var personManager = NativeModules.PersonManager
 
 import {actionCreators} from './SendCommentReducer'
-var personManager = NativeModules.PersonManager
+import {uploadImageRequest, sendComment} from '../util/NetUtil'
 
 const MIN_COMPOSER_HEIGHT = 60
 const {width, height} = Dimensions.get('window')
@@ -33,7 +34,7 @@ const picMargin = 10
 const picRowCount = 4
 const picSize = (width - picMargin * (picRowCount + 1)) / picRowCount
 
-import {uploadImageRequest, sendComment} from '../util/NetUtil'
+import {getUploadImageUrls} from '../util/NetUtil'
 class KeyboardTool extends Component {
     _openPicker() {
         var sendAction = this.props.sendAction
@@ -44,59 +45,39 @@ class KeyboardTool extends Component {
         })
     }
 
-    _openCamera(){
-        ImagePicker.openCamera({width: 300,height: 400,cropping: true})
-            .then(image => {
-                alert('xxxx')
-                sendAction(image)
-            })
-    }
-
     render() {
         return <View
             style={{backgroundColor:'#f7f7f8',height:MIN_COMPOSER_HEIGHT,flexDirection:'row',justifyContent:'space-between'}}>
             <View style={{flexDirection:'row',alignItems:'center',margin:10}}>
                 <TouchableOpacity
                     style={styles.item}
-                    onPress={this._openCamera.bind(this)}>
-                    <Image
-                        source={require('../../assets/icon_camera.png')}
-                        style={{width:40,height:40}}/>
+                    onPress={()=>{
+                        ImagePicker.openCamera({width: 300,height: 400,cropping: true})
+                            .then(image => {
+                                console.log(image)
+                            })}}>
+                    <Text>拍照</Text>
                 </TouchableOpacity>
                 <TouchableOpacity
                     style={styles.item}
                     onPress={this._openPicker.bind(this)}>
-                    <Image
-                        source={require('../../assets/blacklist.png')}
-                        style={{width:34,height:34}}/>
+                    <Text>相册</Text>
                 </TouchableOpacity>
             </View>
-            <View style={{flexDirection:'row',alignItems:'center',marginRight:15}}>
+            <View style={{flexDirection:'row',alignItems:'center',marginRight:10}}>
                 <TouchableOpacity onPress={()=>{
                     Keyboard.dismiss()
                 }}>
-                    <Image
-                        source={require('../../assets/arrow_down.png')}
-                        style={{width:20,height:10}}/>
+                    <Text>关闭</Text>
                 </TouchableOpacity>
             </View>
             <Toast ref="toast" position='top'/>
+
         </View>
     }
 }
 
 class SendComment extends Component {
-<<<<<<< HEAD
-
-    constructor(props) {
-        super(props)
-
-        this._keyboardHeight = 0;
-        this.state = {
-            composerHeight: MIN_COMPOSER_HEIGHT,
-            messagesContainerHeight: null,
-            pictures:[]
-=======
     constructor(props) {
         super(props)
         const {store} = this.props
@@ -108,15 +89,10 @@ class SendComment extends Component {
             messagesContainerHeight: null,
             pictures: [],
             uploadOn: uploadOn
->>>>>>> 31a3d874c3381e06a302b8a96b343d64143e1262
         }
         this.keyboardWillShowListener = Keyboard.addListener('keyboardWillShow', this.onKeyboardWillShow.bind(this));
         this.keyboardDidHideListener = Keyboard.addListener('keyboardWillHide', this.onKeyboardWillHide.bind(this));
         this.keyboardWillChangeFrameListener = Keyboard.addListener('keyboardWillChangeFrame', this.keyboardWillChangeFrame.bind(this))
-<<<<<<< HEAD
-=======
-
->>>>>>> 31a3d874c3381e06a302b8a96b343d64143e1262
     }
 
     onMainViewLayout(e) {
@@ -127,23 +103,15 @@ class SendComment extends Component {
         })
     }
 
-<<<<<<< HEAD
-    _getPictures(){
-        var pics = this.state.pictures
-        var picViews = pics.map((pic,index)=>{
-            return <Image source={pic} style={{width:60,height:60}}></Image>
-        })
-=======
-
-    _addPicture(images) {
+    _addPicture(images){
+        alert('images')
         var pics = this.state.pictures
         this.setState({
             pictures: [...images, ...pics]
         })
-        this.store.dispatch(actionCreators.setImages(images))
+        this.store.dispatch(actionCreators.setImages(this.state.pictures))
     }
-
-    _getPictures() {
+    _getPictures(){
         var pics = this.state.pictures
         var picViews = pics.map((pic, index) => {
             return <Image source={{uri:pic.path}}
@@ -152,7 +120,6 @@ class SendComment extends Component {
             />
         })
         return picViews
->>>>>>> 31a3d874c3381e06a302b8a96b343d64143e1262
     }
 
     renderMainView() {
@@ -169,11 +136,7 @@ class SendComment extends Component {
                         }}
                     />
                 </View>
-<<<<<<< HEAD
-                <View style={{alignItems:'center',justifyContent:'center',backgroundColor:'green',paddingLeft:10}}>
-=======
                 <View style={{alignItems:'center',justifyContent:'center',paddingLeft:10}}>
->>>>>>> 31a3d874c3381e06a302b8a96b343d64143e1262
                     <TextInput
                         placeholder='正文'
                         editable={true}
@@ -187,19 +150,15 @@ class SendComment extends Component {
                 <View style={{flexDirection:'row',flexWrap:'wrap'}}>
                     {this._getPictures()}
                 </View>
-                <View style={{flexDirection:'row'}}>
-                    {this._getPictures()}
-                </View>
             </Animated.View>
         );
     }
 
     componentWillMount() {
-        LayoutAnimation.linear()
+        LayoutAnimation.linear();
+
     }
 
-<<<<<<< HEAD
-=======
 
     componentDidMount() {
         const {store} = this.props
@@ -216,7 +175,6 @@ class SendComment extends Component {
         this.unsubscribe()
     }
 
->>>>>>> 31a3d874c3381e06a302b8a96b343d64143e1262
     setKeyboardHeight(height) {
         this._keyboardHeight = height;
     }
@@ -290,10 +248,6 @@ class SendComment extends Component {
 }    }
 
 export default class NavigatorIOSComment extends Component {
-<<<<<<< HEAD
-    _handleNavigationRequest(){
-        alert('xxxx')
-=======
     _handleNavigationRequest() {
         const {store} = this.props
         const {title, content, images} = store.getState()
@@ -332,7 +286,6 @@ export default class NavigatorIOSComment extends Component {
             store.dispatch(actionCreators.uploadOn(false))
             personManager.popView()
         })
->>>>>>> 31a3d874c3381e06a302b8a96b343d64143e1262
     }
 
     render() {
@@ -341,30 +294,21 @@ export default class NavigatorIOSComment extends Component {
         return (
             <NavigatorIOS
                 initialRoute={{
-<<<<<<< HEAD
                     component: SendComment,
                     title: '发表评论',
                     rightButtonTitle: '发布',
-                    passProps: { sendClickProp:this._handleNavigationRequest.bind(this)},
-                    onRightButtonPress: () => this._handleNavigationRequest()}}
-=======
-                component: SendComment,
-                title: '发表评论',
-                rightButtonTitle: '发布',
-                leftButtonTitle: '取消',
-                passProps:{store:store},
-                onRightButtonPress: () => this._handleNavigationRequest(),
-                onLeftButtonPress:()=>{
+                    passProps:{store:store},
+                    onRightButtonPress: () => this._handleNavigationRequest(),
+                    onLeftButtonPress:()=>{
                      personManager.popView()
                 }}}
->>>>>>> 31a3d874c3381e06a302b8a96b343d64143e1262
                 barTintColor='#4964ef'
                 tintColor="#ffffff"
                 titleTextColor="#ffffff"
                 style={{flex: 1}}
-                />
-            )
-        }
+            />
+        )
+    }
 }
 
 

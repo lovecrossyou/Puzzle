@@ -6565,6 +6565,10 @@
 					"$(PROJECT_DIR)/Module/Common/Lib/pay/AliPay",
 				);
 				INFOPLIST_FILE = Puzzle/Info.plist;
+<<<<<<< HEAD
+=======
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+>>>>>>> 75aa754dd54422080176bc160a15dd5251adf3db
 				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
@@ -6635,6 +6639,10 @@
 					"$(PROJECT_DIR)/Module/Common/Lib/pay/AliPay",
 				);
 				INFOPLIST_FILE = Puzzle/Info.plist;
+<<<<<<< HEAD
+=======
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+>>>>>>> 75aa754dd54422080176bc160a15dd5251adf3db
 				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
