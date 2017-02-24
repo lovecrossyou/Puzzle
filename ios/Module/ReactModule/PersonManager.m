@@ -101,7 +101,10 @@ RCT_EXPORT_METHOD(dismissView){
   }
 }
 
-
+//--------沙龙 头像点击
+RCT_EXPORT_METHOD(headClick){
+  [[ReactSingleTool sharedInstance].delegate headClick];
+}
 
 - (dispatch_queue_t)methodQueue
 {

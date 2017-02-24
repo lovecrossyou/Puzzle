@@ -30,8 +30,10 @@
 #import "HBLoadingView.h"
 #import "RRFDetailInfoController.h"
 #import "PZReactUIManager.h"
+#import "ReactSingleTool.h"
+
 #define commentPanelHeight 224 - 64
-@interface RRFCommentController ()<UITableViewDelegate,UITableViewDataSource>
+@interface RRFCommentController ()<UITableViewDelegate,UITableViewDataSource,PersonManagerDelegate>
 
 @property(nonatomic,weak)UITableView *tableView;
 @property(nonatomic,weak)RRFCommentInputView *botView;
@@ -54,6 +56,8 @@
     UIView* rootView = [PZReactUIManager createWithPage:@"commentlist" params:nil size:CGSizeZero];
   self.view = rootView ;
   
+  
+  [ReactSingleTool sharedInstance].delegate = self ;
   return;
     WEAKSELF
     self.pageNo = 0;
@@ -104,6 +108,11 @@
     [self.tableView.mj_footer beginRefreshing];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(refreHeadView) name:RefreshCommentNoticeView object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(requestDataList:) name:RefreshCommentTableView object:nil];
+}
+
+#pragma mark - 实现 头像点击代理
+-(void)headClick{
+  
 }
 
 

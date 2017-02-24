@@ -9,13 +9,5 @@
 #import <Foundation/Foundation.h>
 #import <React/RCTBridgeModule.h>
 
-@protocol PersonManagerDelegate <NSObject>
--(void)shareTo:(NSString*)platform;
--(void)reportClick;
--(void)blackList;
-@end
-
-
 @interface PersonManager : NSObject<RCTBridgeModule>
-@property(strong,nonatomic) id<PersonManagerDelegate> delegate;
 @end

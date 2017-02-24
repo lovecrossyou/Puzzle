@@ -13,13 +13,16 @@ import {
     Dimensions,
     TouchableOpacity,
     ListView,
-    Modal
+    Modal,
+    NativeModules
+
 } from 'react-native';
 import Image from 'react-native-image-progress'
 import ProgressPie from 'react-native-progress/Pie'
 import SGListView from 'react-native-sglistview'
 import ImageViewer from 'react-native-image-zoom-viewer'
 import {shalongcommentlist} from '../util/NetUtil'
+var personManager = NativeModules.PersonManager
 
 const {width, height} = Dimensions.get('window')
 
@@ -37,9 +40,13 @@ class Header extends Component {
             sexUrl = require('../../assets/woman.png')
         }
         return <View style={styles.userinfo_container}>
-            <Image
-                style={{width: 40, height: 40, borderRadius: 3, marginLeft: 10}}
-                source={{uri: userIconUrl}}/>
+            <TouchableOpacity onPress={()=>{
+                personManager.headClick()
+            }}>
+                <Image
+                    style={{width: 40, height: 40, borderRadius: 3, marginLeft: 10}}
+                    source={{uri: userIconUrl}}/>
+            </TouchableOpacity>
             <View style={{marginLeft: 10,justifyContent:'center'}}>
                 <View style={{flexDirection: 'row',alignItems:'flex-start'}}>
                     <Text style={{color: '#333333', fontSize: 14}}>{userName}</Text>
@@ -114,6 +121,17 @@ class Content extends Component {
     }
 }
 
+//点赞 评论 赞赏 通用组件
+class MoreItem extends Component{
+    render(){
+        var {text,icon} = this.props.data
+        return <TouchableOpacity style={{alignItems:'center',flexDirection:'row',justifyContent:'space-around'}}>
+            <Image source={icon} style={{width:28,height:28}}/>
+            <Text style={{fontSize:11,color:'gray',paddingRight:4}}>{text}</Text>
+        </TouchableOpacity>
+    }
+}
+
 
 class Footer extends Component {
     constructor(){
@@ -126,26 +144,20 @@ class Footer extends Component {
     render() {
         return <View
             style={[styles.row,{marginTop:20,justifyContent:'space-between',alignItems:'center',borderBottomColor:'#f5f5f5',borderBottomWidth:1}]}>
-            <View style={[styles.row,{paddingBottom:6}]}>
+            <View style={[styles.row,{paddingBottom:6,width:100,flexGrow:3}]}>
                 <Text style={styles.footerText}>100 点赞</Text>
                 <Text style={styles.footerText}>200 赞赏</Text>
                 <Text style={styles.footerText}>999 评论</Text>
             </View>
-            <View style={[styles.row,{justifyContent:'flex-end'}]}>
+            <View style={[styles.row,{justifyContent:'flex-end',flexGrow:4}]}>
                 <View
-                    style={[{paddingRight:10,marginBottom:4,justifyContent:'space-around',alignItems:'center',backgroundColor:'#f5f5f5',borderRadius:4,opacity:this.state.more_opacity},styles.row,styles.border_1]}>
-                    <TouchableOpacity>
-                        <Image source={require('../../assets/operation_more.png')} style={{width:28,height:28}}/>
-                    </TouchableOpacity>
-                    <TouchableOpacity>
-                        <Image source={require('../../assets/operation_more.png')} style={{width:28,height:28}}/>
-                    </TouchableOpacity>
-                    <TouchableOpacity>
-                        <Image source={require('../../assets/operation_more.png')} style={{width:28,height:28}}/>
-                    </TouchableOpacity>
+                    style={[styles.row,{marginBottom:4,justifyContent:'space-around',alignItems:'center',backgroundColor:'#f5f5f5',borderRadius:4,opacity:this.state.more_opacity},styles.border_1]}>
+                    <MoreItem data={{text:'点赞',icon:require('../../assets/operation_more.png')}}/>
+                    <MoreItem data={{text:'评论',icon:require('../../assets/operation_more.png')}}/>
+                    <MoreItem data={{text:'赞赏',icon:require('../../assets/operation_more.png')}}/>
                 </View>
                 <TouchableOpacity
-                    style={{paddingRight:10}}
+                    style={{paddingRight:6}}
                 onPress={()=>{
                     var opacity = this.state.more_opacity
                     opacity = Math.abs(1-opacity)
@@ -210,21 +222,25 @@ export default class ShalongList extends Component {
     }
 
     render() {
-        return <SGListView
-            style={styles.flex}
-            dataSource={this.state.dataSource}
-            renderRow={this.renderData}
-            initialListSize={1}
-            onEndReached={this.fetchData.bind(this)}
-            onEndReachedThreshold={10}
-            pageSize={pageSize}
-            scrollRenderAheadDistance={1}
-            stickyHeaderIndices={[]}
-            renderFooter={()=>{
+        return <View style={{flex:1,justifyContent:'space-between'}}>
+            <SGListView
+                dataSource={this.state.dataSource}
+                renderRow={this.renderData}
+                initialListSize={1}
+                onEndReached={this.fetchData.bind(this)}
+                onEndReachedThreshold={10}
+                pageSize={pageSize}
+                scrollRenderAheadDistance={1}
+                stickyHeaderIndices={[]}
+                renderFooter={()=>{
                 if(this.state.isLast)return null
                 return <LoadMoreFooter/>
             }}>
-        </SGListView>
+            </SGListView>
+            <View style={{backgroundColor:'red',height:40}}>
+
+            </View>
+        </View>
     }
 }
 
@@ -261,8 +277,8 @@ const styles = {
     },
     footerText: {
         color: 'gray',
-        fontSize: 11,
-        marginLeft: 10
+        fontSize: 10,
+        marginLeft: 6
     },
     border_1:{
         borderColor:'#f5f5f5',
