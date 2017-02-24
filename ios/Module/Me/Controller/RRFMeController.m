@@ -19,12 +19,9 @@
 #import "RRFMeTool.h"
 #import "PZParamTool.h"
 #import "CommonTableViewCell.h"
-<<<<<<< HEAD
 
 
 #import "RRFApplyForController.h"
-=======
->>>>>>> d835aacbfc8da0e2072b8a076555cea61b806e52
 #import "RRFPersonalHomePageController.h"
 #import "RRFNoticeListController.h"
 #import "RRFNoLoginMyInfoView.h"
@@ -181,10 +178,6 @@
         NSString *str = json;
         NSString *title = @"喜鹊计划";
         if ([str isEqualToString:@"already_apply"]) {
-<<<<<<< HEAD
-
-=======
->>>>>>> d835aacbfc8da0e2072b8a076555cea61b806e52
             RRFXTPlanViewController *desc = [[RRFXTPlanViewController alloc]init];
             desc.title = title;
             [self.navigationController pushViewController:desc animated:YES];
