@@ -102,10 +102,12 @@ class Content extends Component {
                     var showModal = !this.state.showModal
                     this.setState({
                     showModal:showModal,
-                    loadingRender:()=>{
-                        <Image style={{height:30,width:30}} source={require('../../assets/loading.gif')}/>
-                    }
                    })}}
+                    loadingRender={()=>{
+                        return <View style={{flex:1,justifyContent:'center',alignItems:'center'}}>
+                        <Image style={{height:30,width:30}} source={require('../../assets/loading.gif')}/>
+                     </View>
+                }}
                 />
             </Modal>
         </View>
