@@ -8,11 +8,11 @@ import {
     Text,
     View,
     PixelRatio,
-    Image,
     ListView,
     TouchableOpacity,
     NativeModules
 } from 'react-native';
+import Image from 'react-native-image-progress'
 
 import codePush from "react-native-code-push"
 import {dateDistanceByNow} from '../util/DateUtil'
@@ -47,7 +47,7 @@ class BetCell extends Component {
                     onPress={()=>{
                         personManager.goUserProfileEvent(this.props.data.userId)
                     }}>
-                    <Image style={styles.logo} source={{uri: userIconUrl}}/>
+                    <Image style={[styles.logo,styles.border_1]} source={{uri: userIconUrl}}/>
                 </TouchableOpacity>
                 <View>
                     <Text style={{marginTop: 12, marginLeft: 6}}>{this.props.data.userName}</Text>
@@ -153,5 +153,9 @@ const styles = StyleSheet.create({
     leftContainer: {
         // justifyContent: 'center',
         // alignItems: 'center'
+    },
+    border_1:{
+        borderColor:'#f5f5f5',
+        borderWidth:1/PixelRatio.get()
     }
 })

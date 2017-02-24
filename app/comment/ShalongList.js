@@ -44,7 +44,7 @@ class Header extends Component {
                 <View style={{flexDirection: 'row',alignItems:'flex-start'}}>
                     <Text style={{color: '#333333', fontSize: 14}}>{userName}</Text>
                     <Image
-                        style={{width: 14, height: 14, marginLeft: 6}}
+                        style={[{width: 14, height: 14, marginLeft: 6},styles.border_1]}
                         source={sexUrl}/>
                 </View>
                 <Text style={{color: '#333333', fontSize: 11}}>{time}</Text>
@@ -80,7 +80,7 @@ class Content extends Component {
                 })
             }}>
                 <Image
-                    style={styles.imageItem}
+                    style={[styles.imageItem,styles.border_1]}
                     source={{uri: img.head_img}}
                     key={index}
                 />
@@ -234,5 +234,9 @@ const styles = {
         color: 'gray',
         fontSize: 11,
         marginLeft: 10
+    },
+    border_1:{
+        borderColor:'#f5f5f5',
+        borderWidth:1/PixelRatio.get()
     }
 }
