@@ -71,17 +71,18 @@ class Content extends Component {
 
         var contentImageViews = contentImages.map((img, index) => {
             return <TouchableOpacity
+                key={index}
                 onPress={()=>{
                     var showModal = !this.state.showModal
                     this.setState({
                     showModal:showModal,
                     showIndex:index
                 })
-                key={index}
             }}>
                 <Image
                     style={styles.imageItem}
                     source={{uri: img.head_img}}
+                    key={index}
                 />
             </TouchableOpacity>
         })
@@ -101,6 +102,9 @@ class Content extends Component {
                     var showModal = !this.state.showModal
                     this.setState({
                     showModal:showModal,
+                    loadingRender:()=>{
+                        <Image style={{height:30,width:30}} source={require('../../assets/loading.gif')}/>
+                    }
                    })}}
                 />
             </Modal>
