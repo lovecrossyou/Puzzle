@@ -286,8 +286,8 @@ class SendComment extends Component {
                 <Toast ref="toast" position='top'/>
             </ScrollView>
         );
-    }
-}
+
+}    }
 
 export default class NavigatorIOSComment extends Component {
 <<<<<<< HEAD
@@ -374,7 +374,7 @@ SendComment.defaultProps = {
         android: false
     }),
 }
-
+ 
 const styles = StyleSheet.create({
     container: {
         flex: 1,
