@@ -24,7 +24,11 @@ import CommentShareView from './app/share/CommentShareView'
 //发表评论
 import NavigatorIOSComment from './app/comment/SendComment'
 //沙龙
-import ShalongList from './app/comment/ShalongList'
+import ShalongList from './app/comment/ShaLongList'
+// 喜鹊计划
+import ApplyforXQPlan from './app/plan/ApplyforXQPlan'
+
+import AboutMe from './app/me/AboutMe'
 import codePush from 'react-native-code-push'
 import {createStore} from 'redux'
 import {reducer} from './app/comment/SendCommentReducer'
@@ -67,6 +71,12 @@ class Puzzle extends React.Component {
             }
             case 'commentlist': {
                 return <ShalongList />
+            }
+            case 'xqplan':{
+                return <ApplyforXQPlan />
+            }
+            case 'about_me':{
+                return <AboutMe />
             }
         }
     }

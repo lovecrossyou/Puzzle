@@ -32,7 +32,7 @@
 #import "RRFMyOrderViewController.h"
 #import "RRFXTPlanViewController.h"
 #import "RRFApplyForController.h"
-
+#import "PZReactUIManager.h"
 @interface RRFMeController ()<UITableViewDelegate,UITableViewDataSource>
 {
     NSArray *_allData;
@@ -46,6 +46,12 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+  
+  UIView* rootView = [PZReactUIManager createWithPage:@"about_me" params:nil size:CGSizeZero];
+  self.view = rootView;
+  return;
+  
+  
     self.view.backgroundColor = [UIColor colorWithHexString:@"f5f5f5"];
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
@@ -183,8 +189,9 @@
             [self.navigationController pushViewController:desc animated:YES];
         }else{
             RRFApplyForController *desc  = [[RRFApplyForController alloc]init];
-            desc.title = title;
-            [weakSelf.navigationController pushViewController:desc animated:YES];
+          [weakSelf presentViewController:desc animated:YES completion:nil];
+//            desc.title = title;
+//            [weakSelf.navigationController pushViewController:desc animated:YES];
         }
         [MBProgressHUD dismiss];
     } failBlock:^(id json) {

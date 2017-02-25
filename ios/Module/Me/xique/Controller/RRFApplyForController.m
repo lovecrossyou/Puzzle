@@ -20,6 +20,7 @@
 #import "RRFXQPlanView.h"
 #import "RRFMeTool.h"
 #import "RRFXTPlanModel.h"
+#import "PZReactUIManager.h"
 @interface RRFApplyForController ()
 @property(nonatomic,weak)RRFApplyForView *planView;
 @property(nonatomic,weak)RRFPlanHeaderView *porfitView ;
@@ -29,6 +30,11 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    UIView* rootView = [PZReactUIManager createWithPage:@"xqplan" params:nil size:CGSizeZero];
+  self.view = rootView;
+  return;
+  
+  
     WEAKSELF
     RRFPlanHeaderView *porfitView = [[RRFPlanHeaderView alloc]initWithBackgroundColor:[UIColor whiteColor] TextColor:[UIColor colorWithHexString:@"333333"] ];
     self.porfitView = porfitView;

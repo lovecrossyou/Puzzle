@@ -5,7 +5,11 @@
   "scripts": {
     "start": "node node_modules/react-native/local-cli/cli.js start",
     "test": "jest",
-    "package": "node node_modules/react-native/packager"
+    "package": "react-native bundle --entry-file index.ios.js --bundle-output ./ios/main.jsbundle --platform ios --assets-dest ./ios --dev false",
+    "precodepush": "code-push release-react Puzzle ios",
+    "codepush": "echo ###开始部署到生产环境###",
+    "postcodepush": "code-push promote Puzzle Staging Production",
+    "ios": "react-native run-ios"
   },
   "dependencies": {
     "react": "15.4.2",

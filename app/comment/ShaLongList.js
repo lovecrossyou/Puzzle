@@ -89,7 +89,6 @@ class Content extends Component {
                 <Image
                     style={[styles.imageItem,styles.border_1]}
                     source={{uri: img.head_img}}
-                    key={index}
                 />
             </TouchableOpacity>
         })
@@ -109,11 +108,7 @@ class Content extends Component {
                     var showModal = !this.state.showModal
                     this.setState({
                     showModal:showModal,
-                   })}}
-                    loadingRender={()=>{
-                        return <View style={{flex:1,justifyContent:'center',alignItems:'center'}}>
-                        <Image style={{height:30,width:30}} source={require('../../assets/loading.gif')}/>
-                     </View>
+                   })
                 }}
                 />
             </Modal>
@@ -272,8 +267,8 @@ const styles = {
     imageItem: {
         width: picSize,
         height: picSize,
-        marginLeft: picMargin,
-        marginBottom: picMargin / 2
+        marginLeft: picMargin
+        // marginBottom: picMargin / 2
     },
     footerText: {
         color: 'gray',
