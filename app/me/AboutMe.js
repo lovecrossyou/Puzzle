@@ -110,7 +110,7 @@ export default class AboutMe extends Component{
                 navigationBar={
                     <Navigator.NavigationBar
                         routeMapper={NavigationBarRouteMapper}
-                        style={{backgroundColor: 'gray'}}/>
+                        style={{backgroundColor: '#4964ef'}}/>
                 }
             />)
     }

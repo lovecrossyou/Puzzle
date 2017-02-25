@@ -29,19 +29,6 @@ class XQHome extends Component{
 
 export default class ApplyforXQPlan extends Component{
     render(){
-        return (
-            <Navigator
-                initialRoute={{component:XQHome}}
-                renderScene={(route, navigator) => {
-                let Component = route.component;
-                return <Component {...route.params} navigator={navigator} />
-              }}
-                configureScene={(route, routeStack) => Navigator.SceneConfigs.PushFromRight}
-                navigationBar={
-                    <Navigator.NavigationBar
-                        routeMapper={NavigationBarRouteMapper}
-                        style={{backgroundColor: 'gray'}}/>
-                }
-            />)
+        return <XQHome />
     }
 }
