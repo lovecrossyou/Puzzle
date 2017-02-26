@@ -60,6 +60,26 @@ class Header extends Component {
     }
 }
 
+class ImageItem extends Component{
+    render(){
+        var {index,showModal,head_img} = this.props
+        return <TouchableOpacity
+                key={index}
+                onPress={()=>{
+                    var showModal = !this.state.showModal
+                    this.setState({
+                    showModal:showModal,
+                    showIndex:index
+                })
+            }}>
+                <Image
+                    style={[styles.imageItem,styles.border_1]}
+                    source={{uri:head_img}}
+                />
+            </TouchableOpacity>
+    }
+}
+
 class Content extends Component {
     constructor() {
         super()
@@ -76,7 +96,51 @@ class Content extends Component {
             imgUrls.push({'url': img.big_img})
         })
 
-        var contentImageViews = contentImages.map((img, index) => {
+        var imagelist = []
+        for(var i in contentImages){
+            if(i%picRowCount == 0){
+                var picM = contentImages[i]
+                var picM1 = contentImages[i+1]
+                var picM2 = contentImages[i+2]
+                var picM3 = contentImages[i+3]
+
+                var picView1 = null
+                if(picM1==undefined){
+                    picView1 = null
+                }
+                else{
+                    picView1 = (<ImageItem index={i+1} head_img={picM1.head_img} showModal={false}/>)
+                }
+
+                var picView2 = null
+                if(picM2==undefined){
+                    picView2 = null
+                }
+                else {
+                    picView2 = (<ImageItem index={i+2} head_img={picM2.head_img} showModal={false}/>)
+                }
+
+                var picView3 = null
+                if(picM3==undefined){
+                    picView3 = null
+                }
+                else {
+                    picView3 = (<ImageItem index={i+3} head_img={picM3.head_img} showModal={false}/>)
+                }
+
+                var row = (<View
+                    style={{flexDirection:'row'}}
+                    key={i}>
+                    <ImageItem index={i} head_img={picM.head_img} showModal={false}/>
+                    {picView1}
+                    {picView2}
+                    {picView3}
+                </View>)
+            }
+            imagelist.push(row)
+        }
+
+        /*var contentImageViews = contentImages.map((img, index) => {
             return <TouchableOpacity
                 key={index}
                 onPress={()=>{
@@ -91,14 +155,14 @@ class Content extends Component {
                     source={{uri: img.head_img}}
                 />
             </TouchableOpacity>
-        })
+        })*/
 
         return <View style={styles.container}>
             <View>
                 <Text numberOfLines={9} style={{marginHorizontal:10,marginVertical:10}}>{content}</Text>
             </View>
             <View style={{flexDirection:'row',flexWrap:'wrap'}}>
-                {contentImageViews}
+                {imagelist}
             </View>
             <Modal visible={this.state.showModal} transparent={false}>
                 <ImageViewer
