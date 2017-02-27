@@ -10,16 +10,16 @@
 #define Puzzle_pch
 
 // 测试环境
-//#define Base_url @"http://114.251.53.22/xitenggamejar/"
-//#define ImageUrl @"http://114.251.53.22/imageserver/"
-//#define  AppKey @"b5958b665e0b4d8cae77d28e1ad3f521"
-//#define  AppSecret @"71838ae252714085bc0fb2fc3f420110"
-
-//生产环境
-#define Base_url @"http://www.xiteng.com/xitenggame/"
-#define ImageUrl @"http://www.xiteng.com/imageserver/"
+#define Base_url @"http://114.251.53.22/xitenggamejar/"
+#define ImageUrl @"http://114.251.53.22/imageserver/"
 #define  AppKey @"b5958b665e0b4d8cae77d28e1ad3f521"
 #define  AppSecret @"71838ae252714085bc0fb2fc3f420110"
+
+//生产环境
+//#define Base_url @"http://www.xiteng.com/xitenggame/"
+//#define ImageUrl @"http://www.xiteng.com/imageserver/"
+//#define  AppKey @"b5958b665e0b4d8cae77d28e1ad3f521"
+//#define  AppSecret @"71838ae252714085bc0fb2fc3f420110"
 
 //AlipayClient      UnionPay   WeixinPay
 #define AlipayClient @"AlipayClient"
