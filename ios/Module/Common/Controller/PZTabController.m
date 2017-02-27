@@ -136,9 +136,14 @@
     // 设置选中的图标
     UIImage *selectedImage = [UIImage imageNamed:selectedImageName];
     childController.tabBarItem.selectedImage = [selectedImage imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+  if (![title isEqualToString:@"我"]) {
     PZNavController *nav = [[PZNavController alloc] initWithRootViewController:childController];
     [self addChildViewController:nav];
     nav.title = title;
+  }
+  else{
+    [self addChildViewController:childController];
+  }
 }
 
 -(void)refreshMeBadgeValue:(int)unread_count{
